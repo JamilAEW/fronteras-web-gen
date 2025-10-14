@@ -107,7 +107,7 @@ const Navbar = () => {
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
             >
               <a
-                href="https://educarsinfronteras.es/moodle/login/index.php"
+                href="https://portal.educarsinfronteras.es/acceso.cgi"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -172,7 +172,7 @@ const Navbar = () => {
             <div className="px-4 pt-2 space-y-2">
               <Button variant="outline" size="sm" asChild className="w-full">
                 <a
-                  href="https://educarsinfronteras.es/moodle/login/index.php"
+                  href="https://portal.educarsinfronteras.es/acceso.cgi"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
