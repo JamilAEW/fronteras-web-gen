@@ -1,6 +1,6 @@
-import { Button } from '@/components/ui/button';
 import { RocketIcon } from '@radix-ui/react-icons';
 import BlurText from './BlurText';
+import StarBorder from './StarBorder';
 
 const Hero = () => {
   return (
@@ -19,12 +19,16 @@ const Hero = () => {
           tus metas.
         </p>
         <div className="flex justify-center">
-          <Button size="lg" variant="secondary" asChild className="bg-white text-primary hover:bg-white/90">
-            <a href="#form-inicio">
-              <RocketIcon className="mr-2 h-5 w-5" aria-hidden="true" />
-              Inscríbete aquí
-            </a>
-          </Button>
+          <StarBorder
+            as="a"
+            href="#form-inicio"
+            color="cyan"
+            speed="5s"
+            className="cursor-pointer"
+          >
+            <RocketIcon className="mr-2 h-5 w-5 inline" aria-hidden="true" />
+            Inscríbete aquí
+          </StarBorder>
         </div>
       </div>
     </section>
