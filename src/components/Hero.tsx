@@ -13,17 +13,11 @@ const Hero = () => {
           Abre la puerta a nuevas oportunidades con nuestra formación y da el primer paso hacia
           tus metas.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex justify-center">
           <Button size="lg" variant="secondary" asChild className="bg-white text-primary hover:bg-white/90">
             <a href="#form-inicio">
               <RocketIcon className="mr-2 h-5 w-5" aria-hidden="true" />
               Inscríbete aquí
-            </a>
-          </Button>
-          <Button size="lg" variant="outline" asChild className="border-white text-white hover:bg-white/10">
-            <a href="#cursos">
-              <ChevronRightIcon className="mr-2 h-5 w-5" aria-hidden="true" />
-              Ver cursos
             </a>
           </Button>
         </div>
