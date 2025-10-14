@@ -358,7 +358,7 @@ export const courses: Curso[] = [
     titulo: 'SSCG0111 — Gestión de llamadas de teleasistencia',
     categoria: 'arraigo',
     resumen: 'Certificado de profesionalidad oficial para gestionar llamadas de teleasistencia, emitir y recibir llamadas, movilizar recursos de atención y garantizar la confidencialidad. Incluye 80 horas de prácticas en empresas.',
-    horas: 310,
+    horas: 330,
     modalidad: 'presencial',
     requisitos: [
       'Más de 2 años de residencia en España',
@@ -405,7 +405,7 @@ export const courses: Curso[] = [
     titulo: 'SSCM0108 — Limpieza de superficies y mobiliario en edificios y locales',
     categoria: 'arraigo',
     resumen: 'Certificado de profesionalidad oficial para realizar labores de limpieza y mantenimiento profesional aplicando técnicas, útiles y maquinaria específica. Incluye 80 horas de prácticas profesionales.',
-    horas: 310,
+    horas: 270,
     modalidad: 'presencial',
     requisitos: [
       'Más de 2 años de residencia en España',
