@@ -39,6 +39,13 @@
   padding: 16px 26px;
   border-radius: 20px;
   z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.inner-content:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(169, 25, 22, 0.6);
+  filter: brightness(1.2);
 }
 
 @keyframes star-movement-bottom {
