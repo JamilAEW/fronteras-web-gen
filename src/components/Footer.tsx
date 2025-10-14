@@ -1,0 +1,32 @@
+import { Link } from 'react-router-dom';
+
+const Footer = () => {
+  return (
+    <footer className="bg-primary text-white py-12">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-display font-bold mb-2">EDUCAR SIN FRONTERAS</h2>
+          <p className="text-white/80">
+            Estudia y regularízate con una capacitación de alta demanda laboral
+          </p>
+        </div>
+        <div className="border-t border-white/20 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/70">
+          <p>&copy; {new Date().getFullYear()} Educar Sin Fronteras. Todos los derechos reservados.</p>
+          <div className="flex gap-4">
+            <Link to="/privacidad" className="hover:text-white transition-colors">
+              Política de Privacidad
+            </Link>
+            <Link to="/cookies" className="hover:text-white transition-colors">
+              Cookies
+            </Link>
+            <Link to="/legal" className="hover:text-white transition-colors">
+              Aviso Legal
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

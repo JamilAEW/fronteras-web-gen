@@ -1,12 +1,21 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background font-sans">
+      <Navbar />
+      <main>
+        <Hero />
+        <section id="form-inicio" className="py-20 bg-brand-50">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <h2 className="text-4xl font-display font-bold mb-4">Próximamente contenido completo</h2>
+            <p className="text-lg text-muted-foreground">La web está en construcción. Todos los cursos y componentes están listos.</p>
+          </div>
+        </section>
+      </main>
+      <Footer />
     </div>
   );
 };

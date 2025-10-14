@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ['Poppins', 'sans-serif'],
+        sans: ['Open Sans', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,6 +51,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        brand: {
+          DEFAULT: "hsl(var(--brand))",
+          900: "hsl(var(--brand-900))",
+          50: "hsl(var(--brand-50))",
+          yellow: "hsl(var(--brand-yellow))",
+          red: "hsl(var(--brand-red))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +68,9 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      boxShadow: {
+        soft: '0 10px 30px -12px rgba(35, 36, 76, 0.25)',
       },
       borderRadius: {
         lg: "var(--radius)",
