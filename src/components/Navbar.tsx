@@ -70,18 +70,12 @@ const Navbar = () => {
               Inicio
             </Link>
 
-            <div className="relative" ref={megaMenuRef}>
-              <button
-                onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
-                onMouseEnter={() => setIsMegaMenuOpen(true)}
-                className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
-                aria-expanded={isMegaMenuOpen}
-                aria-haspopup="true"
-              >
-                Cursos
-              </button>
-              {isMegaMenuOpen && <MegaMenuCursos />}
-            </div>
+            <Link
+              to="/cursos"
+              className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+            >
+              Cursos
+            </Link>
 
             <Link
               to="/quienes-somos"
@@ -146,17 +140,12 @@ const Navbar = () => {
             >
               Inicio
             </Link>
-            <button
-              onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
-              className="w-full text-left px-4 py-2 text-sm font-medium text-foreground hover:bg-secondary rounded-md"
+            <Link
+              to="/cursos"
+              className="block px-4 py-2 text-sm font-medium text-foreground hover:bg-secondary rounded-md"
             >
               Cursos
-            </button>
-            {isMegaMenuOpen && (
-              <div className="pl-4">
-                <MegaMenuCursos />
-              </div>
-            )}
+            </Link>
             <Link
               to="/quienes-somos"
               className="block px-4 py-2 text-sm font-medium text-foreground hover:bg-secondary rounded-md"
