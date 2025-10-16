@@ -36,7 +36,8 @@ const Hero = () => {
         </div>
 
         {/* Content overlay */}
-        <div className="absolute inset-0 z-10 flex items-center justify-center">
+        <div className="absolute inset-0 z-40 flex items-center justify-center pointer-events-none">
+          <div className="pointer-events-auto">
           <div className="max-w-4xl mx-auto px-4 text-center py-20">
             <BlurText
               text="INSCRIPCIONES ABIERTAS"
@@ -61,6 +62,7 @@ const Hero = () => {
                 Inscríbete aquí
               </StarBorder>
             </div>
+          </div>
           </div>
         </div>
 
