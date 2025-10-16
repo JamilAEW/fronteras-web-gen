@@ -3,9 +3,6 @@ import { useEffect } from 'react';
 import { initFlowbite } from 'flowbite';
 import BlurText from './BlurText';
 import StarBorder from './StarBorder';
-import heroImage1 from '@/assets/hero-academia-1.jpg';
-import heroImage2 from '@/assets/hero-academia-2.jpg';
-import heroImage3 from '@/assets/hero-academia-3.jpg';
 
 const Hero = () => {
   useEffect(() => {
@@ -20,30 +17,21 @@ const Hero = () => {
         <div className="relative h-full overflow-hidden">
           {/* Item 1 */}
           <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img 
-              src={heroImage1} 
-              className="absolute block w-full h-full object-cover" 
-              alt="Academia de formación - Aula moderna"
-            />
-            <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-brand-900">
+              <div className="absolute inset-0 bg-black/40" />
+            </div>
           </div>
           {/* Item 2 */}
           <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img 
-              src={heroImage2} 
-              className="absolute block w-full h-full object-cover" 
-              alt="Academia de formación - Estudiantes colaborando"
-            />
-            <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute inset-0 bg-gradient-to-br from-brand-900 via-primary to-accent">
+              <div className="absolute inset-0 bg-black/40" />
+            </div>
           </div>
           {/* Item 3 */}
           <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img 
-              src={heroImage3} 
-              className="absolute block w-full h-full object-cover" 
-              alt="Academia de formación - Instructor profesional"
-            />
-            <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute inset-0 bg-gradient-to-br from-accent via-brand-900 to-primary">
+              <div className="absolute inset-0 bg-black/40" />
+            </div>
           </div>
         </div>
 
