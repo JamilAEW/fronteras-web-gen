@@ -4,22 +4,22 @@ import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 const stats = [
   {
     icon: StarFilledIcon,
-    value: '30',
+    value: '6',
     label: 'Años de experiencia',
   },
   {
     icon: PersonIcon,
-    value: '24.000',
+    value: '14.000',
     label: 'Alumnos formados',
   },
   {
     icon: BarChartIcon,
-    value: '2.400',
+    value: '466',
     label: 'Programas finalizados',
   },
   {
     icon: BackpackIcon,
-    value: '1.600',
+    value: '8.000',
     label: 'Prácticas en empresas',
   },
 ];
