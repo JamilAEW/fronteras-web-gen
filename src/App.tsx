@@ -8,6 +8,7 @@ import Cursos from "./pages/Cursos";
 import Curso from "./pages/Curso";
 import QuienesSomos from "./pages/QuienesSomos";
 import Contacto from "./pages/Contacto";
+import Privacidad from "./pages/Privacidad";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/cursos/:slug" element={<Curso />} />
           <Route path="/quienes-somos" element={<QuienesSomos />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/privacidad" element={<Privacidad />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
