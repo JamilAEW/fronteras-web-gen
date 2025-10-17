@@ -3,9 +3,11 @@ import LogoLoop from './LogoLoop';
 import comunidadMadridLogo from '@/assets/logos/comunidad-madrid.webp';
 import euneizLogo from '@/assets/logos/euneiz.webp';
 import unionEuropeaLogo from '@/assets/logos/union-europea.png';
+import ministerioTrabajoSepeLogo from '@/assets/logos/ministerio-trabajo-sepe.jpg';
 
 const partners = [
   { src: comunidadMadridLogo, name: 'Comunidad de Madrid', alt: 'Logo Comunidad de Madrid' },
+  { src: ministerioTrabajoSepeLogo, name: 'Ministerio de Trabajo y SEPE', alt: 'Logo Ministerio de Trabajo y Economía Social - SEPE' },
   { src: unionEuropeaLogo, name: 'Unión Europea', alt: 'Logo Unión Europea - Cofinanciado por la Unión Europea' },
   { src: euneizLogo, name: 'EUNEIZ', alt: 'Logo Universidad EUNEIZ' },
 ];
