@@ -111,7 +111,7 @@ const Navbar = () => {
             <Button 
               size="sm" 
               asChild 
-              className="bg-[#25D366] hover:bg-[#20BD5A] text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,211,102,0.6)]"
+              className="bg-[#25D366] hover:bg-[#20BD5A] text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,211,102,0.6)] hover:scale-105"
             >
               <a 
                 href="https://wa.link/eaetlq"
@@ -181,7 +181,7 @@ const Navbar = () => {
               <Button 
                 size="sm" 
                 asChild 
-                className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,211,102,0.6)]"
+                className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,211,102,0.6)] hover:scale-105"
               >
                 <a 
                   href="https://wa.link/eaetlq"
