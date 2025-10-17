@@ -1,4 +1,5 @@
 import StickyForm from './StickyForm';
+import ShinyText from './ShinyText';
 import { CheckCircledIcon, StarFilledIcon, BarChartIcon } from '@radix-ui/react-icons';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
@@ -49,7 +50,7 @@ const PresentacionFormulario = () => {
                     <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
                       <Icon className="h-5 w-5 text-accent" aria-hidden="true" />
                     </div>
-                    <p className="text-lg pt-1.5">{feature.text}</p>
+                    <ShinyText text={feature.text} speed={3} className="text-lg pt-1.5" />
                   </div>
                 );
               })}
