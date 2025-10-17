@@ -104,7 +104,7 @@ const Curso = () => {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="border-white text-white hover:bg-white hover:text-primary"
+                  className="border-white text-[hsl(var(--brand-red))] hover:bg-white hover:text-primary"
                   onClick={() => document.getElementById('formulario-pdf')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Descarga el PDF gratis
