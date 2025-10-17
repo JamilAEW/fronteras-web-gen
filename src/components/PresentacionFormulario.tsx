@@ -33,8 +33,7 @@ const PresentacionFormulario = () => {
           {/* Columna izquierda - Presentación */}
           <div>
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-              En Educar Sin Fronteras ofrecemos formación de calidad, oficial y
-              accesible para que logres tus objetivos en España
+              Ofrecemos formación de calidad, oficial y accesible para que logres tus objetivos en España
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
               Nuestro compromiso garantiza tus derechos personales y de la
