@@ -4,12 +4,14 @@ import comunidadMadridLogo from '@/assets/logos/comunidad-madrid.webp';
 import euneizLogo from '@/assets/logos/euneiz.webp';
 import unionEuropeaLogo from '@/assets/logos/union-europea.png';
 import ministerioTrabajoSepeLogo from '@/assets/logos/ministerio-trabajo-sepe.jpg';
+import iso9001Logo from '@/assets/logos/iso-9001.png';
 
 const partners = [
   { src: comunidadMadridLogo, name: 'Comunidad de Madrid', alt: 'Logo Comunidad de Madrid' },
   { src: ministerioTrabajoSepeLogo, name: 'Ministerio de Trabajo y SEPE', alt: 'Logo Ministerio de Trabajo y Economía Social - SEPE' },
   { src: unionEuropeaLogo, name: 'Unión Europea', alt: 'Logo Unión Europea - Cofinanciado por la Unión Europea' },
   { src: euneizLogo, name: 'EUNEIZ', alt: 'Logo Universidad EUNEIZ' },
+  { src: iso9001Logo, name: 'ISO 9001', alt: 'Certificación ISO 9001' },
 ];
 
 const partnerLogos = partners.map(partner => ({
