@@ -6,10 +6,7 @@ import euneizLogo from '@/assets/logos/euneiz.webp';
 
 const partners = [
   { src: comunidadMadridLogo, name: 'Comunidad de Madrid', alt: 'Logo Comunidad de Madrid' },
-  { name: 'Gobierno de España', alt: 'Logo Gobierno de España' },
   { src: sepeLogo, name: 'SEPE', alt: 'Logo SEPE - Servicio Público de Empleo Estatal' },
-  { name: 'Unión Europea - FSE', alt: 'Logo Fondo Social Europeo' },
-  { name: 'Lider System', alt: 'Logo Lider System' },
   { src: euneizLogo, name: 'EUNEIZ', alt: 'Logo Universidad EUNEIZ' },
 ];
 
