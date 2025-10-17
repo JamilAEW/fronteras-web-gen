@@ -108,7 +108,7 @@ const Navbar = () => {
             <Button
               size="sm"
               asChild
-              className="bg-[#F2E035] hover:bg-[#D9C830] text-gray-900 font-medium transition-all duration-300 hover:shadow-lg"
+              className="bg-[#F2E035] hover:bg-brand-red text-gray-900 hover:text-white font-medium transition-all duration-300 hover:shadow-lg"
             >
               <a
                 href="https://portal.educarsinfronteras.es/acceso.cgi"
@@ -173,7 +173,7 @@ const Navbar = () => {
               Contacto
             </Link>
             <div className="px-4 pt-2 space-y-2">
-              <Button size="sm" asChild className="w-full bg-[#F2E035] hover:bg-[#D9C830] text-gray-900 font-medium transition-all duration-300 hover:shadow-lg">
+              <Button size="sm" asChild className="w-full bg-[#F2E035] hover:bg-brand-red text-gray-900 hover:text-white font-medium transition-all duration-300 hover:shadow-lg">
                 <a
                   href="https://portal.educarsinfronteras.es/acceso.cgi"
                   target="_blank"
