@@ -1,6 +1,5 @@
 import StickyForm from './StickyForm';
 import ShinyText from './ShinyText';
-import RippleGrid from './RippleGrid';
 import { CheckCircledIcon, StarFilledIcon, BarChartIcon } from '@radix-ui/react-icons';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
@@ -26,20 +25,11 @@ const PresentacionFormulario = () => {
     <section 
       ref={ref as React.RefObject<HTMLElement>}
       id="form-inicio" 
-      className={`relative py-20 bg-brand-red transition-all duration-1000 ${
+      className={`py-20 bg-brand-red transition-all duration-1000 ${
         isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
       }`}
     >
-      <RippleGrid 
-        gridColor="#FFD700"
-        rippleIntensity={0.08}
-        gridSize={8.0}
-        gridThickness={12.0}
-        opacity={0.3}
-        glowIntensity={0.15}
-        mouseInteraction={true}
-      />
-      <div className="max-w-7xl mx-auto px-4 relative z-10">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Columna izquierda - Presentación */}
           <div className="text-white">
