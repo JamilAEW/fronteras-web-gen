@@ -11,6 +11,7 @@ import {
   DialogClose,
 } from '@/components/ui/dialog';
 import whatsappQR from '@/assets/whatsapp-qr.png';
+import logo from '@/assets/logo-educar-sin-fronteras.webp';
 import MegaMenuCursos from './MegaMenuCursos';
 
 const Navbar = () => {
@@ -68,7 +69,7 @@ const Navbar = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-display font-bold text-primary">ESF</span>
+            <img src={logo} alt="Educar Sin Fronteras" className="h-12 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
