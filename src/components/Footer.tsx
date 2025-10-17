@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
+import logoJamEducar from '@/assets/logo-jam-educar.webp';
 
 const Footer = () => {
   return (
     <footer className="bg-primary text-white py-12">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-8">
+          <img 
+            src={logoJamEducar} 
+            alt="JAM Educar Sin Fronteras" 
+            className="h-16 mx-auto mb-4"
+          />
           <h2 className="text-2xl font-display font-bold mb-2">EDUCAR SIN FRONTERAS</h2>
           <p className="text-white/80">
             Estudia y regularízate con una capacitación de alta demanda laboral
