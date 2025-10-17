@@ -1,4 +1,5 @@
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
+import LogoLoop from './LogoLoop';
 
 const partners = [
   { name: 'Comunidad de Madrid', alt: 'Logo Comunidad de Madrid' },
@@ -8,6 +9,18 @@ const partners = [
   { name: 'Lider System', alt: 'Logo Lider System' },
   { name: 'EUNEIZ', alt: 'Logo Universidad EUNEIZ' },
 ];
+
+const partnerLogos = partners.map(partner => ({
+  node: (
+    <div className="flex items-center justify-center px-6 py-3 bg-white rounded-lg border border-slate-200 shadow-sm min-w-[180px]">
+      <span className="text-sm text-center font-medium text-muted-foreground whitespace-nowrap">
+        {partner.name}
+      </span>
+    </div>
+  ),
+  title: partner.alt,
+  ariaLabel: partner.alt
+}));
 
 const PartnersStrip = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -27,19 +40,19 @@ const PartnersStrip = () => {
             Acreditaciones y certificaciones oficiales
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-          {partners.map((partner, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center p-4 bg-white rounded-lg border border-slate-200"
-              role="img"
-              aria-label={partner.alt}
-            >
-              <span className="text-xs text-center font-medium text-muted-foreground">
-                {partner.name}
-              </span>
-            </div>
-          ))}
+        <div className="py-8">
+          <LogoLoop
+            logos={partnerLogos}
+            speed={50}
+            direction="left"
+            logoHeight={60}
+            gap={24}
+            pauseOnHover
+            scaleOnHover
+            fadeOut
+            fadeOutColor="hsl(var(--brand-50))"
+            ariaLabel="Nuestros aliados y certificaciones"
+          />
         </div>
       </div>
     </section>
