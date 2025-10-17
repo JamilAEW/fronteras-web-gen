@@ -25,7 +25,7 @@ const PresentacionFormulario = () => {
     <section 
       ref={ref as React.RefObject<HTMLElement>}
       id="form-inicio" 
-      className={`py-20 bg-brand-50 transition-all duration-1000 ${
+      className={`py-20 bg-brand-red transition-all duration-1000 ${
         isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
       }`}
     >
