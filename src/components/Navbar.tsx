@@ -106,10 +106,9 @@ const Navbar = () => {
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center space-x-3">
             <Button
-              variant="outline"
               size="sm"
               asChild
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              className="bg-[#F2E035] hover:bg-[#D9C830] text-gray-900 font-medium transition-all duration-300 hover:shadow-lg"
             >
               <a
                 href="https://portal.educarsinfronteras.es/acceso.cgi"
@@ -174,7 +173,7 @@ const Navbar = () => {
               Contacto
             </Link>
             <div className="px-4 pt-2 space-y-2">
-              <Button variant="outline" size="sm" asChild className="w-full">
+              <Button size="sm" asChild className="w-full bg-[#F2E035] hover:bg-[#D9C830] text-gray-900 font-medium transition-all duration-300 hover:shadow-lg">
                 <a
                   href="https://portal.educarsinfronteras.es/acceso.cgi"
                   target="_blank"
