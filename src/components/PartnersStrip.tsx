@@ -1,11 +1,12 @@
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import LogoLoop from './LogoLoop';
 import comunidadMadridLogo from '@/assets/logos/comunidad-madrid.webp';
+import sepeLogo from '@/assets/logos/sepe.png';
 
 const partners = [
   { src: comunidadMadridLogo, name: 'Comunidad de Madrid', alt: 'Logo Comunidad de Madrid' },
   { name: 'Gobierno de España', alt: 'Logo Gobierno de España' },
-  { name: 'SEPE', alt: 'Logo SEPE - Servicio Público de Empleo Estatal' },
+  { src: sepeLogo, name: 'SEPE', alt: 'Logo SEPE - Servicio Público de Empleo Estatal' },
   { name: 'Unión Europea - FSE', alt: 'Logo Fondo Social Europeo' },
   { name: 'Lider System', alt: 'Logo Lider System' },
   { name: 'EUNEIZ', alt: 'Logo Universidad EUNEIZ' },
