@@ -1,13 +1,11 @@
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import LogoLoop from './LogoLoop';
 import comunidadMadridLogo from '@/assets/logos/comunidad-madrid.webp';
-import sepeLogo from '@/assets/logos/sepe.png';
 import euneizLogo from '@/assets/logos/euneiz.webp';
 import unionEuropeaLogo from '@/assets/logos/union-europea.png';
 
 const partners = [
   { src: comunidadMadridLogo, name: 'Comunidad de Madrid', alt: 'Logo Comunidad de Madrid' },
-  { src: sepeLogo, name: 'SEPE', alt: 'Logo SEPE - Servicio Público de Empleo Estatal' },
   { src: unionEuropeaLogo, name: 'Unión Europea', alt: 'Logo Unión Europea - Cofinanciado por la Unión Europea' },
   { src: euneizLogo, name: 'EUNEIZ', alt: 'Logo Universidad EUNEIZ' },
 ];
