@@ -133,15 +133,27 @@ const Navbar = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-md text-foreground hover:bg-secondary"
+            className="md:hidden p-2 rounded-md hover:bg-secondary group h-12 w-12 flex items-center justify-center"
             aria-label="Menú de navegación"
             aria-expanded={isMobileMenuOpen}
           >
-            {isMobileMenuOpen ? (
-              <Cross1Icon className="h-6 w-6" aria-hidden="true" />
-            ) : (
-              <HamburgerMenuIcon className="h-6 w-6" aria-hidden="true" />
-            )}
+            <div className="grid justify-items-center gap-1.5 w-6">
+              <span 
+                className={`h-0.5 w-6 rounded-full bg-foreground transition-all duration-300 ${
+                  isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''
+                }`}
+              />
+              <span 
+                className={`h-0.5 w-6 rounded-full bg-foreground transition-all duration-300 ${
+                  isMobileMenuOpen ? 'scale-x-0' : ''
+                }`}
+              />
+              <span 
+                className={`h-0.5 w-6 rounded-full bg-foreground transition-all duration-300 ${
+                  isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
+                }`}
+              />
+            </div>
           </button>
         </div>
 
