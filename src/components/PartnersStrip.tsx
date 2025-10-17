@@ -52,8 +52,8 @@ const PartnersStrip = () => {
             logos={partnerLogos}
             speed={50}
             direction="left"
-            logoHeight={100}
-            gap={32}
+            logoHeight={140}
+            gap={40}
             pauseOnHover
             scaleOnHover
             fadeOut
