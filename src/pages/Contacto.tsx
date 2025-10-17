@@ -6,8 +6,10 @@ import { Button } from '@/components/ui/button';
 import CoursesSelect from '@/components/CoursesSelect';
 import { toast } from 'sonner';
 import { EnvelopeClosedIcon, MobileIcon } from '@radix-ui/react-icons';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 const Contacto = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const [formData, setFormData] = useState({
     nombre: '',
     apellidos: '',
@@ -51,7 +53,12 @@ const Contacto = () => {
         </section>
 
         {/* Formulario y datos de contacto */}
-        <section className="py-20 bg-background">
+        <section 
+          ref={ref as React.RefObject<HTMLElement>}
+          className={`py-20 bg-background transition-all duration-1000 ${
+            isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
+          }`}
+        >
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Formulario */}

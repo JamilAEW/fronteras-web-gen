@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 const FormularioCentral = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
@@ -26,7 +28,12 @@ const FormularioCentral = () => {
   };
 
   return (
-    <section className="py-20 bg-primary">
+    <section 
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`py-20 bg-primary transition-all duration-1000 ${
+        isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
+      }`}
+    >
       <div className="max-w-3xl mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">

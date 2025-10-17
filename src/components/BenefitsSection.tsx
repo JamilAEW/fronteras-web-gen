@@ -1,4 +1,5 @@
 import { CheckCircledIcon, PersonIcon, BarChartIcon, GlobeIcon } from '@radix-ui/react-icons';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 const benefits = [
   {
@@ -24,8 +25,15 @@ const benefits = [
 ];
 
 const BenefitsSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
-    <section className="py-20 bg-background">
+    <section 
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`py-20 bg-background transition-all duration-1000 ${
+        isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">

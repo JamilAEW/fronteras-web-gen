@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 const DiscountBlock = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
@@ -26,7 +28,12 @@ const DiscountBlock = () => {
   };
 
   return (
-    <section className="py-20 bg-background">
+    <section 
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`py-20 bg-background transition-all duration-1000 ${
+        isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4">
         <div className="bg-gradient-to-br from-primary to-brand-900 rounded-3xl overflow-hidden shadow-soft">
           <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">

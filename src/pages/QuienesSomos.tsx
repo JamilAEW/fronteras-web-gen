@@ -5,8 +5,14 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import { CheckCircledIcon, RocketIcon } from '@radix-ui/react-icons';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 const QuienesSomos = () => {
+  const { ref: misionRef, isVisible: misionVisible } = useScrollAnimation();
+  const { ref: quienesRef, isVisible: quienesVisible } = useScrollAnimation();
+  const { ref: acredRef, isVisible: acredVisible } = useScrollAnimation();
+  const { ref: ctaRef, isVisible: ctaVisible } = useScrollAnimation();
+  
   return (
     <div className="min-h-screen bg-background font-sans">
       <Navbar />
@@ -24,7 +30,12 @@ const QuienesSomos = () => {
         </section>
 
         {/* Misión y Visión */}
-        <section className="py-20 bg-background">
+        <section 
+          ref={misionRef as React.RefObject<HTMLElement>}
+          className={`py-20 bg-background transition-all duration-1000 ${
+            misionVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
+          }`}
+        >
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12">
               {/* Misión */}
@@ -51,7 +62,12 @@ const QuienesSomos = () => {
         </section>
 
         {/* ¿Quiénes somos? */}
-        <section className="py-20 bg-brand-50">
+        <section 
+          ref={quienesRef as React.RefObject<HTMLElement>}
+          className={`py-20 bg-brand-50 transition-all duration-1000 ${
+            quienesVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
+          }`}
+        >
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 text-center">
               ¿QUIÉNES SOMOS?
@@ -67,7 +83,12 @@ const QuienesSomos = () => {
         </section>
 
         {/* Garantías y acreditaciones */}
-        <section className="py-20 bg-background">
+        <section 
+          ref={acredRef as React.RefObject<HTMLElement>}
+          className={`py-20 bg-background transition-all duration-1000 ${
+            acredVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
+          }`}
+        >
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-12 text-center">
               Garantías y acreditaciones
@@ -115,7 +136,12 @@ const QuienesSomos = () => {
         </section>
 
         {/* CTAs finales */}
-        <section className="py-20 bg-brand-50">
+        <section 
+          ref={ctaRef as React.RefObject<HTMLElement>}
+          className={`py-20 bg-brand-50 transition-all duration-1000 ${
+            ctaVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
+          }`}
+        >
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">
               ¿Listo para dar el siguiente paso?

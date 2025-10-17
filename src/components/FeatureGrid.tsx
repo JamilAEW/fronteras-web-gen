@@ -1,4 +1,5 @@
 import { ClipboardIcon, RocketIcon, ChatBubbleIcon } from '@radix-ui/react-icons';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 const features = [
   {
@@ -19,8 +20,15 @@ const features = [
 ];
 
 const FeatureGrid = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
-    <section className="py-16 bg-background">
+    <section 
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`py-16 bg-background transition-all duration-1000 ${
+        isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-6">
           {features.map((feature, index) => {

@@ -1,3 +1,5 @@
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
+
 const partners = [
   { name: 'Comunidad de Madrid', alt: 'Logo Comunidad de Madrid' },
   { name: 'Gobierno de España', alt: 'Logo Gobierno de España' },
@@ -8,8 +10,14 @@ const partners = [
 ];
 
 const PartnersStrip = () => {
+  const { ref, isVisible } = useScrollAnimation();
   return (
-    <section className="py-16 bg-brand-50">
+    <section 
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`py-16 bg-brand-50 transition-all duration-1000 ${
+        isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">

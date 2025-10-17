@@ -7,6 +7,7 @@ import {
 import { faqGeneral } from '@/data/faq-general';
 import { QuestionMarkCircledIcon } from '@radix-ui/react-icons';
 import type { Faq } from '@/data/courses';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 interface FaqAccordionProps {
   faqs?: Faq[];
@@ -16,9 +17,15 @@ interface FaqAccordionProps {
 
 const FaqAccordion = ({ faqs, showTitle = true, showIcon = true }: FaqAccordionProps) => {
   const faqsToShow = faqs || faqGeneral;
+  const { ref, isVisible } = useScrollAnimation();
   
   return (
-    <section className="py-20 bg-background">
+    <section 
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`py-20 bg-background transition-all duration-1000 ${
+        isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
+      }`}
+    >
       <div className="max-w-4xl mx-auto px-4">
         {showTitle && (
           <div className="text-center mb-12">

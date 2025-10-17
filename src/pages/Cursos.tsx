@@ -5,9 +5,13 @@ import Footer from '@/components/Footer';
 import CourseCard from '@/components/CourseCard';
 import { courses, Categoria } from '@/data/courses';
 import { Button } from '@/components/ui/button';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 const Cursos = () => {
   const [selectedCategory, setSelectedCategory] = useState<Categoria | 'todos'>('todos');
+  const { ref: introRef, isVisible: introVisible } = useScrollAnimation();
+  const { ref: filterRef, isVisible: filterVisible } = useScrollAnimation();
+  const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation();
 
   const filteredCourses = selectedCategory === 'todos' 
     ? courses 
@@ -42,7 +46,12 @@ const Cursos = () => {
       </section>
 
       {/* Intro Text Section */}
-      <section className="py-16 bg-background">
+      <section 
+        ref={introRef as React.RefObject<HTMLElement>}
+        className={`py-16 bg-background transition-all duration-1000 ${
+          introVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-lg text-foreground leading-relaxed">
@@ -53,7 +62,12 @@ const Cursos = () => {
       </section>
 
       {/* Filter Buttons */}
-      <section className="py-8 bg-secondary/30">
+      <section 
+        ref={filterRef as React.RefObject<HTMLElement>}
+        className={`py-8 bg-secondary/30 transition-all duration-1000 ${
+          filterVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-3">
             <Button
@@ -82,7 +96,12 @@ const Cursos = () => {
       </section>
 
       {/* Courses Grid */}
-      <section className="py-16 bg-background">
+      <section 
+        ref={gridRef as React.RefObject<HTMLElement>}
+        className={`py-16 bg-background transition-all duration-1000 ${
+          gridVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCourses.map((curso) => (

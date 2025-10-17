@@ -1,5 +1,6 @@
 import StickyForm from './StickyForm';
 import { CheckCircledIcon, StarFilledIcon, BarChartIcon } from '@radix-ui/react-icons';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 const features = [
   {
@@ -17,8 +18,16 @@ const features = [
 ];
 
 const PresentacionFormulario = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
-    <section id="form-inicio" className="py-20 bg-brand-50">
+    <section 
+      ref={ref as React.RefObject<HTMLElement>}
+      id="form-inicio" 
+      className={`py-20 bg-brand-50 transition-all duration-1000 ${
+        isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Columna izquierda - Presentación */}
