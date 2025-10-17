@@ -1,13 +1,17 @@
 import { RocketIcon } from '@radix-ui/react-icons';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { initFlowbite } from 'flowbite';
 import BlurText from './BlurText';
 import StarBorder from './StarBorder';
+import StickyForm from './StickyForm';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import heroImage1 from '@/assets/hero-academia-1.jpg';
 import heroImage2 from '@/assets/hero-academia-2.jpg';
 import heroImage3 from '@/assets/hero-academia-3.jpg';
 
 const Hero = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  
   useEffect(() => {
     initFlowbite();
   }, []);
@@ -64,8 +68,8 @@ const Hero = () => {
             </p>
             <div className="flex justify-center">
               <StarBorder
-                as="a"
-                href="#form-inicio"
+                as="button"
+                onClick={() => setIsFormOpen(true)}
                 color="cyan"
                 speed="5s"
                 className="cursor-pointer"
@@ -153,6 +157,18 @@ const Hero = () => {
           </span>
         </button>
       </div>
+
+      {/* Dialog con formulario */}
+      <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-display font-bold">
+              Inscríbete en nuestros cursos
+            </DialogTitle>
+          </DialogHeader>
+          <StickyForm />
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
