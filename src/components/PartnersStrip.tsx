@@ -12,8 +12,8 @@ const partners = [
 
 const partnerLogos = partners.map(partner => ({
   node: (
-    <div className="flex items-center justify-center px-6 py-3 bg-white rounded-lg border border-slate-200 shadow-sm min-w-[180px]">
-      <span className="text-sm text-center font-medium text-muted-foreground whitespace-nowrap">
+    <div className="flex items-center justify-center px-6 py-3 bg-white/10 rounded-lg border border-white/20 shadow-sm min-w-[180px]">
+      <span className="text-sm text-center font-medium text-white whitespace-nowrap">
         {partner.name}
       </span>
     </div>
@@ -27,16 +27,16 @@ const PartnersStrip = () => {
   return (
     <section 
       ref={ref as React.RefObject<HTMLElement>}
-      className={`py-16 bg-brand-50 transition-all duration-1000 ${
+      className={`py-16 bg-primary text-white transition-all duration-1000 ${
         isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-white">
             Nuestros aliados que avalan el trabajo que realizamos
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-white/80">
             Acreditaciones y certificaciones oficiales
           </p>
         </div>
@@ -50,7 +50,7 @@ const PartnersStrip = () => {
             pauseOnHover
             scaleOnHover
             fadeOut
-            fadeOutColor="hsl(var(--brand-50))"
+            fadeOutColor="hsl(var(--primary))"
             ariaLabel="Nuestros aliados y certificaciones"
           />
         </div>
