@@ -78,10 +78,10 @@ export const StaggeredMenu = ({
       gsap.set(plusV, { transformOrigin: '50% 50%', rotate: 90 });
       gsap.set(icon, { rotate: 0, transformOrigin: '50% 50%' });
       gsap.set(textInner, { yPercent: 0 });
-      if (toggleBtnRef.current) gsap.set(toggleBtnRef.current, { color: menuButtonColor });
+      // Don't set color via GSAP - let CSS handle it
     });
     return () => ctx.revert();
-  }, [menuButtonColor, position]);
+  }, [position]);
 
   const buildOpenTimeline = useCallback(() => {
     const panel = panelRef.current;
@@ -259,16 +259,11 @@ export const StaggeredMenu = ({
       const btn = toggleBtnRef.current;
       if (!btn) return;
       colorTweenRef.current?.kill();
+      // Use CSS classes instead of GSAP color animation to avoid CSS variable parsing issues
       if (changeMenuColorOnOpen) {
-        const targetColor = opening ? openMenuButtonColor : menuButtonColor;
-        colorTweenRef.current = gsap.to(btn, {
-          color: targetColor,
-          delay: 0.18,
-          duration: 0.3,
-          ease: 'power2.out'
-        });
+        btn.style.color = opening ? openMenuButtonColor : menuButtonColor;
       } else {
-        gsap.set(btn, { color: menuButtonColor });
+        btn.style.color = menuButtonColor;
       }
     },
     [openMenuButtonColor, menuButtonColor, changeMenuColorOnOpen]
@@ -276,11 +271,12 @@ export const StaggeredMenu = ({
 
   React.useEffect(() => {
     if (toggleBtnRef.current) {
+      // Set color via inline styles instead of GSAP
       if (changeMenuColorOnOpen) {
         const targetColor = openRef.current ? openMenuButtonColor : menuButtonColor;
-        gsap.set(toggleBtnRef.current, { color: targetColor });
+        toggleBtnRef.current.style.color = targetColor;
       } else {
-        gsap.set(toggleBtnRef.current, { color: menuButtonColor });
+        toggleBtnRef.current.style.color = menuButtonColor;
       }
     }
   }, [changeMenuColorOnOpen, menuButtonColor, openMenuButtonColor]);
