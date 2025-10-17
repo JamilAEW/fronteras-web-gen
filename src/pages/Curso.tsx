@@ -96,6 +96,7 @@ const Curso = () => {
                 <Button 
                   variant="secondary" 
                   size="lg"
+                  className="text-[hsl(var(--brand-900))]"
                   onClick={() => document.getElementById('formulario-info')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Solicita información
