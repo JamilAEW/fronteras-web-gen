@@ -33,7 +33,7 @@ const PresentacionFormulario = () => {
       {/* Animated background */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <Squares 
-          speed={0.5} 
+          speed={0.2} 
           squareSize={40}
           direction='diagonal'
           borderColor='#fff'
