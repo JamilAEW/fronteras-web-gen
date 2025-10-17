@@ -1,8 +1,9 @@
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import LogoLoop from './LogoLoop';
+import comunidadMadridLogo from '@/assets/logos/comunidad-madrid.webp';
 
 const partners = [
-  { name: 'Comunidad de Madrid', alt: 'Logo Comunidad de Madrid' },
+  { src: comunidadMadridLogo, name: 'Comunidad de Madrid', alt: 'Logo Comunidad de Madrid' },
   { name: 'Gobierno de España', alt: 'Logo Gobierno de España' },
   { name: 'SEPE', alt: 'Logo SEPE - Servicio Público de Empleo Estatal' },
   { name: 'Unión Europea - FSE', alt: 'Logo Fondo Social Europeo' },
@@ -11,15 +12,21 @@ const partners = [
 ];
 
 const partnerLogos = partners.map(partner => ({
-  node: (
-    <div className="flex items-center justify-center px-6 py-3 bg-white/10 rounded-lg border border-white/20 shadow-sm min-w-[180px]">
-      <span className="text-sm text-center font-medium text-white whitespace-nowrap">
-        {partner.name}
-      </span>
-    </div>
-  ),
-  title: partner.alt,
-  ariaLabel: partner.alt
+  ...(partner.src ? {
+    src: partner.src,
+    alt: partner.alt,
+    title: partner.name
+  } : {
+    node: (
+      <div className="flex items-center justify-center px-6 py-3 bg-white/10 rounded-lg border border-white/20 shadow-sm min-w-[180px]">
+        <span className="text-sm text-center font-medium text-white whitespace-nowrap">
+          {partner.name}
+        </span>
+      </div>
+    ),
+    title: partner.alt,
+    ariaLabel: partner.alt
+  })
 }));
 
 const PartnersStrip = () => {
