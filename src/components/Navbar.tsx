@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { RocketIcon, HamburgerMenuIcon, Cross1Icon } from '@radix-ui/react-icons';
+import { HamburgerMenuIcon, Cross1Icon } from '@radix-ui/react-icons';
+import { MessageCircle } from 'lucide-react';
 import MegaMenuCursos from './MegaMenuCursos';
 
 const Navbar = () => {
@@ -108,10 +109,18 @@ const Navbar = () => {
                 Aula Virtual
               </a>
             </Button>
-            <Button size="sm" asChild className="bg-primary hover:bg-brand-900">
-              <a href="#form-inicio">
-                <RocketIcon className="mr-2 h-4 w-4" aria-hidden="true" />
-                Inscríbete
+            <Button 
+              size="sm" 
+              asChild 
+              className="bg-[#25D366] hover:bg-[#20BD5A] text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,211,102,0.6)]"
+            >
+              <a 
+                href="https://wa.link/eaetlq"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle className="mr-2 h-4 w-4" aria-hidden="true" />
+                Habla con una asesora ahora!
               </a>
             </Button>
           </div>
@@ -168,10 +177,18 @@ const Navbar = () => {
                   Aula Virtual
                 </a>
               </Button>
-              <Button size="sm" asChild className="w-full bg-primary">
-                <a href="#form-inicio">
-                  <RocketIcon className="mr-2 h-4 w-4" aria-hidden="true" />
-                  Inscríbete
+              <Button 
+                size="sm" 
+                asChild 
+                className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,211,102,0.6)]"
+              >
+                <a 
+                  href="https://wa.link/eaetlq"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessageCircle className="mr-2 h-4 w-4" aria-hidden="true" />
+                  Habla con una asesora ahora!
                 </a>
               </Button>
             </div>
