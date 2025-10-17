@@ -1,5 +1,6 @@
 import StickyForm from './StickyForm';
 import ShinyText from './ShinyText';
+import Squares from './Squares';
 import { CheckCircledIcon, StarFilledIcon, BarChartIcon } from '@radix-ui/react-icons';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
@@ -25,11 +26,22 @@ const PresentacionFormulario = () => {
     <section 
       ref={ref as React.RefObject<HTMLElement>}
       id="form-inicio" 
-      className={`py-20 bg-brand-red transition-all duration-1000 ${
+      className={`relative py-20 bg-brand-red transition-all duration-1000 ${
         isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4">
+      {/* Animated background */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <Squares 
+          speed={0.5} 
+          squareSize={40}
+          direction='diagonal'
+          borderColor='#fff'
+          hoverFillColor='#222'
+        />
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Columna izquierda - Presentación */}
           <div className="text-white">
