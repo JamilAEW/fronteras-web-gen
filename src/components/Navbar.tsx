@@ -101,6 +101,13 @@ const Navbar = () => {
             >
               Contacto
             </Link>
+
+            <Link
+              to="/guia-gratuita"
+              className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+            >
+              Guía Gratuita
+            </Link>
           </div>
 
           {/* Desktop CTAs */}
@@ -183,6 +190,12 @@ const Navbar = () => {
               className="block px-4 py-2 text-sm font-medium text-foreground hover:bg-secondary rounded-md"
             >
               Contacto
+            </Link>
+            <Link
+              to="/guia-gratuita"
+              className="block px-4 py-2 text-sm font-medium text-foreground hover:bg-secondary rounded-md"
+            >
+              Guía Gratuita
             </Link>
             <div className="px-4 pt-2 space-y-2">
               <Button size="sm" asChild className="w-full bg-[#F2E035] hover:bg-brand-red text-gray-900 hover:text-white font-medium transition-all duration-300 hover:shadow-lg">

@@ -9,6 +9,7 @@ import Cursos from "./pages/Cursos";
 import Curso from "./pages/Curso";
 import QuienesSomos from "./pages/QuienesSomos";
 import Contacto from "./pages/Contacto";
+import GuiaGratuita from "./pages/GuiaGratuita";
 import Privacidad from "./pages/Privacidad";
 import Cookies from "./pages/Cookies";
 import Legal from "./pages/Legal";
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/cursos/:slug" element={<Curso />} />
           <Route path="/quienes-somos" element={<QuienesSomos />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/guia-gratuita" element={<GuiaGratuita />} />
           <Route path="/privacidad" element={<Privacidad />} />
           <Route path="/cookies" element={<Cookies />} />
           <Route path="/legal" element={<Legal />} />
