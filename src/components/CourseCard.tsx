@@ -38,8 +38,8 @@ const CourseCard = ({ curso, isHomepage = false }: CourseCardProps) => {
       
       {/* Gradient overlay */}
       <div 
-        className="absolute inset-0"
-        style={{ background: 'linear-gradient(90deg, rgba(42, 155, 132, 1) 0%, rgba(87, 199, 133, 1) 25%, rgba(237, 221, 83, 1) 100%)' }}
+        className="absolute inset-0 opacity-20"
+        style={{ background: 'linear-gradient(7deg, rgba(42, 155, 132, 1) 0%, rgba(87, 199, 133, 1) 25%, rgba(237, 221, 83, 1) 100%)' }}
       />
       
       {/* Background Pattern */}
