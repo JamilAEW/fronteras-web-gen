@@ -62,7 +62,7 @@ const PresentacionFormulario = () => {
                     <div className="w-10 h-10 rounded-lg bg-brand-yellow/20 flex items-center justify-center flex-shrink-0">
                       <Icon className="h-5 w-5 text-brand-yellow" aria-hidden="true" />
                     </div>
-                    <ShinyText text={feature.text} speed={8} className="text-lg pt-1.5 text-brand-yellow" />
+                    <ShinyText text={feature.text} speed={8} className="text-lg pt-1.5 text-brand-yellow font-semibold" />
                   </div>
                 );
               })}
