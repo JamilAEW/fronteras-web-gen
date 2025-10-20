@@ -133,7 +133,15 @@ const BlogPost = () => {
         </header>
 
         {/* Imagen destacada */}
-        {post.imagen}
+        {post.imagen && (
+          <div className="w-full max-w-5xl mx-auto px-4 -mt-8">
+            <img 
+              src={post.imagen} 
+              alt={post.titulo}
+              className="w-full h-auto rounded-2xl shadow-2xl object-cover max-h-[500px]"
+            />
+          </div>
+        )}
 
         {/* Contenido del post */}
         <div ref={contentRef as React.RefObject<HTMLDivElement>} className={`max-w-4xl mx-auto px-4 py-16 transition-all duration-1000 ${contentVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'}`}>
