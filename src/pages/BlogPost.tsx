@@ -159,7 +159,7 @@ const BlogPost = () => {
         >
           {/* Índice de contenidos */}
           {tableOfContents.length > 0 && (
-            <div className="bg-gradient-to-br from-brand-50 to-white border-l-4 border-primary rounded-lg p-8 mb-12 shadow-sm sticky top-24 z-10">
+            <div className="bg-gradient-to-br from-brand-50 to-white border-l-4 border-primary rounded-lg p-8 mb-12 shadow-sm">
               <h2 className="text-2xl font-display font-bold mb-6 text-foreground flex items-center gap-2">
                 <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
