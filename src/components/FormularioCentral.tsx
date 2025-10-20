@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
-import DotGrid from './DotGrid';
+import Prism from './Prism';
 const FormularioCentral = () => {
   const {
     ref,
@@ -30,17 +30,17 @@ const FormularioCentral = () => {
   };
   return <section ref={ref as React.RefObject<HTMLElement>} className={`relative py-20 bg-primary transition-all duration-1000 ${isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'}`}>
       {/* Animated background */}
-      <div className="absolute inset-0 opacity-20 pointer-events-auto">
-        <DotGrid
-          dotSize={10}
-          gap={15}
-          baseColor="#ffffff"
-          activeColor="#FFD700"
-          proximity={120}
-          shockRadius={250}
-          shockStrength={5}
-          resistance={750}
-          returnDuration={1.5}
+      <div className="absolute inset-0 opacity-30 pointer-events-none">
+        <Prism
+          animationType="rotate"
+          timeScale={0.5}
+          height={3.5}
+          baseWidth={5.5}
+          scale={3.6}
+          hueShift={0}
+          colorFrequency={1}
+          noise={0.5}
+          glow={1}
         />
       </div>
       
