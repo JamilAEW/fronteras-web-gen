@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Curso } from '@/data/courses';
-import { BookOpenIcon } from 'lucide-react';
+import { BookOpenIcon, TrendingUpIcon, ShieldIcon, PackageIcon, PhoneIcon, SparklesIcon, HeartPulseIcon } from 'lucide-react';
 import marketingImage from '@/assets/courses/marketing-digital.jpg';
 import ciberseguridadImage from '@/assets/courses/ciberseguridad.jpg';
 import logisticaImage from '@/assets/courses/logistica.jpg';
@@ -25,8 +25,19 @@ const getCourseImage = (slug: string): string => {
   return sociosanitariaImage; // default
 };
 
+const getCourseIcon = (slug: string) => {
+  if (slug.includes('marketing')) return TrendingUpIcon;
+  if (slug.includes('hacking') || slug.includes('ciberseguridad')) return ShieldIcon;
+  if (slug.includes('logistic') || slug.includes('almacen')) return PackageIcon;
+  if (slug.includes('sociosanitaria') || slug.includes('atencion-sociosanitaria')) return HeartPulseIcon;
+  if (slug.includes('teleasistencia')) return PhoneIcon;
+  if (slug.includes('limpieza')) return SparklesIcon;
+  return BookOpenIcon; // default
+};
+
 const CourseCard = ({ curso, isHomepage = false }: CourseCardProps) => {
   const backgroundImage = getCourseImage(curso.slug);
+  const IconComponent = getCourseIcon(curso.slug);
   
   return (
     <div className="relative bg-gradient-to-br from-slate-50 to-white rounded-3xl border border-slate-200 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group h-full flex flex-col">
@@ -48,8 +59,8 @@ const CourseCard = ({ curso, isHomepage = false }: CourseCardProps) => {
       <div className="relative p-8 flex flex-col h-full">
         {/* Icon */}
         <div className="mb-6 inline-flex">
-          <div className="p-4 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-colors">
-            <BookOpenIcon className="h-10 w-10 text-primary" />
+          <div className="p-4 bg-white/10 rounded-2xl group-hover:bg-white/20 transition-colors backdrop-blur-sm">
+            <IconComponent className="h-10 w-10 text-white" />
           </div>
         </div>
 
