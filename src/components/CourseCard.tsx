@@ -41,11 +41,14 @@ const CourseCard = ({ curso, isHomepage = false }: CourseCardProps) => {
   
   return (
     <div className="relative bg-gradient-to-br from-slate-50 to-white rounded-3xl border border-slate-200 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group h-full flex flex-col">
-      {/* Background Image with 75% opacity */}
+      {/* Background Image with brightness filter */}
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-75"
+        className="absolute inset-0 bg-cover bg-center opacity-75 brightness-150 saturate-50"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       />
+      
+      {/* White overlay for brightness */}
+      <div className="absolute inset-0 bg-white/30" />
       
       {/* Gradient overlay */}
       <div 
