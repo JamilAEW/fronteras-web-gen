@@ -40,77 +40,76 @@ const CourseCard = ({ curso, isHomepage = false }: CourseCardProps) => {
   const IconComponent = getCourseIcon(curso.slug);
   
   return (
-    <div className="relative bg-gradient-to-br from-slate-50 to-white rounded-3xl border border-slate-200 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group h-full flex flex-col">
-      {/* Background Image with brightness filter */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center opacity-75 brightness-150 saturate-50"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-      />
-      
-      {/* White overlay for brightness */}
-      <div className="absolute inset-0 bg-white/30" />
-      
-      {/* Gradient overlay */}
-      <div 
-        className="absolute inset-0 opacity-70"
-        style={{ background: 'linear-gradient(0deg, rgba(207, 10, 0, 1) 0%, rgba(207, 76, 76, 1) 40%, rgba(255, 234, 48, 0) 87%)' }}
-      />
-      
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzk0YTNiOCIgc3Ryb2tlLXdpZHRoPSIwLjUiIG9wYWNpdHk9IjAuMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-20" />
-      
-      <div className="relative p-8 flex flex-col h-full">
-        {/* Icon */}
-        <div className="mb-6 inline-flex">
-          <div className="p-4 bg-white/10 rounded-2xl group-hover:bg-white/20 transition-colors backdrop-blur-sm">
-            <IconComponent className="h-10 w-10 text-white" />
+    <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group h-full flex flex-col">
+      {/* Header Image */}
+      <div className="relative h-48 bg-primary/10">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${backgroundImage})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-card/80" />
+        
+        {/* Icon in header */}
+        <div className="absolute top-4 left-4">
+          <div className="p-3 bg-primary/90 rounded-xl backdrop-blur-sm">
+            <IconComponent className="h-6 w-6 text-primary-foreground" />
           </div>
         </div>
 
-        {/* Badges */}
-        <div className="flex flex-wrap gap-2 mb-4">
+        {/* Badges in header */}
+        <div className="absolute top-4 right-4 flex flex-col gap-2">
           {curso.categoria === 'visado-estancia' ? (
             <>
-              <Badge variant="outline" className="border-primary text-primary bg-primary/5 font-medium">
+              <Badge variant="default" className="bg-primary text-primary-foreground shadow-md">
                 Visado / Estancia
               </Badge>
               {curso.modalidad && (
-                <Badge variant="outline" className="border-blue-500 text-blue-600 bg-blue-50 font-medium capitalize">
+                <Badge variant="secondary" className="shadow-md capitalize">
                   {curso.modalidad === 'mixta' ? 'Semipresencial' : curso.modalidad === 'online' ? 'Online' : 'Presencial'}
                 </Badge>
               )}
             </>
           ) : (
-            <Badge variant="outline" className="border-accent text-accent bg-accent/5 font-medium">
+            <Badge variant="default" className="bg-accent text-accent-foreground shadow-md">
               Arraigo Socioformativo
             </Badge>
           )}
         </div>
+      </div>
 
+      {/* Content */}
+      <div className="p-6 flex flex-col flex-grow">
         {/* Title */}
-        <h3 className="text-2xl font-display font-bold mb-4 text-foreground group-hover:text-primary transition-colors leading-tight">
+        <h3 className="text-xl font-display font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
           {curso.titulo}
         </h3>
 
-        {/* Description */}
-        <p className={`text-sm text-white font-semibold mb-6 flex-grow ${isHomepage ? 'line-clamp-4' : 'line-clamp-3'}`}>
-          {curso.resumen}
-        </p>
+        {/* Course Summary */}
+        <div className="mb-4">
+          <h4 className="text-sm font-semibold text-muted-foreground mb-2">Resumen del curso</h4>
+          <p className={`text-sm text-muted-foreground ${isHomepage ? 'line-clamp-3' : 'line-clamp-4'}`}>
+            {curso.resumen}
+          </p>
+        </div>
 
         {/* Meta Info */}
         {curso.horas && (
-          <div className="text-sm text-white mb-6 font-medium">
-            📚 {curso.horas} horas
+          <div className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
+            <BookOpenIcon className="h-4 w-4" />
+            <span>{curso.horas} horas de formación</span>
           </div>
         )}
+
+        {/* Spacer to push button to bottom */}
+        <div className="flex-grow" />
 
         {/* CTA Button */}
         <Button 
           asChild 
-          className="w-full bg-primary hover:bg-brand-900 text-white font-semibold py-6 rounded-xl shadow-lg hover:shadow-xl transition-all group-hover:scale-[1.02]"
+          className="w-full"
+          size="lg"
         >
           <Link to={`/cursos/${curso.slug}`} className="flex items-center justify-center gap-2">
-            <BookOpenIcon className="h-5 w-5" />
             Más información
           </Link>
         </Button>
