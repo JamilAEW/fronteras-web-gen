@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
+import DotGrid from './DotGrid';
 const FormularioCentral = () => {
   const {
     ref,
@@ -27,8 +28,23 @@ const FormularioCentral = () => {
       rgpd: false
     });
   };
-  return <section ref={ref as React.RefObject<HTMLElement>} className={`py-20 bg-primary transition-all duration-1000 ${isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'}`}>
-      <div className="max-w-3xl mx-auto px-4">
+  return <section ref={ref as React.RefObject<HTMLElement>} className={`relative py-20 bg-primary transition-all duration-1000 ${isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'}`}>
+      {/* Animated background */}
+      <div className="absolute inset-0 opacity-20 pointer-events-auto">
+        <DotGrid
+          dotSize={10}
+          gap={15}
+          baseColor="#ffffff"
+          activeColor="#FFD700"
+          proximity={120}
+          shockRadius={250}
+          shockStrength={5}
+          resistance={750}
+          returnDuration={1.5}
+        />
+      </div>
+      
+      <div className="max-w-3xl mx-auto px-4 relative z-10">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
             Formulario
