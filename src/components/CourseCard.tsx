@@ -38,8 +38,8 @@ const CourseCard = ({ curso, isHomepage = false }: CourseCardProps) => {
       
       {/* Gradient overlay */}
       <div 
-        className="absolute inset-0 opacity-20"
-        style={{ background: 'linear-gradient(7deg, rgba(42, 155, 132, 1) 0%, rgba(87, 199, 133, 1) 25%, rgba(237, 221, 83, 1) 100%)' }}
+        className="absolute inset-0"
+        style={{ background: 'linear-gradient(90deg, rgba(42, 155, 132, 1) 0%, rgba(87, 199, 133, 1) 25%, rgba(237, 221, 83, 1) 100%)' }}
       />
       
       {/* Background Pattern */}
@@ -74,12 +74,12 @@ const CourseCard = ({ curso, isHomepage = false }: CourseCardProps) => {
         </div>
 
         {/* Title */}
-        <h3 className="text-2xl font-display font-bold mb-4 text-[hsl(var(--brand-red))] group-hover:text-primary transition-colors leading-tight">
+        <h3 className="text-2xl font-display font-bold mb-4 text-foreground group-hover:text-primary transition-colors leading-tight">
           {curso.titulo}
         </h3>
 
         {/* Description */}
-        <p className={`text-foreground mb-6 flex-grow bg-white/70 p-4 rounded-lg ${isHomepage ? 'line-clamp-4' : 'line-clamp-3'}`}>
+        <p className={`text-muted-foreground mb-6 flex-grow ${isHomepage ? 'line-clamp-4' : 'line-clamp-3'}`}>
           {curso.resumen}
         </p>
 
