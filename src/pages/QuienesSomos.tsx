@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import { CheckCircledIcon, RocketIcon } from '@radix-ui/react-icons';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
+import PartnersStrip from '@/components/PartnersStrip';
 
 const QuienesSomos = () => {
   const { ref: misionRef, isVisible: misionVisible } = useScrollAnimation();
@@ -134,6 +135,9 @@ const QuienesSomos = () => {
             </div>
           </div>
         </section>
+
+        {/* Carrusel de colaboradores */}
+        <PartnersStrip />
 
         {/* CTAs finales */}
         <section 
