@@ -84,7 +84,7 @@ const FormularioCentral = () => {
             </label>
           </div>
 
-          <Button type="submit" variant="secondary" size="lg" className="w-full bg-white text-primary hover:bg-white/90">
+          <Button type="submit" variant="secondary" size="lg" className="w-full bg-white text-primary hover:bg-white hover:scale-105 hover:brightness-110 hover:shadow-xl transition-all duration-300">
             Inscríbete aquí
           </Button>
         </form>
