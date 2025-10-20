@@ -85,7 +85,7 @@ const CourseCard = ({ curso, isHomepage = false }: CourseCardProps) => {
 
         {/* Meta Info */}
         {curso.horas && (
-          <div className="text-sm text-muted-foreground mb-6 font-medium">
+          <div className="text-sm text-white mb-6 font-medium">
             📚 {curso.horas} horas
           </div>
         )}
