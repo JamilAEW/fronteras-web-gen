@@ -85,7 +85,7 @@ const CourseCard = ({ curso, isHomepage = false }: CourseCardProps) => {
         </div>
 
         {/* Title */}
-        <h3 className="text-2xl font-display font-bold mb-4 text-[hsl(var(--brand-yellow))] group-hover:text-[hsl(var(--brand-yellow))] transition-colors leading-tight">
+        <h3 className="text-2xl font-display font-bold mb-4 text-foreground group-hover:text-primary transition-colors leading-tight">
           {curso.titulo}
         </h3>
 
