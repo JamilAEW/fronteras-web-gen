@@ -3,18 +3,18 @@ import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 const testimonials = [
   {
-    name: 'María González',
-    comment: 'Excelente academia, conseguí mi arraigo gracias a ellos. El equipo muy profesional y el apoyo constante.',
+    name: 'Jeison Trujillo',
+    comment: 'Excelente Servicio, Ana excelente asesora, muy atenta siempre resuelve 😉',
     rating: 5,
   },
   {
-    name: 'Carlos Ramírez',
-    comment: 'La financiación sin intereses me ayudó mucho. Ahora tengo mi certificado y trabajo estable.',
+    name: 'Andres Manrique',
+    comment: 'Muchas gracias por todo, en realidad he quedado muy contento con todo.',
     rating: 5,
   },
   {
-    name: 'Ana Martínez',
-    comment: 'Recomiendo 100%. Los horarios de fin de semana fueron perfectos para mí.',
+    name: 'Nuria Mariela Rivas Vallecillo',
+    comment: 'Muy buena atención súper amables 😊muchas gracias Ana Maria Orozco',
     rating: 5,
   },
 ];
