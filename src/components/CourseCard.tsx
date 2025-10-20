@@ -6,9 +6,10 @@ import { BookOpenIcon } from 'lucide-react';
 
 interface CourseCardProps {
   curso: Curso;
+  isHomepage?: boolean;
 }
 
-const CourseCard = ({ curso }: CourseCardProps) => {
+const CourseCard = ({ curso, isHomepage = false }: CourseCardProps) => {
   return (
     <div className="relative bg-gradient-to-br from-slate-50 to-white rounded-3xl border border-slate-200 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group h-full flex flex-col">
       {/* Background Pattern */}
@@ -48,7 +49,7 @@ const CourseCard = ({ curso }: CourseCardProps) => {
         </h3>
 
         {/* Description */}
-        <p className="text-muted-foreground mb-6 line-clamp-3 flex-grow">
+        <p className={`text-muted-foreground mb-6 flex-grow ${isHomepage ? 'line-clamp-4' : 'line-clamp-3'}`}>
           {curso.resumen}
         </p>
 

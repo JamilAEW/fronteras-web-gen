@@ -26,7 +26,7 @@ const CoursesFeatured = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredCourses.map((curso) => (
-            <CourseCard key={curso.slug} curso={curso} />
+            <CourseCard key={curso.slug} curso={curso} isHomepage />
           ))}
         </div>
       </div>
