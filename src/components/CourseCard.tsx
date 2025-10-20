@@ -79,7 +79,7 @@ const CourseCard = ({ curso, isHomepage = false }: CourseCardProps) => {
         </h3>
 
         {/* Description */}
-        <p className={`text-muted-foreground mb-6 flex-grow ${isHomepage ? 'line-clamp-4' : 'line-clamp-3'}`}>
+        <p className={`text-white font-semibold mb-6 flex-grow ${isHomepage ? 'line-clamp-4' : 'line-clamp-3'}`}>
           {curso.resumen}
         </p>
 
