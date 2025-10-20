@@ -166,7 +166,7 @@ export const blogPosts: BlogPost[] = [
     fecha: '2025-01-17',
     autor: 'Equipo Educar Sin Fronteras',
     categoria: 'visado',
-    imagen: '/src/assets/blog/visado-estudios-espana.jpg',
+    imagen: new URL('@/assets/blog/visado-estudios-espana.jpg', import.meta.url).href,
     destacado: true,
     tags: ['visado', 'estudiante', 'trabajo', 'España 2025', 'formación oficial']
   },
