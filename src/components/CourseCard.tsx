@@ -74,12 +74,12 @@ const CourseCard = ({ curso, isHomepage = false }: CourseCardProps) => {
         </div>
 
         {/* Title */}
-        <h3 className="text-2xl font-display font-bold mb-4 text-foreground group-hover:text-primary transition-colors leading-tight">
+        <h3 className="text-2xl font-display font-bold mb-4 text-[hsl(var(--brand-red))] group-hover:text-primary transition-colors leading-tight">
           {curso.titulo}
         </h3>
 
         {/* Description */}
-        <p className={`text-muted-foreground mb-6 flex-grow ${isHomepage ? 'line-clamp-4' : 'line-clamp-3'}`}>
+        <p className={`text-foreground mb-6 flex-grow bg-white/70 p-4 rounded-lg ${isHomepage ? 'line-clamp-4' : 'line-clamp-3'}`}>
           {curso.resumen}
         </p>
 
