@@ -40,7 +40,6 @@ const BlogPost = () => {
     id: string;
     level: number;
   }[]>([]);
-  const [processedContent, setProcessedContent] = useState('');
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [isWhatsAppDialogOpen, setIsWhatsAppDialogOpen] = useState(false);
 
@@ -49,22 +48,27 @@ const BlogPost = () => {
     return <Navigate to="/404" replace />;
   }
 
-  // Generar tabla de contenidos (índice) y procesar contenido con IDs
+  // Generar tabla de contenidos (índice) extrayendo los IDs del HTML
   useEffect(() => {
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = post.contenido;
-    const headings = tempDiv.querySelectorAll('h2, h3');
-    const toc = Array.from(headings).map((heading, index) => {
-      const id = `section-${index}`;
-      heading.id = id; // Aplicar ID al heading
-      return {
-        text: heading.textContent || '',
-        id,
-        level: heading.tagName === 'H2' ? 2 : 3
-      };
-    });
-    setTableOfContents(toc);
-    setProcessedContent(tempDiv.innerHTML); // Guardar HTML procesado con IDs
+    // Esperar a que el contenido se renderice
+    setTimeout(() => {
+      const contentDiv = document.getElementById('contenido-estudios-espana');
+      if (contentDiv) {
+        const headings = contentDiv.querySelectorAll('h2, h3');
+        const toc = Array.from(headings).map((heading) => {
+          const id = heading.id || `section-${Math.random().toString(36).substr(2, 9)}`;
+          if (!heading.id) {
+            heading.id = id; // Asignar ID si no existe
+          }
+          return {
+            text: heading.textContent || '',
+            id,
+            level: heading.tagName === 'H2' ? 2 : 3
+          };
+        });
+        setTableOfContents(toc);
+      }
+    }, 100);
   }, [post.contenido]);
 
   // Función para scroll suave al hacer clic en el índice
