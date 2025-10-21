@@ -248,6 +248,7 @@ const BlogPost = () => {
                   border-collapse: collapse;
                   min-width: 640px;
                   background: #fff;
+                  table-layout: auto;
                 }
                 #contenido-estudios-espana thead th {
                   text-align: left;
@@ -258,11 +259,15 @@ const BlogPost = () => {
                   padding: 10px 12px;
                   position: sticky; 
                   top: 0;
+                  white-space: nowrap;
                 }
                 #contenido-estudios-espana td { 
                   padding: 12px; 
                   border-bottom: 1px solid var(--line); 
-                  vertical-align: top; 
+                  vertical-align: top;
+                  word-wrap: break-word;
+                  white-space: normal;
+                  min-width: 120px;
                 }
                 #contenido-estudios-espana tbody tr:hover { background: #FCFCFD; }
 
