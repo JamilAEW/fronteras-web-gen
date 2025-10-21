@@ -248,7 +248,7 @@ const BlogPost = () => {
                   border-collapse: collapse;
                   min-width: 640px;
                   background: #fff;
-                  table-layout: auto;
+                  table-layout: fixed;
                 }
                 #contenido-estudios-espana thead th {
                   text-align: left;
@@ -259,15 +259,17 @@ const BlogPost = () => {
                   padding: 10px 12px;
                   position: sticky; 
                   top: 0;
-                  white-space: nowrap;
+                  white-space: normal;
+                  word-wrap: break-word;
+                  overflow-wrap: break-word;
                 }
                 #contenido-estudios-espana td { 
                   padding: 12px; 
                   border-bottom: 1px solid var(--line); 
                   vertical-align: top;
-                  word-wrap: break-word;
                   white-space: normal;
-                  min-width: 120px;
+                  word-wrap: break-word;
+                  overflow-wrap: break-word;
                 }
                 #contenido-estudios-espana tbody tr:hover { background: #FCFCFD; }
 
@@ -290,22 +292,21 @@ const BlogPost = () => {
               `}} />
               
               <div className="wrap" dangerouslySetInnerHTML={{__html: `
-                <!-- HERO -->
                 <div class="eyebrow">Guía 2025 · Estancia por estudios en España</div>
-                <h1>¿Por qué España es una opción ideal para estudiar y trabajar?</h1>
+                <h1 id="por-que-espana">¿Por qué España es una opción ideal para estudiar y trabajar?</h1>
 
                 <figure>
-                  <img loading="lazy" src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1600&auto=format&fit=crop" alt="Estudiantes internacionales sonriendo en un campus en España">
-                  <figcaption>Foto libre: Unsplash (educación y vida universitaria en España).</figcaption>
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1600&auto=format&fit=crop" alt="Estudiantes internacionales en un campus en España">
+                  <figcaption>Foto libre: Unsplash — Vida universitaria en España.</figcaption>
                 </figure>
 
                 <p>Mientras muchos países endurecen los visados para estudiantes — <strong>duraciones largas de espera</strong>, <strong>restricciones para trabajar</strong>, <strong>cargas familiares</strong> — <strong>España</strong> se sitúa como una alternativa <strong>accesible, flexible</strong> y con <strong>buenas oportunidades</strong>.</p>
 
                 <div class="callout">
-                  <b>Puntos clave:</b>
+                  <b>Aquí algunos puntos clave:</b>
                   <ul>
                     <li><strong>Educación de calidad</strong> con matrícula en universidades, centros oficiales y certificados profesionales.</li>
-                    <li><strong>Reformas recientes</strong> que facilitan la estancia por estudios, permiten trabajar y luego cambiar a permiso de trabajo.</li>
+                    <li><strong>Reformas normativas recientes</strong> que facilitan la estancia por estudios y permiten trabajar y luego cambiar a permiso de trabajo.</li>
                     <li><strong>Cultura, idioma, clima y entorno</strong> favorables para estudiantes internacionales.</li>
                   </ul>
                 </div>
@@ -320,42 +321,42 @@ const BlogPost = () => {
                   <figcaption>Unsplash — Organización de documentos y matrícula.</figcaption>
                 </figure>
 
-                <h3>2.1 Formación válida para visado</h3>
+                <h3 id="formacion-valida">2.1 Formación válida para visado</h3>
                 <p>Se requiere una <strong>formación completa</strong>: grado, máster, doctorado, FP de segundo grado, certificación profesional o título técnico.</p>
                 <p><strong>Aplicación a tus cursos:</strong> Todos los programas de <strong>Educar Sin Fronteras</strong> — visado/estancia o <em>arraigo socioformativo</em> — <strong>son acreditados</strong> y cumplen con esta clave.</p>
 
-                <h3>2.2 Matrícula a tiempo completo</h3>
+                <h3 id="matricula-completa">2.2 Matrícula a tiempo completo</h3>
                 <p>Tu curso debe ser <strong>a tiempo completo</strong> (no bastan unas horas semanales). Nuestros módulos están diseñados como programas intensivos, <strong>compatibles con visado/estancia</strong>.</p>
 
-                <h3>2.3 Modalidad presencial o semipresencial</h3>
+                <h3 id="modalidad">2.3 Modalidad presencial o semipresencial</h3>
                 <p>Ahora se acepta modalidad semipresencial siempre que <strong>al menos el 50&nbsp;%</strong> de las clases sean presenciales. Nuestros cursos "mixtos" están diseñados para <strong>cumplir esta norma</strong>.</p>
 
-                <h3>2.4 Acreditación de medios económicos</h3>
+                <h3 id="medios-economicos">2.4 Acreditación de medios económicos</h3>
                 <p>Debes demostrar que dispones de <strong>medios económicos</strong> (habitualmente <strong>100&nbsp;% del IPREM</strong> al mes). Desde 2025, esa cantidad se ha actualizado; te ayudamos a <strong>calcularla</strong> en nuestro asesoramiento.</p>
 
-                <h3>2.5 Seguro médico</h3>
+                <h3 id="seguro-medico">2.5 Seguro médico</h3>
                 <p><strong>Seguro privado o público válido en España</strong>, sin copago, con repatriación. Lo incluimos como servicio adicional para estudiantes de fuera de la UE.</p>
 
-                <h3>2.6 Lugar de solicitud</h3>
+                <h3 id="lugar-solicitud">2.6 Lugar de solicitud</h3>
                 <ul>
                   <li>En un <strong>Consulado de España</strong> en tu país.</li>
                   <li>O <strong>en España</strong>, si ya estás legalmente y cumples los criterios (por ejemplo visado turístico). Este segundo camino es interesante para muchos estudiantes.</li>
                 </ul>
 
-                <h3>2.7 Estancia superior a 6 meses</h3>
+                <h3 id="estancia-6m">2.7 Estancia superior a 6 meses</h3>
                 <p>Si tu curso es superior a 6 meses, necesitarás además <strong>certificado de antecedentes penales</strong> y <strong>certificado médico</strong>. Nuestros cursos <strong>tienen entre 200 y 750 horas</strong> (varios meses) y te preparamos para esta fase.</p>
 
-                <h3>2.8 Familiar acompañante</h3>
+                <h3 id="familiar">2.8 Familiar acompañante</h3>
                 <p>En algunos casos, los <strong>hijos menores o cónyuges</strong> pueden acompañar al estudiante si el curso es superior y se cumplen otros requisitos. Esto puede aplicar en visado de estudios; <strong>te asesoramos</strong> sobre tu caso concreto.</p>
 
-                <h3>2.9 Nuevo reglamento y ventajas laborales</h3>
+                <h3 id="reglamento">2.9 Nuevo reglamento y ventajas laborales</h3>
                 <p>El reglamento más reciente (2025) permite <strong>mayor flexibilidad</strong>, <strong>integración laboral</strong>, <strong>trabajo durante estudios</strong> y <strong>vías para residir</strong> tras los estudios.</p>
 
-                <h3>2.10 Asesoría profesional</h3>
+                <h3 id="asesoria">2.10 Asesoría profesional</h3>
                 <p>Es clave contar con <strong>asesoramiento experto</strong> para evitar errores, denegaciones o trámites largos. Nuestro equipo en <strong>Educar Sin Fronteras</strong> ofrece este acompañamiento.</p>
 
                 <figure>
-                  <img loading="lazy" src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1600&auto=format&fit=crop" alt="Estudiante trabajando con ordenador portátil en biblioteca">
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1600&auto=format&fit=crop" alt="Estudiante trabajando con portátil en biblioteca">
                   <figcaption>Unsplash — Estudiar y trabajar: compatibilidad y organización.</figcaption>
                 </figure>
 
@@ -363,7 +364,7 @@ const BlogPost = () => {
                 <ul class="checklist">
                   <li><strong>Estudiar y trabajar:</strong> puedes trabajar hasta <strong>20 horas semanales</strong> mientras estudias (según normativa vigente).</li>
                   <li><strong>Quedarte a trabajar después:</strong> existen vías legales para <strong>cambiar de visado de estudiante a permiso de residencia y trabajo</strong>.</li>
-                  <li><strong>Formación certificada:</strong> nuestros cursos cumplen con certificaciones oficiales (EUNEIZ, Comunidad de Madrid, SEPE).</li>
+                  <li><strong>Formación certificada:</strong> nuestros cursos cumplen con certificaciones oficiales (<strong>EUNEIZ, Comunidad de Madrid, SEPE</strong>).</li>
                 </ul>
 
                 <figure>
@@ -447,7 +448,7 @@ const BlogPost = () => {
                   <li>Asegúrate de que el <strong>pasaporte</strong> tenga al menos <strong>un año</strong> de validez.</li>
                   <li><strong>Traduce/apostilla</strong> los documentos extranjeros.</li>
                   <li>Conserva <strong>copias</strong> de todo lo entregado.</li>
-                  <li>Durante tu estancia, mantente <strong>matriculado y asistente</strong> para renovar sin problemas.</li>
+                  <li>Mantente <strong>matriculado y asistente</strong> para renovar sin problemas.</li>
                   <li>Planifica tu <strong>transición al trabajo</strong>: adapta tu CV al mercado español, mejora idioma y participa en <strong>prácticas</strong> que ofrecemos.</li>
                 </ul>
 
