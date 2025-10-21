@@ -479,16 +479,20 @@ const BlogPost = () => {
 
             {/* Columna derecha: Imagen + Índice */}
             <div className="lg:sticky lg:top-24 space-y-8 lg:order-2">
-              {/* Imagen destacada */}
-              {post.imagen && (
-                <div className="w-full">
-                  <img 
-                    src={post.imagen} 
-                    alt={post.titulo}
-                    className="w-full h-auto rounded-xl shadow-lg object-cover"
-                  />
+              {/* Video destacado */}
+              <div className="w-full rounded-xl shadow-lg overflow-hidden bg-black">
+                <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+                  <iframe 
+                    loading="lazy"
+                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                    src="https://www.youtube.com/embed/BvRKrzfCBqE" 
+                    title={post.titulo}
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowFullScreen>
+                  </iframe>
                 </div>
-              )}
+              </div>
 
               {/* Índice de contenidos */}
               {tableOfContents.length > 0 && (
