@@ -273,11 +273,13 @@ const BlogPost = () => {
                   <p className="text-white/90 mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
                     Contáctanos hoy y descubre cómo nuestros cursos pueden ayudarte a alcanzar tus objetivos en España.
                   </p>
-                  <Link to="/contacto">
-                    <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                      Contactar ahora
-                    </Button>
-                  </Link>
+                  <Button 
+                    size="lg" 
+                    className="bg-white text-primary hover:bg-white/90 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                    onClick={() => setIsFormOpen(true)}
+                  >
+                    Contactar ahora
+                  </Button>
                 </div>
               </div>
             </div>
