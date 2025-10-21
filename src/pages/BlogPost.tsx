@@ -10,6 +10,8 @@ import Footer from '@/components/Footer';
 import { getPostBySlug } from '@/data/blog';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
+import StickyForm from '@/components/StickyForm';
 import { ArrowLeft, Calendar, User } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import { useEffect, useState } from 'react';
@@ -38,6 +40,7 @@ const BlogPost = () => {
     level: number;
   }[]>([]);
   const [processedContent, setProcessedContent] = useState('');
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   // Si no existe el post, redirigir a 404
   if (!post) {
@@ -234,11 +237,13 @@ const BlogPost = () => {
                 <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
                   Nuestro equipo de expertos está listo para ayudarte con tu proceso. Agenda una consulta gratuita.
                 </p>
-                <Link to="/contacto">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold shadow-md hover:shadow-lg transition-all">
-                    Solicitar información
-                  </Button>
-                </Link>
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-white font-semibold shadow-md hover:shadow-lg transition-all"
+                  onClick={() => setIsFormOpen(true)}
+                >
+                  Solicitar información
+                </Button>
               </div>
 
               {/* Tags */}
@@ -279,6 +284,13 @@ const BlogPost = () => {
           </div>
         </div>
       </article>
+
+      {/* Formulario popup */}
+      <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+          <StickyForm />
+        </DialogContent>
+      </Dialog>
 
       <Footer />
     </div>;
