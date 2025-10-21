@@ -141,100 +141,320 @@ const BlogPost = () => {
         <div ref={contentRef as React.RefObject<HTMLDivElement>} className={`max-w-7xl mx-auto px-4 py-16 transition-all duration-1000 ${contentVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'}`}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Columna izquierda: Contenido principal */}
-            <div className="space-y-12 lg:order-1">
-              {/* Opening - Resumen destacado */}
-              <div className="bg-gradient-to-r from-primary/5 to-brand-900/5 border-l-4 border-primary p-8 rounded-r-lg shadow-sm">
-                <div className="flex items-start gap-4">
-                  <svg className="w-8 h-8 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
-                  </svg>
-                  <div>
-                    <h3 className="text-sm font-semibold text-primary mb-2 uppercase tracking-wide">Lo que aprenderás</h3>
-                    <p className="text-lg text-foreground leading-relaxed">
-                      {post.resumen}
-                    </p>
-                  </div>
+            <div className="space-y-12 lg:order-1" id="contenido-estudios-espana">
+              <style dangerouslySetInnerHTML={{__html: `
+                /* ====== Estilos embebidos para legibilidad (tema claro) ====== */
+                #contenido-estudios-espana {
+                  --bg: #ffffff;
+                  --ink: #0B1220;
+                  --muted: #556070;
+                  --brand: #8243D9;
+                  --accent: #EDE7FB;
+                  --line: #E9EEF4;
+                  --radius: 14px;
+                  --maxw: 860px;
+                  background: var(--bg);
+                  color: var(--ink);
+                  font: 16px/1.7 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+                }
+
+                #contenido-estudios-espana .wrap {
+                  max-width: var(--maxw);
+                  margin: 0 auto;
+                  padding: 24px 20px 10px;
+                }
+
+                #contenido-estudios-espana .eyebrow {
+                  font-size: 13px;
+                  letter-spacing: .12em;
+                  text-transform: uppercase;
+                  color: var(--muted);
+                  margin-bottom: 6px;
+                }
+
+                #contenido-estudios-espana h1, 
+                #contenido-estudios-espana h2, 
+                #contenido-estudios-espana h3 {
+                  line-height: 1.25;
+                  margin: 12px 0 14px;
+                  font-weight: 800;
+                }
+
+                #contenido-estudios-espana h1 { font-size: 32px; letter-spacing: -0.02em; }
+                #contenido-estudios-espana h2 { font-size: 24px; margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; }
+                #contenido-estudios-espana h3 { font-size: 18px; margin-top: 26px; color: var(--ink); }
+
+                #contenido-estudios-espana p { margin: 10px 0 14px; }
+
+                #contenido-estudios-espana strong { font-weight: 700; }
+
+                #contenido-estudios-espana ul, 
+                #contenido-estudios-espana ol { margin: 10px 0 16px 1.2rem; }
+                #contenido-estudios-espana li { margin: 6px 0; }
+
+                #contenido-estudios-espana .callout {
+                  border: 1px solid var(--line);
+                  background: var(--accent);
+                  border-radius: var(--radius);
+                  padding: 14px 16px;
+                  margin: 18px 0;
+                }
+                #contenido-estudios-espana .callout b { color: var(--brand); }
+
+                #contenido-estudios-espana figure {
+                  margin: 18px 0 22px;
+                  display: block;
+                  border-radius: var(--radius);
+                  overflow: hidden;
+                  border: 1px solid var(--line);
+                  background: #fafafa;
+                }
+                #contenido-estudios-espana figure img {
+                  width: 100%;
+                  height: auto;
+                  display: block;
+                }
+                #contenido-estudios-espana figcaption {
+                  font-size: 12.5px;
+                  color: var(--muted);
+                  padding: 8px 12px;
+                  background: #fff;
+                }
+                #contenido-estudios-espana figcaption a { color: var(--muted); text-decoration: underline; }
+
+                #contenido-estudios-espana .checklist { list-style: none; margin-left: 0; padding-left: 0; }
+                #contenido-estudios-espana .checklist li {
+                  padding-left: 30px;
+                  position: relative;
+                  margin: 8px 0;
+                }
+                #contenido-estudios-espana .checklist li::before {
+                  content: "✔";
+                  position: absolute;
+                  left: 8px;
+                  top: 0;
+                  color: #10B981;
+                  font-weight: 900;
+                }
+
+                #contenido-estudios-espana .table-wrap {
+                  overflow: auto;
+                  border: 1px solid var(--line);
+                  border-radius: var(--radius);
+                  margin: 14px 0 20px;
+                }
+                #contenido-estudios-espana table {
+                  width: 100%;
+                  border-collapse: collapse;
+                  min-width: 640px;
+                  background: #fff;
+                }
+                #contenido-estudios-espana thead th {
+                  text-align: left;
+                  font-size: 14px;
+                  color: var(--muted);
+                  background: #F8FAFC;
+                  border-bottom: 1px solid var(--line);
+                  padding: 10px 12px;
+                  position: sticky; 
+                  top: 0;
+                }
+                #contenido-estudios-espana td { 
+                  padding: 12px; 
+                  border-bottom: 1px solid var(--line); 
+                  vertical-align: top; 
+                }
+                #contenido-estudios-espana tbody tr:hover { background: #FCFCFD; }
+
+                #contenido-estudios-espana .tag {
+                  display: inline-block;
+                  font-size: 12px;
+                  padding: 4px 8px;
+                  border-radius: 999px;
+                  background: #F1EBFF;
+                  color: var(--brand);
+                  border: 1px solid var(--line);
+                  margin-right: 6px;
+                }
+
+                #contenido-estudios-espana .sep { 
+                  height: 1px; 
+                  background: var(--line); 
+                  margin: 24px 0; 
+                }
+              `}} />
+              
+              <div className="wrap" dangerouslySetInnerHTML={{__html: `
+                <!-- HERO -->
+                <div class="eyebrow">Guía 2025 · Estancia por estudios en España</div>
+                <h1>¿Por qué España es una opción ideal para estudiar y trabajar?</h1>
+
+                <figure>
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1600&auto=format&fit=crop" alt="Estudiantes internacionales sonriendo en un campus en España">
+                  <figcaption>Foto libre: Unsplash (educación y vida universitaria en España).</figcaption>
+                </figure>
+
+                <p>Mientras muchos países endurecen los visados para estudiantes — <strong>duraciones largas de espera</strong>, <strong>restricciones para trabajar</strong>, <strong>cargas familiares</strong> — <strong>España</strong> se sitúa como una alternativa <strong>accesible, flexible</strong> y con <strong>buenas oportunidades</strong>.</p>
+
+                <div class="callout">
+                  <b>Puntos clave:</b>
+                  <ul>
+                    <li><strong>Educación de calidad</strong> con matrícula en universidades, centros oficiales y certificados profesionales.</li>
+                    <li><strong>Reformas recientes</strong> que facilitan la estancia por estudios, permiten trabajar y luego cambiar a permiso de trabajo.</li>
+                    <li><strong>Cultura, idioma, clima y entorno</strong> favorables para estudiantes internacionales.</li>
+                  </ul>
                 </div>
-              </div>
 
-              {/* Contenido principal */}
-              <div className="prose prose-lg max-w-none
-                prose-headings:font-display prose-headings:text-foreground prose-headings:scroll-mt-24
-                prose-h2:text-2xl prose-h2:mt-16 prose-h2:mb-8 prose-h2:pb-4 prose-h2:font-bold prose-h2:border-b prose-h2:border-primary/20
-                prose-h3:text-xl prose-h3:mt-12 prose-h3:mb-6 prose-h3:font-semibold prose-h3:text-primary
-                prose-p:text-foreground prose-p:leading-loose prose-p:mb-10 prose-p:text-lg prose-p:text-left
-                prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline hover:prose-a:text-brand-900
-                prose-strong:text-foreground prose-strong:font-bold
-                prose-em:text-foreground prose-em:italic prose-em:font-normal
-                prose-ul:my-10 prose-ul:text-foreground prose-ul:space-y-4 prose-ul:leading-loose prose-ul:text-lg
-                prose-ol:my-10 prose-ol:text-foreground prose-ol:space-y-4 prose-ol:leading-loose prose-ol:text-lg
-                prose-li:my-3 prose-li:leading-loose prose-li:text-left
-                prose-table:w-full prose-table:border-collapse prose-table:my-12 prose-table:shadow-sm prose-table:rounded-lg prose-table:overflow-hidden
-                prose-thead:bg-gradient-to-r prose-thead:from-primary prose-thead:to-brand-900
-                prose-th:bg-transparent prose-th:text-white prose-th:font-semibold prose-th:p-4 prose-th:text-left prose-th:text-base
-                prose-td:text-foreground prose-td:p-4 prose-td:border-t prose-td:border-border prose-td:text-base prose-td:leading-loose
-                prose-tr:transition-colors hover:prose-tr:bg-brand-50/50
-                prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-brand-50 prose-blockquote:py-6 prose-blockquote:px-8 prose-blockquote:my-12 prose-blockquote:rounded-r-lg prose-blockquote:text-lg prose-blockquote:leading-loose
-                prose-code:text-primary prose-code:bg-brand-50 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-base prose-code:font-medium
-                prose-img:rounded-lg prose-img:shadow-md prose-img:my-12"
-                dangerouslySetInnerHTML={{
-                  __html: processedContent
-                }} 
-              />
+                <div class="sep"></div>
 
-              {/* CTA intermedio */}
-              <div className="my-12 bg-gradient-to-r from-primary/10 via-brand-900/10 to-primary/10 border border-primary/20 rounded-xl p-8 text-center">
-                <h3 className="text-2xl font-display font-bold mb-3 text-foreground">
-                  ¿Necesitas asesoramiento personalizado?
-                </h3>
-                <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-                  Nuestro equipo de expertos está listo para ayudarte con tu proceso. Agenda una consulta gratuita.
-                </p>
-                <Button 
-                  size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-white font-semibold shadow-md hover:shadow-lg transition-all"
-                  onClick={() => setIsFormOpen(true)}
-                >
-                  Solicitar información
-                </Button>
-              </div>
+                <h2 id="claves-2025">Las 10 claves que necesitas conocer (y cómo se aplican en 2025)</h2>
+                <p>Tomando como base las "10 Claves de la Estancia por Estudios", aquí tienes una versión <strong>adaptada y actualizada</strong>:</p>
 
-              {/* Tags */}
-              {post.tags && post.tags.length > 0 && (
-                <div className="pt-8 border-t border-border">
-                  <h4 className="text-sm font-semibold text-muted-foreground mb-3">
-                    Etiquetas:
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {post.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
+                <figure>
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1600&auto=format&fit=crop" alt="Estudiante organizando documentos para visado en España">
+                  <figcaption>Unsplash — Organización de documentos y matrícula.</figcaption>
+                </figure>
+
+                <h3>2.1 Formación válida para visado</h3>
+                <p>Se requiere una <strong>formación completa</strong>: grado, máster, doctorado, FP de segundo grado, certificación profesional o título técnico.</p>
+                <p><strong>Aplicación a tus cursos:</strong> Todos los programas de <strong>Educar Sin Fronteras</strong> — visado/estancia o <em>arraigo socioformativo</em> — <strong>son acreditados</strong> y cumplen con esta clave.</p>
+
+                <h3>2.2 Matrícula a tiempo completo</h3>
+                <p>Tu curso debe ser <strong>a tiempo completo</strong> (no bastan unas horas semanales). Nuestros módulos están diseñados como programas intensivos, <strong>compatibles con visado/estancia</strong>.</p>
+
+                <h3>2.3 Modalidad presencial o semipresencial</h3>
+                <p>Ahora se acepta modalidad semipresencial siempre que <strong>al menos el 50&nbsp;%</strong> de las clases sean presenciales. Nuestros cursos "mixtos" están diseñados para <strong>cumplir esta norma</strong>.</p>
+
+                <h3>2.4 Acreditación de medios económicos</h3>
+                <p>Debes demostrar que dispones de <strong>medios económicos</strong> (habitualmente <strong>100&nbsp;% del IPREM</strong> al mes). Desde 2025, esa cantidad se ha actualizado; te ayudamos a <strong>calcularla</strong> en nuestro asesoramiento.</p>
+
+                <h3>2.5 Seguro médico</h3>
+                <p><strong>Seguro privado o público válido en España</strong>, sin copago, con repatriación. Lo incluimos como servicio adicional para estudiantes de fuera de la UE.</p>
+
+                <h3>2.6 Lugar de solicitud</h3>
+                <ul>
+                  <li>En un <strong>Consulado de España</strong> en tu país.</li>
+                  <li>O <strong>en España</strong>, si ya estás legalmente y cumples los criterios (por ejemplo visado turístico). Este segundo camino es interesante para muchos estudiantes.</li>
+                </ul>
+
+                <h3>2.7 Estancia superior a 6 meses</h3>
+                <p>Si tu curso es superior a 6 meses, necesitarás además <strong>certificado de antecedentes penales</strong> y <strong>certificado médico</strong>. Nuestros cursos <strong>tienen entre 200 y 750 horas</strong> (varios meses) y te preparamos para esta fase.</p>
+
+                <h3>2.8 Familiar acompañante</h3>
+                <p>En algunos casos, los <strong>hijos menores o cónyuges</strong> pueden acompañar al estudiante si el curso es superior y se cumplen otros requisitos. Esto puede aplicar en visado de estudios; <strong>te asesoramos</strong> sobre tu caso concreto.</p>
+
+                <h3>2.9 Nuevo reglamento y ventajas laborales</h3>
+                <p>El reglamento más reciente (2025) permite <strong>mayor flexibilidad</strong>, <strong>integración laboral</strong>, <strong>trabajo durante estudios</strong> y <strong>vías para residir</strong> tras los estudios.</p>
+
+                <h3>2.10 Asesoría profesional</h3>
+                <p>Es clave contar con <strong>asesoramiento experto</strong> para evitar errores, denegaciones o trámites largos. Nuestro equipo en <strong>Educar Sin Fronteras</strong> ofrece este acompañamiento.</p>
+
+                <figure>
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1600&auto=format&fit=crop" alt="Estudiante trabajando con ordenador portátil en biblioteca">
+                  <figcaption>Unsplash — Estudiar y trabajar: compatibilidad y organización.</figcaption>
+                </figure>
+
+                <h2 id="beneficios">Beneficios concretos del visado de estudios + posibilidad de trabajar</h2>
+                <ul class="checklist">
+                  <li><strong>Estudiar y trabajar:</strong> puedes trabajar hasta <strong>20 horas semanales</strong> mientras estudias (según normativa vigente).</li>
+                  <li><strong>Quedarte a trabajar después:</strong> existen vías legales para <strong>cambiar de visado de estudiante a permiso de residencia y trabajo</strong>.</li>
+                  <li><strong>Formación certificada:</strong> nuestros cursos cumplen con certificaciones oficiales (EUNEIZ, Comunidad de Madrid, SEPE).</li>
+                </ul>
+
+                <figure>
+                  <img loading="lazy" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGh0cXZnY2xvdXU5Y3g0bXJ1a3A3cGx3N2xubHNxN3ZpZzJmMHh6OSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/13HgwGsXF0aiGY/giphy.gif" alt="GIF motivacional de logros académicos">
+                  <figcaption>GIF: GIPHY — Motivación para alcanzar objetivos académicos y laborales.</figcaption>
+                </figure>
+
+                <h2 id="requisitos">Requisitos paso a paso para la solicitud</h2>
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Paso</th>
+                        <th>Qué necesitas</th>
+                        <th>Comentarios</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="tag">1</span></td>
+                        <td><strong>Carta de admisión</strong> de un centro oficial</td>
+                        <td>Nosotros emitimos carta para tus cursos.</td>
+                      </tr>
+                      <tr>
+                        <td><span class="tag">2</span></td>
+                        <td><strong>Pasaporte válido</strong></td>
+                        <td>Mínimo <strong>12 meses</strong> recomendados.</td>
+                      </tr>
+                      <tr>
+                        <td><span class="tag">3</span></td>
+                        <td><strong>Medios económicos</strong></td>
+                        <td><strong>100&nbsp;% del IPREM/mes</strong>, o menos si acreditas alojamiento.</td>
+                      </tr>
+                      <tr>
+                        <td><span class="tag">4</span></td>
+                        <td><strong>Seguro médico español</strong></td>
+                        <td>Incluido como servicio adicional.</td>
+                      </tr>
+                      <tr>
+                        <td><span class="tag">5</span></td>
+                        <td><strong>Certificado de antecedentes penales</strong></td>
+                        <td>Para estancias &gt; 6 meses.</td>
+                      </tr>
+                      <tr>
+                        <td><span class="tag">6</span></td>
+                        <td><strong>Certificado médico</strong></td>
+                        <td>General.</td>
+                      </tr>
+                      <tr>
+                        <td><span class="tag">7</span></td>
+                        <td><strong>Pago de tasas</strong></td>
+                        <td>Alrededor de <strong>60&nbsp;€</strong> (varía por país).</td>
+                      </tr>
+                      <tr>
+                        <td><span class="tag">8</span></td>
+                        <td><strong>Presentación del trámite</strong></td>
+                        <td>Consulado o en España (según caso).</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-              )}
 
-              {/* CTA final */}
-              <div className="mt-12 bg-gradient-to-br from-primary via-brand-900 to-primary text-white rounded-2xl p-10 text-center shadow-xl relative overflow-hidden">
-                {/* Decoración de fondo */}
-                <div className="absolute inset-0 bg-grid-white/5 bg-[size:20px_20px]"></div>
-                <div className="relative z-10">
-                  <h3 className="text-3xl font-display font-bold mb-4">
-                    ¿Listo para dar el siguiente paso?
-                  </h3>
-                  <p className="text-white/90 mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
-                    Contáctanos hoy y descubre cómo nuestros cursos pueden ayudarte a alcanzar tus objetivos en España.
-                  </p>
-                  <Button 
-                    size="lg" 
-                    className="bg-white text-primary hover:bg-white/90 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-                    onClick={() => setIsWhatsAppDialogOpen(true)}
-                  >
-                    Contactar ahora
-                  </Button>
+                <h2 id="preparacion-cursos">Cómo nuestros cursos te preparan para todo esto</h2>
+                <ul>
+                  <li><strong>Formación oficial y actualizada</strong> para visado/estancia y arraigo.</li>
+                  <li><strong>Asesoramiento</strong> para visado y trámite (documentación, plazos, traducción).</li>
+                  <li><strong>Calendarios adaptados</strong>, horarios de fin de semana o mixtos.</li>
+                  <li><strong>Financiación</strong> sin intereses, alta tasa de aprobación.</li>
+                  <li><strong>Acompañamiento post-curso</strong> para encontrar empleo en España.</li>
+                </ul>
+
+                <figure>
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1600&auto=format&fit=crop" alt="Grupo de estudiantes internacionales con banderas en España">
+                  <figcaption>Unsplash — Comunidad internacional y oportunidades post-curso.</figcaption>
+                </figure>
+
+                <h2 id="consejos">Consejos clave para tu aplicación y estancia</h2>
+                <ul class="checklist">
+                  <li>Presenta la solicitud <strong>60–90 días</strong> antes del comienzo del curso.</li>
+                  <li>Verifica que el <strong>centro esté acreditado</strong>.</li>
+                  <li>Asegúrate de que el <strong>pasaporte</strong> tenga al menos <strong>un año</strong> de validez.</li>
+                  <li><strong>Traduce/apostilla</strong> los documentos extranjeros.</li>
+                  <li>Conserva <strong>copias</strong> de todo lo entregado.</li>
+                  <li>Durante tu estancia, mantente <strong>matriculado y asistente</strong> para renovar sin problemas.</li>
+                  <li>Planifica tu <strong>transición al trabajo</strong>: adapta tu CV al mercado español, mejora idioma y participa en <strong>prácticas</strong> que ofrecemos.</li>
+                </ul>
+
+                <div class="sep"></div>
+
+                <h2 id="conclusion">Conclusión: tu futuro empieza hoy en España</h2>
+                <p>Estudiar en España no solo es una oportunidad académica — es una <strong>puerta a tu carrera profesional</strong> y a la <strong>residencia en Europa</strong>. Con un visado de estudios correctamente gestionado y la formación adecuada, <strong>puedes estudiar, trabajar y construir tu vida</strong> en España.</p>
+
+                <div class="callout">
+                  <p><strong>📌 ¿Quieres dar el primer paso?</strong> Contáctanos ahora y descubre cómo nuestros cursos te abren la vía hacia el <strong>visado</strong>, la <strong>residencia</strong> y el <strong>empleo</strong> en España.</p>
                 </div>
-              </div>
+              `}} />
             </div>
 
             {/* Columna derecha: Imagen + Índice */}
