@@ -210,23 +210,23 @@ const BlogPost = () => {
               {/* Contenido principal */}
               <div className="prose prose-lg max-w-none
                 prose-headings:font-display prose-headings:text-foreground prose-headings:scroll-mt-24
-                prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:pb-3 prose-h2:font-bold prose-h2:border-b prose-h2:border-primary/20
-                prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:font-semibold prose-h3:text-primary
-                prose-p:text-foreground prose-p:leading-loose prose-p:mb-8 prose-p:text-lg prose-p:text-left
+                prose-h2:text-2xl prose-h2:mt-16 prose-h2:mb-8 prose-h2:pb-4 prose-h2:font-bold prose-h2:border-b prose-h2:border-primary/20
+                prose-h3:text-xl prose-h3:mt-12 prose-h3:mb-6 prose-h3:font-semibold prose-h3:text-primary
+                prose-p:text-foreground prose-p:leading-loose prose-p:mb-10 prose-p:text-lg prose-p:text-left
                 prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline hover:prose-a:text-brand-900
                 prose-strong:text-foreground prose-strong:font-bold
                 prose-em:text-foreground prose-em:italic prose-em:font-normal
-                prose-ul:my-6 prose-ul:text-foreground prose-ul:space-y-3 prose-ul:leading-loose prose-ul:text-lg
-                prose-ol:my-6 prose-ol:text-foreground prose-ol:space-y-3 prose-ol:leading-loose prose-ol:text-lg
-                prose-li:my-2 prose-li:leading-loose prose-li:text-left
-                prose-table:w-full prose-table:border-collapse prose-table:my-8 prose-table:shadow-sm prose-table:rounded-lg prose-table:overflow-hidden
+                prose-ul:my-10 prose-ul:text-foreground prose-ul:space-y-4 prose-ul:leading-loose prose-ul:text-lg
+                prose-ol:my-10 prose-ol:text-foreground prose-ol:space-y-4 prose-ol:leading-loose prose-ol:text-lg
+                prose-li:my-3 prose-li:leading-loose prose-li:text-left
+                prose-table:w-full prose-table:border-collapse prose-table:my-12 prose-table:shadow-sm prose-table:rounded-lg prose-table:overflow-hidden
                 prose-thead:bg-gradient-to-r prose-thead:from-primary prose-thead:to-brand-900
                 prose-th:bg-transparent prose-th:text-white prose-th:font-semibold prose-th:p-4 prose-th:text-left prose-th:text-base
                 prose-td:text-foreground prose-td:p-4 prose-td:border-t prose-td:border-border prose-td:text-base prose-td:leading-loose
                 prose-tr:transition-colors hover:prose-tr:bg-brand-50/50
-                prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-brand-50 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:my-8 prose-blockquote:rounded-r-lg prose-blockquote:text-lg prose-blockquote:leading-loose
+                prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-brand-50 prose-blockquote:py-6 prose-blockquote:px-8 prose-blockquote:my-12 prose-blockquote:rounded-r-lg prose-blockquote:text-lg prose-blockquote:leading-loose
                 prose-code:text-primary prose-code:bg-brand-50 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-base prose-code:font-medium
-                prose-img:rounded-lg prose-img:shadow-md prose-img:my-8"
+                prose-img:rounded-lg prose-img:shadow-md prose-img:my-12"
                 dangerouslySetInnerHTML={{
                   __html: processedContent
                 }} 
