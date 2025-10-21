@@ -140,58 +140,8 @@ const BlogPost = () => {
         {/* Contenido del post */}
         <div ref={contentRef as React.RefObject<HTMLDivElement>} className={`max-w-7xl mx-auto px-4 py-16 transition-all duration-1000 ${contentVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'}`}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* Columna izquierda: Imagen + Índice */}
-            <div className="lg:sticky lg:top-24 space-y-8">
-              {/* Imagen destacada - Half Width */}
-              {post.imagen && (
-                <div className="w-full">
-                  <img 
-                    src={post.imagen} 
-                    alt={post.titulo}
-                    className="w-full h-auto rounded-xl shadow-lg object-cover"
-                  />
-                </div>
-              )}
-
-              {/* Índice de contenidos */}
-              {tableOfContents.length > 0 && (
-                <div className="bg-gradient-to-br from-brand-50 to-white border-l-4 border-primary rounded-lg p-6 shadow-sm">
-                  <h2 className="text-xl font-display font-bold mb-4 text-foreground flex items-center gap-2">
-                    <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
-                    </svg>
-                    Índice
-                  </h2>
-                  <nav>
-                    <ul className="space-y-2">
-                      {tableOfContents.map((item, index) => (
-                        <li key={item.id} className={`${item.level === 3 ? 'ml-6' : ''}`}>
-                          <a 
-                            href={`#${item.id}`} 
-                            onClick={(e) => handleTocClick(e, item.id)}
-                            className={`${
-                              item.level === 2 
-                                ? 'text-sm font-semibold text-foreground' 
-                                : 'text-xs text-muted-foreground'
-                            } hover:text-primary transition-colors hover:underline flex items-start gap-2 group`}
-                          >
-                            <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity text-xs">
-                              {item.level === 2 ? '▸' : '•'}
-                            </span>
-                            <span className="flex-1">
-                              {item.level === 2 && <span className="font-bold">{index + 1}. </span>}{item.text}
-                            </span>
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </nav>
-                </div>
-              )}
-            </div>
-
-            {/* Columna derecha: Contenido principal */}
-            <div className="space-y-12">
+            {/* Columna izquierda: Contenido principal */}
+            <div className="space-y-12 lg:order-1">
               {/* Opening - Resumen destacado */}
               <div className="bg-gradient-to-r from-primary/5 to-brand-900/5 border-l-4 border-primary p-8 rounded-r-lg shadow-sm">
                 <div className="flex items-start gap-4">
@@ -285,6 +235,56 @@ const BlogPost = () => {
                   </Button>
                 </div>
               </div>
+            </div>
+
+            {/* Columna derecha: Imagen + Índice */}
+            <div className="lg:sticky lg:top-24 space-y-8 lg:order-2">
+              {/* Imagen destacada */}
+              {post.imagen && (
+                <div className="w-full">
+                  <img 
+                    src={post.imagen} 
+                    alt={post.titulo}
+                    className="w-full h-auto rounded-xl shadow-lg object-cover"
+                  />
+                </div>
+              )}
+
+              {/* Índice de contenidos */}
+              {tableOfContents.length > 0 && (
+                <div className="bg-gradient-to-br from-brand-50 to-white border-l-4 border-primary rounded-lg p-6 shadow-sm">
+                  <h2 className="text-xl font-display font-bold mb-4 text-foreground flex items-center gap-2">
+                    <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
+                    </svg>
+                    Índice
+                  </h2>
+                  <nav>
+                    <ul className="space-y-2">
+                      {tableOfContents.map((item, index) => (
+                        <li key={item.id} className={`${item.level === 3 ? 'ml-6' : ''}`}>
+                          <a 
+                            href={`#${item.id}`} 
+                            onClick={(e) => handleTocClick(e, item.id)}
+                            className={`${
+                              item.level === 2 
+                                ? 'text-sm font-semibold text-foreground' 
+                                : 'text-xs text-muted-foreground'
+                            } hover:text-primary transition-colors hover:underline flex items-start gap-2 group`}
+                          >
+                            <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity text-xs">
+                              {item.level === 2 ? '▸' : '•'}
+                            </span>
+                            <span className="flex-1">
+                              {item.level === 2 && <span className="font-bold">{index + 1}. </span>}{item.text}
+                            </span>
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
+                </div>
+              )}
             </div>
           </div>
         </div>
