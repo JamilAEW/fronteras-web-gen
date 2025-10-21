@@ -372,8 +372,18 @@ const BlogPost = () => {
                 </ul>
 
                 <figure>
-                  <img loading="lazy" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGh0cXZnY2xvdXU5Y3g0bXJ1a3A3cGx3N2xubHNxN3ZpZzJmMHh6OSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/13HgwGsXF0aiGY/giphy.gif" alt="GIF motivacional de logros académicos">
-                  <figcaption>GIF: GIPHY — Motivación para alcanzar objetivos académicos y laborales.</figcaption>
+                  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                    <iframe 
+                      loading="lazy"
+                      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                      src="https://www.youtube.com/embed/BvRKrzfCBqE" 
+                      title="Video motivacional" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowfullscreen>
+                    </iframe>
+                  </div>
+                  <figcaption>Video: YouTube — Motivación para alcanzar objetivos académicos y laborales.</figcaption>
                 </figure>
 
                 <h2 id="requisitos">Requisitos paso a paso para la solicitud</h2>
