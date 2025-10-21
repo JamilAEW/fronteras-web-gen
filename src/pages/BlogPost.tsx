@@ -179,7 +179,7 @@ const BlogPost = () => {
                               {item.level === 2 ? '▸' : '•'}
                             </span>
                             <span className="flex-1">
-                              {item.level === 2 && `${index + 1}. `}{item.text}
+                              {item.level === 2 && <span className="font-bold">{index + 1}. </span>}{item.text}
                             </span>
                           </a>
                         </li>
@@ -212,7 +212,7 @@ const BlogPost = () => {
                 prose-headings:font-display prose-headings:text-foreground prose-headings:scroll-mt-24
                 prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:pb-3 prose-h2:font-bold prose-h2:border-b prose-h2:border-primary/20
                 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:font-semibold prose-h3:text-primary
-                prose-p:text-foreground prose-p:leading-loose prose-p:mb-6 prose-p:text-lg prose-p:text-left
+                prose-p:text-foreground prose-p:leading-loose prose-p:mb-8 prose-p:text-lg prose-p:text-left
                 prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline hover:prose-a:text-brand-900
                 prose-strong:text-foreground prose-strong:font-bold
                 prose-em:text-foreground prose-em:italic prose-em:font-normal
@@ -226,7 +226,7 @@ const BlogPost = () => {
                 prose-tr:transition-colors hover:prose-tr:bg-brand-50/50
                 prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-brand-50 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:my-8 prose-blockquote:rounded-r-lg prose-blockquote:text-lg prose-blockquote:leading-loose
                 prose-code:text-primary prose-code:bg-brand-50 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-base prose-code:font-medium
-                prose-img:rounded-lg prose-img:shadow-md prose-img:my-8" 
+                prose-img:rounded-lg prose-img:shadow-md prose-img:my-8"
                 dangerouslySetInnerHTML={{
                   __html: processedContent
                 }} 
