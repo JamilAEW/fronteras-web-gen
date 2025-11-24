@@ -1,52 +1,52 @@
-export type Categoria = 'visado-estancia' | 'arraigo';
+export type Category = 'visa-stay' | 'rootedness';
 
 export interface Faq {
-  pregunta: string;
-  respuesta: string;
+  question: string;
+  answer: string;
 }
 
-export interface Modulo {
-  codigo?: string;
-  nombre: string;
-  unidades?: string[];
+export interface Module {
+  code?: string;
+  name: string;
+  units?: string[];
 }
 
-export interface Docente {
-  nombre: string;
-  titulo: string;
-  imagen?: string;
+export interface Instructor {
+  name: string;
+  title: string;
+  image?: string;
 }
 
-export interface Curso {
+export interface Course {
   slug: string;
-  titulo: string;
-  categoria: Categoria;
-  resumen: string;
-  horas?: number;
-  modalidad?: 'presencial' | 'mixta' | 'online';
-  requisitos?: string[];
-  proximaConvocatoria?: string;
-  temario?: Modulo[];
-  salidaProfesional?: string[];
-  docentes?: Docente[];
+  title: string;
+  category: Category;
+  summary: string;
+  hours?: number;
+  modality?: 'in-person' | 'blended' | 'online';
+  requirements?: string[];
+  nextCall?: string;
+  curriculum?: Module[];
+  professionalOutcomes?: string[];
+  instructors?: Instructor[];
   faq?: Faq[];
-  etiquetas?: string[];
-  destacado?: boolean;
+  tags?: string[];
+  featured?: boolean;
 }
 
-// FAQs comunes de financiación (se añaden a todos los cursos)
-export const faqsFinanciacion: Faq[] = [
+// Common financing FAQs (added to all courses)
+export const financingFaqs: Faq[] = [
   {
-    pregunta: '¿Ofrecen financiación?',
-    respuesta: 'Sí, ofrecemos financiación directa de la academia, sin necesidad de estudio bancario.',
+    question: 'Do you offer financing?',
+    answer: 'Yes, we offer direct financing from the academy, without the need for a bank study.',
   },
   {
-    pregunta: '¿Cómo son las cuotas?',
-    respuesta: 'Las cuotas son cómodas y encajan con tu día a día en España, ajustadas a tu situación económica.',
+    question: 'What are the installments like?',
+    answer: 'The installments are comfortable and fit your daily life in Spain, adjusted to your economic situation.',
   },
 ];
 
-export const courses: Curso[] = [
+export const courses: Course[] = [
   // ========== VISADO / ESTANCIA ==========
   {
     slug: 'curso-superior-universitario-marketing-digital',

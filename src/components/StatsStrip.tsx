@@ -5,22 +5,22 @@ const stats = [
   {
     icon: StarFilledIcon,
     value: '6',
-    label: 'Años de experiencia',
+    label: 'Years of experience',
   },
   {
     icon: PersonIcon,
-    value: '14.000',
-    label: 'Alumnos formados',
+    value: '14,000',
+    label: 'Students trained',
   },
   {
     icon: BarChartIcon,
     value: '466',
-    label: 'Programas finalizados',
+    label: 'Completed programs',
   },
   {
     icon: BackpackIcon,
-    value: '8.000',
-    label: 'Prácticas en empresas',
+    value: '8,000',
+    label: 'Company internships',
   },
 ];
 
@@ -36,7 +36,7 @@ const StatsStrip = () => {
     >
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12">
-          Demostrar autoridad y efectividad
+          Proven Authority and Effectiveness
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => {

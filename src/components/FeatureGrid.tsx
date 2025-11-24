@@ -4,18 +4,18 @@ import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 const features = [
   {
     icon: ClipboardIcon,
-    title: 'Arraigo socioformativo',
-    description: 'Certificados oficiales que te permiten regularizar tu situación en España',
+    title: 'Socio-formative Rootedness',
+    description: 'Official certificates that allow you to regularize your status in Spain',
   },
   {
     icon: RocketIcon,
-    title: 'Estancia / Visado por estudios',
-    description: 'Cursos universitarios válidos para obtener tu visado o estancia legal',
+    title: 'Stay / Study Visa',
+    description: 'University courses valid for obtaining your visa or legal stay',
   },
   {
     icon: ChatBubbleIcon,
-    title: 'Consulta gratuita',
-    description: 'Asesoría personalizada para elegir el mejor camino para tu situación',
+    title: 'Free Consultation',
+    description: 'Personalized advice to choose the best path for your situation',
   },
 ];
 

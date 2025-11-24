@@ -3,19 +3,19 @@ import { Helmet } from 'react-helmet';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CourseCard from '@/components/CourseCard';
-import { courses, Categoria } from '@/data/courses';
+import { courses, Category } from '@/data/courses';
 import { Button } from '@/components/ui/button';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 const Cursos = () => {
-  const [selectedCategory, setSelectedCategory] = useState<Categoria | 'todos'>('todos');
+  const [selectedCategory, setSelectedCategory] = useState<Category | 'all'>('all');
   const { ref: introRef, isVisible: introVisible } = useScrollAnimation();
   const { ref: filterRef, isVisible: filterVisible } = useScrollAnimation();
   const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation();
 
-  const filteredCourses = selectedCategory === 'todos' 
+  const filteredCourses = selectedCategory === 'all' 
     ? courses 
-    : courses.filter(c => c.categoria === selectedCategory);
+    : courses.filter(c => c.category === selectedCategory);
 
   return (
     <>
@@ -71,25 +71,25 @@ const Cursos = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-3">
             <Button
-              variant={selectedCategory === 'todos' ? 'default' : 'outline'}
-              onClick={() => setSelectedCategory('todos')}
+              variant={selectedCategory === 'all' ? 'default' : 'outline'}
+              onClick={() => setSelectedCategory('all')}
               className="rounded-full"
             >
-              Todos los cursos
+              All Courses
             </Button>
             <Button
-              variant={selectedCategory === 'visado-estancia' ? 'default' : 'outline'}
-              onClick={() => setSelectedCategory('visado-estancia')}
+              variant={selectedCategory === 'visa-stay' ? 'default' : 'outline'}
+              onClick={() => setSelectedCategory('visa-stay')}
               className="rounded-full"
             >
-              Visado / Estancia
+              Visa / Stay
             </Button>
             <Button
-              variant={selectedCategory === 'arraigo' ? 'default' : 'outline'}
-              onClick={() => setSelectedCategory('arraigo')}
+              variant={selectedCategory === 'rootedness' ? 'default' : 'outline'}
+              onClick={() => setSelectedCategory('rootedness')}
               className="rounded-full"
             >
-              Arraigo Socioformativo
+              Socio-formative Rootedness
             </Button>
           </div>
         </div>
