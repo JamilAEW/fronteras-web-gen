@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Course } from '@/data/courses';
+import { Curso } from '@/data/courses';
 import { BookOpenIcon, TrendingUpIcon, ShieldIcon, PackageIcon, PhoneIcon, SparklesIcon, HeartPulseIcon } from 'lucide-react';
 import marketingImage from '@/assets/courses/marketing-digital.jpg';
 import ciberseguridadImage from '@/assets/courses/ciberseguridad.jpg';

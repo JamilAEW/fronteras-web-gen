@@ -1,4 +1,4 @@
-import { locations } from '@/data/locations';
+import { sedes } from '@/data/sedes';
 import { HomeIcon, EnvelopeClosedIcon } from '@radix-ui/react-icons';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
@@ -14,12 +14,12 @@ const Locations = () => {
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">Our Locations</h2>
-          <p className="text-lg text-muted-foreground">Easy access locations in Madrid</p>
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">Nuestras sedes</h2>
+          <p className="text-lg text-muted-foreground">Ubicaciones de fácil acceso en Madrid</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {locations.map((location, index) => (
+          {sedes.map((sede, index) => (
             <div
               key={index}
               className="bg-white rounded-2xl border border-slate-200 p-6 shadow-soft"
@@ -29,10 +29,10 @@ const Locations = () => {
                   <HomeIcon className="h-5 w-5 text-accent" aria-hidden="true" />
                 </div>
                 <div>
-                  <h3 className="font-display font-bold mb-1">{location.name}</h3>
-                  <p className="text-sm text-muted-foreground">{location.address}</p>
+                  <h3 className="font-display font-bold mb-1">{sede.nombre}</h3>
+                  <p className="text-sm text-muted-foreground">{sede.direccion}</p>
                   <p className="text-sm text-muted-foreground">
-                    {location.district}, {location.zipCode} {location.city}
+                    {sede.distrito}, {sede.cp} {sede.ciudad}
                   </p>
                 </div>
               </div>
@@ -59,17 +59,17 @@ const Locations = () => {
                       d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                     />
                   </svg>
-                  <span className="font-medium">Metro {location.metro}</span>
+                  <span className="font-medium">Metro {sede.metro}</span>
                 </div>
 
-                {location.phone && (
-                  <p className="text-muted-foreground">Tel: {location.phone}</p>
+                {sede.telefono && (
+                  <p className="text-muted-foreground">Tel: {sede.telefono}</p>
                 )}
 
-                {location.email && (
+                {sede.email && (
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <EnvelopeClosedIcon className="h-4 w-4" aria-hidden="true" />
-                    <span className="text-xs">{location.email}</span>
+                    <span className="text-xs">{sede.email}</span>
                   </div>
                 )}
               </div>

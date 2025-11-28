@@ -4,23 +4,23 @@ import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 const benefits = [
   {
     icon: CheckCircledIcon,
-    title: 'Official and Certifiable Training',
-    description: 'Certificates recognized by official organizations',
+    title: 'Formación oficial y certificable',
+    description: 'Certificados reconocidos por organismos oficiales',
   },
   {
     icon: PersonIcon,
-    title: 'Tutoring with Expert Teachers',
-    description: 'Personalized support throughout the course',
+    title: 'Tutorías con docentes expertos',
+    description: 'Acompañamiento personalizado durante todo el curso',
   },
   {
     icon: BarChartIcon,
-    title: 'Practical Methodology',
-    description: 'Learn with real cases and applied exercises',
+    title: 'Metodología práctica',
+    description: 'Aprende con casos reales y ejercicios aplicados',
   },
   {
     icon: GlobeIcon,
-    title: 'Updated Content',
-    description: 'Curriculum adapted to market needs',
+    title: 'Contenido actualizado',
+    description: 'Temarios adaptados a las necesidades del mercado',
   },
 ];
 
@@ -37,7 +37,7 @@ const BenefitsSection = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            Become the Professional Companies Are Looking For
+            Conviértete en el profesional que las empresas están buscando
           </h2>
         </div>
 

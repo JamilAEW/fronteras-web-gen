@@ -1,52 +1,52 @@
-export type Category = 'visa-stay' | 'rootedness';
+export type Categoria = 'visado-estancia' | 'arraigo';
 
 export interface Faq {
-  question: string;
-  answer: string;
+  pregunta: string;
+  respuesta: string;
 }
 
-export interface Module {
-  code?: string;
-  name: string;
-  units?: string[];
+export interface Modulo {
+  codigo?: string;
+  nombre: string;
+  unidades?: string[];
 }
 
-export interface Instructor {
-  name: string;
-  title: string;
-  image?: string;
+export interface Docente {
+  nombre: string;
+  titulo: string;
+  imagen?: string;
 }
 
-export interface Course {
+export interface Curso {
   slug: string;
-  title: string;
-  category: Category;
-  summary: string;
-  hours?: number;
-  modality?: 'in-person' | 'blended' | 'online';
-  requirements?: string[];
-  nextCall?: string;
-  curriculum?: Module[];
-  professionalOutcomes?: string[];
-  instructors?: Instructor[];
+  titulo: string;
+  categoria: Categoria;
+  resumen: string;
+  horas?: number;
+  modalidad?: 'presencial' | 'mixta' | 'online';
+  requisitos?: string[];
+  proximaConvocatoria?: string;
+  temario?: Modulo[];
+  salidaProfesional?: string[];
+  docentes?: Docente[];
   faq?: Faq[];
-  tags?: string[];
-  featured?: boolean;
+  etiquetas?: string[];
+  destacado?: boolean;
 }
 
-// Common financing FAQs (added to all courses)
-export const financingFaqs: Faq[] = [
+// FAQs comunes de financiación (se añaden a todos los cursos)
+export const faqsFinanciacion: Faq[] = [
   {
-    question: 'Do you offer financing?',
-    answer: 'Yes, we offer direct financing from the academy, without the need for a bank study.',
+    pregunta: '¿Ofrecen financiación?',
+    respuesta: 'Sí, ofrecemos financiación directa de la academia, sin necesidad de estudio bancario.',
   },
   {
-    question: 'What are the installments like?',
-    answer: 'The installments are comfortable and fit your daily life in Spain, adjusted to your economic situation.',
+    pregunta: '¿Cómo son las cuotas?',
+    respuesta: 'Las cuotas son cómodas y encajan con tu día a día en España, ajustadas a tu situación económica.',
   },
 ];
 
-export const courses: Course[] = [
+export const courses: Curso[] = [
   // ========== VISADO / ESTANCIA ==========
   {
     slug: 'curso-superior-universitario-marketing-digital',
