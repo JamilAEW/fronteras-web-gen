@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Locations from '@/components/Locations';
@@ -7,6 +8,8 @@ import CoursesSelect from '@/components/CoursesSelect';
 import { toast } from 'sonner';
 import { EnvelopeClosedIcon, MobileIcon } from '@radix-ui/react-icons';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
+import { LocalBusinessSchema } from '@/components/StructuredData';
+import { sedes } from '@/data/sedes';
 
 const Contacto = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -40,6 +43,25 @@ const Contacto = () => {
 
   return (
     <div className="min-h-screen bg-background font-sans">
+      <Helmet>
+        <title>Contacto | Educar Sin Fronteras</title>
+        <meta name="description" content="Contacta con Educar Sin Fronteras. 3 sedes en Madrid: Salamanca, Usera y Carabanchel. Tel: +34 658 40 39 06 | Email: info@educarsinfronteras.es" />
+        <link rel="canonical" href="https://educarsinfronteras.es/contacto" />
+        <meta name="keywords" content="contacto educar sin fronteras, sedes madrid, teléfono centro formación, dirección" />
+      </Helmet>
+      {sedes.map((sede) => (
+        <LocalBusinessSchema
+          key={sede.nombre}
+          name={`Educar Sin Fronteras - ${sede.nombre}`}
+          address={{
+            streetAddress: sede.direccion,
+            addressLocality: sede.ciudad,
+            postalCode: sede.cp,
+          }}
+          telephone={sede.telefono}
+          email={sede.email}
+        />
+      ))}
       <Navbar />
       <main>
         {/* Hero interno */}

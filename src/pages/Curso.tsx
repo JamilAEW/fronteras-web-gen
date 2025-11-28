@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { courses } from '@/data/courses';
@@ -7,6 +8,7 @@ import NotFound from './NotFound';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 import FaqAccordion from '@/components/FaqAccordion';
+import { CourseSchema, FAQSchema } from '@/components/StructuredData';
 
 const Curso = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -62,8 +64,25 @@ const Curso = () => {
     });
   };
 
+  const cursoUrl = `https://educarsinfronteras.es/cursos/${curso.slug}`;
+  const duration = curso.horas ? `PT${curso.horas}H` : undefined;
+
   return (
     <div className="min-h-screen bg-background font-sans">
+      <Helmet>
+        <title>{curso.titulo} | Educar Sin Fronteras</title>
+        <meta name="description" content={curso.resumen} />
+        <link rel="canonical" href={cursoUrl} />
+        <meta name="keywords" content={`${curso.titulo}, ${curso.categoria === 'visado-estancia' ? 'visado estudios' : 'arraigo socioformativo'}, cursos ${curso.modalidad || 'presencial'}, formación profesional madrid`} />
+      </Helmet>
+      <CourseSchema 
+        name={curso.titulo}
+        description={curso.resumen}
+        url={cursoUrl}
+        duration={duration}
+        courseMode={curso.modalidad === 'presencial' ? 'offline' : curso.modalidad === 'online' ? 'online' : 'blended'}
+      />
+      {curso.faq && curso.faq.length > 0 && <FAQSchema faqs={curso.faq} />}
       <Navbar />
       
       {/* Hero Section */}
