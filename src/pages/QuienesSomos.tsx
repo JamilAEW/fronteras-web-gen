@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { aboutData } from '@/data/about';
@@ -7,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { CheckCircledIcon, RocketIcon } from '@radix-ui/react-icons';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import PartnersStrip from '@/components/PartnersStrip';
+import { OrganizationSchema } from '@/components/StructuredData';
 
 const QuienesSomos = () => {
   const { ref: misionRef, isVisible: misionVisible } = useScrollAnimation();
@@ -16,6 +18,13 @@ const QuienesSomos = () => {
   
   return (
     <div className="min-h-screen bg-background font-sans">
+      <Helmet>
+        <title>Quiénes Somos | Educar Sin Fronteras</title>
+        <meta name="description" content="Centro de formación especializado en cursos para visado, estancia por estudios y arraigo socioformativo. Más de 10 años formando profesionales en Madrid." />
+        <link rel="canonical" href="https://educarsinfronteras.es/quienes-somos" />
+        <meta name="keywords" content="educar sin fronteras, centro formación madrid, visado estudios, arraigo, cursos profesionales" />
+      </Helmet>
+      <OrganizationSchema />
       <Navbar />
       <main>
         {/* Hero interno */}
