@@ -1,6 +1,6 @@
-# Welcome to your Lovable project
+# Welcome to Educar Sin Fronteras
 
-## Project info
+## Pagina web Auto actualizable 
 
 **URL**: https://lovable.dev/projects/113fad91-a927-45ab-bddc-725b90316019
 
