@@ -106,14 +106,13 @@ const DiscountBlock = () => {
               </form>
             </div>
 
-            {/* Descuento */}
+            {/* Información */}
             <div className="flex flex-col items-center justify-center text-center text-white">
-              <div className="text-9xl font-display font-black mb-4">10%</div>
-              <h3 className="text-3xl md:text-4xl font-display font-bold mb-4">
-                DE DESCUENTO EN TU PRIMER CURSO
+              <h3 className="text-3xl md:text-5xl font-display font-bold mb-4">
+                Solicita información ahora
               </h3>
               <p className="text-lg text-white/80">
-                Aprovecha esta oferta exclusiva y empieza tu formación
+                Déjanos tus datos y te ayudamos a encontrar la formación adecuada para ti
               </p>
             </div>
           </div>
