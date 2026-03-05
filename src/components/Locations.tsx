@@ -12,35 +12,35 @@ const Locations = () => {
         isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-12 max-w-2xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">Nuestras sedes</h2>
           <p className="text-lg text-muted-foreground">Ubicaciones de fácil acceso en Madrid</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4 items-stretch">
           {sedes.map((sede, index) => (
-            <div
+            <article
               key={index}
-              className="bg-white rounded-2xl border border-slate-200 p-6 shadow-soft"
+              className="h-full bg-background rounded-2xl border border-border p-6 shadow-soft flex flex-col"
             >
-              <div className="flex items-start gap-3 mb-4">
+              <div className="flex items-start gap-3 mb-5">
                 <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
                   <HomeIcon className="h-5 w-5 text-accent" aria-hidden="true" />
                 </div>
-                <div>
-                  <h3 className="font-display font-bold mb-1">{sede.nombre}</h3>
+                <div className="space-y-1 min-w-0">
+                  <h3 className="font-display font-bold leading-snug">{sede.nombre}</h3>
                   <p className="text-sm text-muted-foreground">{sede.direccion}</p>
                   <p className="text-sm text-muted-foreground">
-                    {sede.distrito}, {sede.cp} {sede.ciudad}
+                    {sede.distrito}{sede.cp ? `, ${sede.cp}` : ''} {sede.ciudad}
                   </p>
                 </div>
               </div>
 
-              <div className="space-y-2 text-sm">
+              <div className="space-y-3 text-sm mt-auto pt-4 border-t border-border">
                 <div className="flex items-center gap-2 text-primary">
                   <svg
-                    className="h-4 w-4"
+                    className="h-4 w-4 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -63,17 +63,17 @@ const Locations = () => {
                 </div>
 
                 {sede.telefono && (
-                  <p className="text-muted-foreground">Tel: {sede.telefono}</p>
+                  <p className="text-muted-foreground break-words">Tel: {sede.telefono}</p>
                 )}
 
                 {sede.email && (
                   <div className="flex items-center gap-2 text-muted-foreground">
-                    <EnvelopeClosedIcon className="h-4 w-4" aria-hidden="true" />
-                    <span className="text-xs">{sede.email}</span>
+                    <EnvelopeClosedIcon className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
+                    <span className="text-xs break-all">{sede.email}</span>
                   </div>
                 )}
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
