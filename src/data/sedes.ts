@@ -40,4 +40,14 @@ export const sedes: Sede[] = [
     telefono: '+34 658 40 39 06',
     email: 'info@educarsinfronteras.es',
   },
+  {
+    nombre: 'Oficina de Información',
+    direccion: 'Av. de la Albufera, 76',
+    distrito: 'Puente de Vallecas',
+    cp: '',
+    ciudad: 'Madrid',
+    metro: 'Nueva Numancia (L1)',
+    telefono: '+34 657 111 506',
+    email: 'atcliente76@distritodeabogados.com',
+  },
 ];
