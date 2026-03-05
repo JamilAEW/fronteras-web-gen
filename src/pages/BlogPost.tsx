@@ -563,7 +563,7 @@ const BlogPost = () => {
               className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white"
             >
               <a 
-                href="https://wa.me/34640024913" 
+                href="https://wa.link/4t6vcf" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2"

@@ -244,7 +244,7 @@ const Navbar = () => {
               className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white"
             >
               <a 
-                href="https://wa.link/eaetlq"
+                href="https://wa.link/4t6vcf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
