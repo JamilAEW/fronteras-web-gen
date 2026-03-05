@@ -5,6 +5,11 @@ import { Curso } from '@/data/courses';
 import { BookOpenIcon, TrendingUpIcon, ShieldIcon, PackageIcon, PhoneIcon, SparklesIcon, HeartPulseIcon } from 'lucide-react';
 import { getCourseImage } from '@/lib/course-media';
 
+interface CourseCardProps {
+  curso: Curso;
+  isHomepage?: boolean;
+}
+
 const getCourseIcon = (slug: string) => {
   if (slug.includes('marketing')) return TrendingUpIcon;
   if (slug.includes('hacking') || slug.includes('ciberseguridad')) return ShieldIcon;
