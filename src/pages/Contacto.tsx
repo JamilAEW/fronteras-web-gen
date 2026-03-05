@@ -241,7 +241,7 @@ const Contacto = () => {
                 <div className="bg-accent/10 rounded-2xl border border-accent/20 p-8">
                   <h3 className="text-xl font-display font-bold mb-3">Horario de atención</h3>
                   <p className="text-muted-foreground mb-2">
-                    <strong>Lunes a Viernes:</strong> 9:00 - 18:00
+                    <strong>Lunes a Viernes:</strong> 09:00 a 14:00 y 16:00 a 20:00
                   </p>
                   <p className="text-muted-foreground">
                     <strong>Sábados:</strong> 10:00 - 14:00
