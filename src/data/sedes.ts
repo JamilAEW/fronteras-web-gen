@@ -17,7 +17,7 @@ export const sedes: Sede[] = [
     cp: '28028',
     ciudad: 'Madrid',
     metro: 'Manuel Becerra (L2 y L6)',
-    telefono: '+34 635 58 20 80',
+    telefono: '+34 658 40 39 06',
     email: 'info@educarsinfronteras.es',
   },
   {
@@ -27,7 +27,7 @@ export const sedes: Sede[] = [
     cp: '28026',
     ciudad: 'Madrid',
     metro: 'Usera (L6) salida Mirasierra',
-    telefono: '+34 615 29 70 31',
+    telefono: '+34 658 40 39 06',
     email: 'info@educarsinfronteras.es',
   },
   {
@@ -47,7 +47,7 @@ export const sedes: Sede[] = [
     cp: '',
     ciudad: 'Madrid',
     metro: 'Nueva Numancia (L1)',
-    telefono: '+34 657 111 506',
+    telefono: '+34 658 40 39 06',
     email: 'info@educarsinfronteras.es',
   },
 ];
