@@ -45,7 +45,7 @@ const Contacto = () => {
     <div className="min-h-screen bg-background font-sans">
       <Helmet>
         <title>Contacto | Educar Sin Fronteras</title>
-        <meta name="description" content="Contacta con Educar Sin Fronteras. 3 sedes en Madrid: Salamanca, Usera y Carabanchel. Tel: +34 658 40 39 06 | Email: info@educarsinfronteras.es" />
+        <meta name="description" content="Contacta con Educar Sin Fronteras. 4 sedes en Madrid. Tel: +34 635 58 20 80 | Email: info@educarsinfronteras.es" />
         <link rel="canonical" href="https://educarsinfronteras.es/contacto" />
         <meta name="keywords" content="contacto educar sin fronteras, sedes madrid, teléfono centro formación, dirección" />
       </Helmet>
@@ -213,10 +213,10 @@ const Contacto = () => {
                       <div>
                         <p className="font-semibold mb-1">Teléfono</p>
                         <a
-                          href="tel:+34658403906"
+                          href="tel:+34635582080"
                           className="text-muted-foreground hover:text-primary transition-colors"
                         >
-                          +34 658 40 39 06
+                          +34 635 58 20 80
                         </a>
                       </div>
                     </div>
