@@ -67,6 +67,7 @@ const Curso = () => {
 
   const cursoUrl = `https://educarsinfronteras.es/cursos/${curso.slug}`;
   const duration = curso.horas ? `PT${curso.horas}H` : undefined;
+  const courseImage = getCourseImage(curso.slug);
 
   return (
     <div className="min-h-screen bg-background font-sans">
