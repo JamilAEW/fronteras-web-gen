@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 import FaqAccordion from '@/components/FaqAccordion';
 import { CourseSchema, FAQSchema } from '@/components/StructuredData';
+import { getCourseImage } from '@/lib/course-media';
 
 const Curso = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -66,6 +67,7 @@ const Curso = () => {
 
   const cursoUrl = `https://educarsinfronteras.es/cursos/${curso.slug}`;
   const duration = curso.horas ? `PT${curso.horas}H` : undefined;
+  const courseImage = getCourseImage(curso.slug);
 
   return (
     <div className="min-h-screen bg-background font-sans">
@@ -131,8 +133,12 @@ const Curso = () => {
               </div>
             </div>
             <div className="hidden md:block">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 aspect-square flex items-center justify-center">
-                <p className="text-6xl opacity-50">📚</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-3 shadow-soft">
+                <img
+                  src={courseImage}
+                  alt={curso.titulo}
+                  className="w-full aspect-square object-cover rounded-2xl"
+                />
               </div>
             </div>
           </div>
