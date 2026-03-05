@@ -17,7 +17,7 @@ export const sedes: Sede[] = [
     cp: '28028',
     ciudad: 'Madrid',
     metro: 'Manuel Becerra (L2 y L6)',
-    telefono: '+34 635 58 20 80',
+    telefono: '+34 658 40 39 06',
     email: 'info@educarsinfronteras.es',
   },
   {
