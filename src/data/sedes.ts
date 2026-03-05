@@ -47,7 +47,7 @@ export const sedes: Sede[] = [
     cp: '',
     ciudad: 'Madrid',
     metro: 'Nueva Numancia (L1)',
-    telefono: '+34 657 111 506',
+    telefono: '+34 658 40 39 06',
     email: 'info@educarsinfronteras.es',
   },
 ];
