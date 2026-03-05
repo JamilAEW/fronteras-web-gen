@@ -44,7 +44,7 @@ export const sedes: Sede[] = [
     nombre: 'Oficina de Información',
     direccion: 'Av. de la Albufera, 76',
     distrito: 'Puente de Vallecas',
-    cp: '',
+    cp: '28038',
     ciudad: 'Madrid',
     metro: 'Nueva Numancia (L1)',
     telefono: '+34 658 40 39 06',
