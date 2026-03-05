@@ -133,8 +133,12 @@ const Curso = () => {
               </div>
             </div>
             <div className="hidden md:block">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 aspect-square flex items-center justify-center">
-                <p className="text-6xl opacity-50">📚</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-3 shadow-soft">
+                <img
+                  src={courseImage}
+                  alt={curso.titulo}
+                  className="w-full aspect-square object-cover rounded-2xl"
+                />
               </div>
             </div>
           </div>

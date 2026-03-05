@@ -3,27 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Curso } from '@/data/courses';
 import { BookOpenIcon, TrendingUpIcon, ShieldIcon, PackageIcon, PhoneIcon, SparklesIcon, HeartPulseIcon } from 'lucide-react';
-import marketingImage from '@/assets/courses/marketing-digital.jpg';
-import ciberseguridadImage from '@/assets/courses/ciberseguridad.jpg';
-import logisticaImage from '@/assets/courses/logistica.jpg';
-import sociosanitariaImage from '@/assets/courses/sociosanitaria.jpg';
-import teleasistenciaImage from '@/assets/courses/teleasistencia.jpg';
-import limpiezaImage from '@/assets/courses/limpieza.jpg';
-
-interface CourseCardProps {
-  curso: Curso;
-  isHomepage?: boolean;
-}
-
-const getCourseImage = (slug: string): string => {
-  if (slug.includes('marketing')) return marketingImage;
-  if (slug.includes('hacking') || slug.includes('ciberseguridad')) return ciberseguridadImage;
-  if (slug.includes('logistic') || slug.includes('almacen')) return logisticaImage;
-  if (slug.includes('sociosanitaria') || slug.includes('atencion-sociosanitaria')) return sociosanitariaImage;
-  if (slug.includes('teleasistencia')) return teleasistenciaImage;
-  if (slug.includes('limpieza')) return limpiezaImage;
-  return sociosanitariaImage; // default
-};
+import { getCourseImage } from '@/lib/course-media';
 
 const getCourseIcon = (slug: string) => {
   if (slug.includes('marketing')) return TrendingUpIcon;
