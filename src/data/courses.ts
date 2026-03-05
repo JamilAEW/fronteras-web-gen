@@ -258,10 +258,57 @@ export const courses: Curso[] = [
 
   // ========== ARRAIGO SOCIOFORMATIVO ==========
   {
+    slug: 'operaciones-auxiliares-servicios-administrativos-generales-adgg0408',
+    titulo: 'ADGG0408 — Operaciones auxiliares de servicios administrativos y generales',
+    categoria: 'arraigo',
+    resumen: 'Certificado oficial orientado a tareas básicas de oficina, archivo, reproducción de documentación, atención y apoyo administrativo en empresas y entidades.',
+    horas: 430,
+    modalidad: 'presencial',
+    requisitos: [
+      'Más de 2 años de residencia en España',
+      'Sin antecedentes penales',
+      'Pasaporte vigente',
+    ],
+    proximaConvocatoria: 'Próximamente',
+    destacado: true,
+    temario: [
+      {
+        codigo: 'MF0969_1',
+        nombre: 'Técnicas administrativas básicas de oficina',
+      },
+      {
+        codigo: 'MF0970_1',
+        nombre: 'Operaciones básicas de comunicación',
+      },
+      {
+        codigo: 'MF0971_1',
+        nombre: 'Reproducción y archivo',
+      },
+      {
+        codigo: 'MP0112',
+        nombre: 'Módulo de prácticas profesionales no laborales',
+      },
+    ],
+    salidaProfesional: [
+      'Auxiliar de oficina',
+      'Auxiliar de servicios generales',
+      'Personal de apoyo administrativo',
+      'Operador/a básico de documentación y archivo',
+    ],
+    faq: [
+      {
+        pregunta: '¿Qué salidas profesionales tiene?',
+        respuesta: 'Podrás trabajar en tareas de apoyo administrativo, archivo, recepción de documentación y asistencia básica en oficinas, gestorías y empresas.',
+      },
+      ...faqsFinanciacion,
+    ],
+    etiquetas: ['Arraigo Socioformativo', 'Certificado oficial (CM/SEPE)', 'Prácticas incluidas'],
+  },
+  {
     slug: 'organizacion-y-gestion-de-almacenes-coml0309',
     titulo: 'COML0309 — Organización y gestión de almacenes',
     categoria: 'arraigo',
-    resumen: 'Organiza y gestiona operaciones de almacenaje y flujos de mercancías. Certificado oficial con 80 horas de prácticas en empresas.',
+    resumen: 'Organiza y gestiona operaciones de almacenaje, stock, preparación de pedidos y flujos de mercancías con certificado oficial y prácticas.',
     horas: 390,
     modalidad: 'presencial',
     requisitos: [
@@ -274,28 +321,19 @@ export const courses: Curso[] = [
     temario: [
       {
         codigo: 'MF1014_3',
-        nombre: 'Organización de almacenes (190 horas)',
-        unidades: [
-          'UF0926: Diseño de la organización del almacén',
-          'UF0927: Gestión del equipo de trabajo del almacén',
-          'UF0928: Seguridad y prevención de riesgos en el almacén',
-        ],
+        nombre: 'Organización de almacenes',
       },
       {
         codigo: 'MF1015_2',
-        nombre: 'Gestión de stocks e inventarios (90 horas)',
-        unidades: [
-          'UF0929: Gestión de stocks',
-          'UF0928: Seguridad y prevención de riesgos en el almacén',
-        ],
+        nombre: 'Gestión de stocks e inventarios',
       },
       {
         codigo: 'MF1005_3',
-        nombre: 'Optimización de la cadena logística (90 horas)',
+        nombre: 'Optimización de la cadena logística',
       },
       {
         codigo: 'MP0193',
-        nombre: 'Módulo de prácticas profesionales no laborales (80 horas)',
+        nombre: 'Módulo de prácticas profesionales no laborales',
       },
     ],
     salidaProfesional: [
@@ -303,23 +341,22 @@ export const courses: Curso[] = [
       'Responsable de logística',
       'Coordinador/a de inventarios',
       'Supervisor/a de almacén',
-      'Técnico/a en gestión de stocks',
     ],
     faq: [
       {
         pregunta: '¿Qué salidas profesionales tiene?',
-        respuesta: 'Podrás trabajar como jefe/a de almacén, responsable de logística, coordinador/a de inventarios o técnico/a en gestión de stocks en empresas de distribución, almacenes y centros logísticos.',
+        respuesta: 'Podrás trabajar en almacenes, centros logísticos, plataformas de distribución y departamentos de logística de diferentes sectores.',
       },
       ...faqsFinanciacion,
     ],
     etiquetas: ['Arraigo Socioformativo', 'Certificado oficial (CM/SEPE)', '80h prácticas'],
   },
   {
-    slug: 'gestion-de-llamadas-de-teleasistencia-sscg0111',
-    titulo: 'SSCG0111 — Gestión de llamadas de teleasistencia',
+    slug: 'limpieza-de-superficies-y-mobiliario-en-edificios-y-locales-sscm0108',
+    titulo: 'SSCM0108 — Limpieza de superficies y mobiliario en edificios y locales',
     categoria: 'arraigo',
-    resumen: 'Gestiona llamadas de teleasistencia y moviliza recursos de atención. Certificado oficial con 80 horas de prácticas.',
-    horas: 330,
+    resumen: 'Formación oficial para limpieza profesional, mantenimiento básico de espacios y uso adecuado de útiles y maquinaria en edificios y locales.',
+    horas: 270,
     modalidad: 'presencial',
     requisitos: [
       'Más de 2 años de residencia en España',
@@ -330,92 +367,46 @@ export const courses: Curso[] = [
     destacado: true,
     temario: [
       {
-        codigo: 'MF1423_2',
-        nombre: 'Atención y gestión de llamadas entrantes en un servicio de teleasistencia (90 horas)',
-      },
-      {
-        codigo: 'MF1424_2',
-        nombre: 'Emisión y gestión de llamadas salientes en un servicio de teleasistencia (60 horas)',
-      },
-      {
-        codigo: 'MF1425_2',
-        nombre: 'Manejo de herramientas, técnicas y habilidades para la prestación de un servicio de teleasistencia (80 horas)',
-      },
-      {
-        codigo: 'MP0416',
-        nombre: 'Módulo de prácticas profesionales no laborales (80 horas)',
-      },
-    ],
-    salidaProfesional: [
-      'Operador/a de teleasistencia',
-      'Teleoperador/a de atención social',
-      'Técnico/a en servicios de teleasistencia',
-      'Gestor/a de llamadas de emergencia social',
-    ],
-    faq: [
-      {
-        pregunta: '¿Qué salidas profesionales tiene?',
-        respuesta: 'Podrás trabajar como operador/a de teleasistencia, teleoperador/a de atención social o técnico/a en servicios de emergencia y atención remota.',
-      },
-      ...faqsFinanciacion,
-    ],
-    etiquetas: ['Arraigo Socioformativo', 'Certificado oficial (CM/SEPE)', '80h prácticas'],
-  },
-  {
-    slug: 'limpieza-de-superficies-y-mobiliario-sscm0108',
-    titulo: 'SSCM0108 — Limpieza de superficies y mobiliario en edificios y locales',
-    categoria: 'arraigo',
-    resumen: 'Labores de limpieza profesional aplicando técnicas y maquinaria específica. Certificado oficial con 80 horas de prácticas.',
-    horas: 270,
-    modalidad: 'presencial',
-    requisitos: [
-      'Más de 2 años de residencia en España',
-      'Sin antecedentes penales',
-      'Pasaporte vigente',
-    ],
-    proximaConvocatoria: 'Próximamente',
-    temario: [
-      {
         codigo: 'MF0972_1',
-        nombre: 'Limpieza, tratamiento y mantenimiento de suelos, paredes y techos en edificios y locales (60 horas)',
+        nombre: 'Limpieza, tratamiento y mantenimiento de suelos, paredes y techos',
       },
       {
         codigo: 'MF0996_1',
-        nombre: 'Limpieza del mobiliario interior (60 horas)',
+        nombre: 'Limpieza del mobiliario interior',
       },
       {
         codigo: 'MF1087_1',
-        nombre: 'Limpieza de cristales en edificios y locales (30 horas)',
+        nombre: 'Limpieza de cristales en edificios y locales',
       },
       {
         codigo: 'MF1088_1',
-        nombre: 'Técnicas y procedimientos de limpieza con utilización de maquinaria (80 horas)',
+        nombre: 'Técnicas y procedimientos de limpieza con maquinaria',
       },
       {
         codigo: 'MP0102',
-        nombre: 'Módulo de prácticas profesionales no laborales (80 horas)',
+        nombre: 'Módulo de prácticas profesionales no laborales',
       },
     ],
     salidaProfesional: [
       'Limpiador/a profesional',
-      'Especialista en limpieza de edificios',
       'Operario/a de limpieza',
-      'Técnico/a en servicios de limpieza',
+      'Especialista en mantenimiento de espacios',
+      'Personal de limpieza en edificios y locales',
     ],
     faq: [
       {
         pregunta: '¿Qué salidas profesionales tiene?',
-        respuesta: 'Podrás trabajar como limpiador/a profesional, operario/a de limpieza en empresas, edificios públicos, hospitales, hoteles y centros comerciales.',
+        respuesta: 'Podrás trabajar en empresas de limpieza, hospitales, centros educativos, hoteles, oficinas y edificios públicos o privados.',
       },
       ...faqsFinanciacion,
     ],
     etiquetas: ['Arraigo Socioformativo', 'Certificado oficial (CM/SEPE)', '80h prácticas'],
   },
   {
-    slug: 'atencion-sociosanitaria-instituciones-sscs0208',
+    slug: 'atencion-sociosanitaria-a-personas-dependientes-en-instituciones-sociales-sscs0208',
     titulo: 'SSCS0208 — Atención sociosanitaria a personas dependientes en instituciones sociales',
     categoria: 'arraigo',
-    resumen: 'Certificado de profesionalidad oficial que capacita para la atención integral (higiene, alimentación, atención sociosanitaria y apoyo psicosocial) a personas dependientes en instituciones. Incluye 80 horas de prácticas profesionales.',
+    resumen: 'Certificado oficial para la atención integral de personas dependientes en instituciones, con formación en apoyo higiénico, alimentario y psicosocial.',
     horas: 450,
     modalidad: 'presencial',
     requisitos: [
@@ -428,55 +419,46 @@ export const courses: Curso[] = [
     temario: [
       {
         codigo: 'MF1016_2',
-        nombre: 'Apoyo en la organización de intervenciones en el ámbito institucional (100 horas)',
-        unidades: [
-          'UF0127: Apoyo en la recepción y acogida en instituciones',
-          'UF0128: Apoyo en la organización de actividades',
-        ],
+        nombre: 'Apoyo en la organización de intervenciones en el ámbito institucional',
       },
       {
         codigo: 'MF1017_2',
-        nombre: 'Intervención en la atención higiénico-alimentaria en instituciones (70 horas)',
+        nombre: 'Intervención en la atención higiénico-alimentaria en instituciones',
       },
       {
         codigo: 'MF1018_2',
-        nombre: 'Intervención en la atención sociosanitaria en instituciones (70 horas)',
+        nombre: 'Intervención en la atención sociosanitaria en instituciones',
       },
       {
         codigo: 'MF1019_2',
-        nombre: 'Apoyo psicosocial, atención relacional y comunicativa en instituciones (130 horas)',
-        unidades: [
-          'UF0129: Animación social de personas dependientes',
-          'UF0130: Mantenimiento y mejora de las actividades diarias',
-          'UF0131: Técnicas de comunicación con personas dependientes',
-        ],
+        nombre: 'Apoyo psicosocial, atención relacional y comunicativa en instituciones',
       },
       {
         codigo: 'MP0029',
-        nombre: 'Módulo de prácticas profesionales no laborales (80 horas)',
+        nombre: 'Módulo de prácticas profesionales no laborales',
       },
     ],
     salidaProfesional: [
       'Cuidador/a de personas dependientes en instituciones',
       'Auxiliar de atención sociosanitaria',
       'Gerocultor/a en residencias',
-      'Auxiliar de ayuda a domicilio en instituciones',
+      'Auxiliar de apoyo institucional',
     ],
     faq: [
       {
         pregunta: '¿Qué salidas profesionales tiene?',
-        respuesta: 'Podrás trabajar en residencias de mayores, centros de día, instituciones para personas con discapacidad y hospitales como auxiliar de atención sociosanitaria.',
+        respuesta: 'Podrás trabajar en residencias, centros de día, instituciones sociales y recursos asistenciales para personas dependientes.',
       },
       ...faqsFinanciacion,
     ],
     etiquetas: ['Arraigo Socioformativo', 'Certificado oficial (CM/SEPE)', '80h prácticas'],
   },
   {
-    slug: 'operaciones-auxiliares-servicios-administrativos',
-    titulo: 'Operaciones auxiliares de servicios administrativos generales',
+    slug: 'gestion-de-llamadas-de-teleasistencia-sscg0111',
+    titulo: 'SSCG0111 — Gestión de llamadas de teleasistencia',
     categoria: 'arraigo',
-    resumen: 'Certificado de profesionalidad para la gestión básica de documentación, archivo, atención telefónica y tareas administrativas de apoyo en oficinas y empresas.',
-    horas: 230,
+    resumen: 'Formación oficial para atender, emitir y gestionar llamadas en servicios de teleasistencia, movilizando recursos de apoyo cuando sea necesario.',
+    horas: 330,
     modalidad: 'presencial',
     requisitos: [
       'Más de 2 años de residencia en España',
@@ -486,69 +468,43 @@ export const courses: Curso[] = [
     proximaConvocatoria: 'Próximamente',
     temario: [
       {
-        nombre: 'Técnicas administrativas básicas',
+        codigo: 'MF1423_2',
+        nombre: 'Atención y gestión de llamadas entrantes en teleasistencia',
       },
       {
-        nombre: 'Archivo y gestión documental',
+        codigo: 'MF1424_2',
+        nombre: 'Emisión y gestión de llamadas salientes en teleasistencia',
       },
       {
-        nombre: 'Atención telefónica y comunicación',
+        codigo: 'MF1425_2',
+        nombre: 'Herramientas, técnicas y habilidades para teleasistencia',
       },
       {
-        nombre: 'Aplicaciones informáticas de oficina',
+        codigo: 'MP0416',
+        nombre: 'Módulo de prácticas profesionales no laborales',
       },
+    ],
+    salidaProfesional: [
+      'Operador/a de teleasistencia',
+      'Teleoperador/a de atención social',
+      'Gestor/a de llamadas de apoyo asistencial',
+      'Técnico/a de servicios remotos de atención',
     ],
     faq: [
       {
         pregunta: '¿Qué salidas profesionales tiene?',
-        respuesta: 'Podrás trabajar como auxiliar administrativo/a en empresas, oficinas y administraciones públicas.',
+        respuesta: 'Podrás trabajar en servicios de teleasistencia, centros de atención remota y plataformas de soporte social y asistencial.',
       },
       ...faqsFinanciacion,
     ],
-    etiquetas: ['Arraigo Socioformativo'],
+    etiquetas: ['Arraigo Socioformativo', 'Certificado oficial (CM/SEPE)', '80h prácticas'],
   },
   {
-    slug: 'transporte-y-distribucion-logistica',
-    titulo: 'Transporte y distribución (Logística)',
+    slug: 'montaje-y-mantenimiento-de-instalaciones-electricas-de-baja-tension-arraigo',
+    titulo: 'Montaje y mantenimiento de instalaciones eléctricas de baja tensión',
     categoria: 'arraigo',
-    resumen: 'Certificado de profesionalidad en operaciones de transporte, rutas de distribución, normativa del sector, documentación y sistemas de trazabilidad.',
-    horas: 220,
-    modalidad: 'mixta',
-    requisitos: [
-      'Más de 2 años de residencia en España',
-      'Sin antecedentes penales',
-      'Pasaporte vigente',
-    ],
-    proximaConvocatoria: 'Próximamente',
-    temario: [
-      {
-        nombre: 'Operaciones de transporte',
-      },
-      {
-        nombre: 'Planificación de rutas',
-      },
-      {
-        nombre: 'Normativa y documentación',
-      },
-      {
-        nombre: 'Trazabilidad y control de mercancías',
-      },
-    ],
-    faq: [
-      {
-        pregunta: '¿Qué salidas profesionales tiene?',
-        respuesta: 'Podrás trabajar en empresas de transporte, logística, distribución y almacenes como operario/a o coordinador/a de transporte.',
-      },
-      ...faqsFinanciacion,
-    ],
-    etiquetas: ['Arraigo Socioformativo'],
-  },
-  {
-    slug: 'servicios-auxiliares-peluqueria',
-    titulo: 'Servicios auxiliares de peluquería',
-    categoria: 'arraigo',
-    resumen: 'Certificado de profesionalidad para prestar servicios auxiliares de peluquería: atención al cliente, higiene, preparación de útiles y apoyo en técnicas básicas de peluquería.',
-    horas: 200,
+    resumen: 'Formación orientada al montaje, revisión y mantenimiento de instalaciones eléctricas de baja tensión con enfoque práctico en seguridad y ejecución.',
+    horas: 380,
     modalidad: 'presencial',
     requisitos: [
       'Más de 2 años de residencia en España',
@@ -558,61 +514,31 @@ export const courses: Curso[] = [
     proximaConvocatoria: 'Próximamente',
     temario: [
       {
-        nombre: 'Atención al cliente en peluquería',
+        nombre: 'Montaje de instalaciones eléctricas interiores',
       },
       {
-        nombre: 'Higiene y asepsia',
+        nombre: 'Canalizaciones, cableado y mecanismos',
       },
       {
-        nombre: 'Preparación de equipos y útiles',
+        nombre: 'Mantenimiento preventivo y correctivo',
       },
       {
-        nombre: 'Apoyo en técnicas básicas',
+        nombre: 'Verificación, medidas y seguridad eléctrica',
       },
+    ],
+    salidaProfesional: [
+      'Ayudante de electricista',
+      'Operario/a de mantenimiento eléctrico',
+      'Instalador/a auxiliar de baja tensión',
+      'Personal de apoyo en instalaciones eléctricas',
     ],
     faq: [
       {
         pregunta: '¿Qué salidas profesionales tiene?',
-        respuesta: 'Podrás trabajar como auxiliar de peluquería en salones, centros de estética y spas.',
+        respuesta: 'Podrás trabajar en apoyo al montaje y mantenimiento de instalaciones eléctricas de baja tensión en obra, rehabilitación y mantenimiento técnico.',
       },
       ...faqsFinanciacion,
     ],
-    etiquetas: ['Arraigo Socioformativo'],
-  },
-  {
-    slug: 'operaciones-basicas-restaurante-bar',
-    titulo: 'Operaciones básicas de restaurante y bar',
-    categoria: 'arraigo',
-    resumen: 'Certificado de profesionalidad para realizar operaciones básicas de servicio en sala, barra, montaje de mesas, atención al cliente y cumplimiento de protocolos de seguridad alimentaria.',
-    horas: 210,
-    modalidad: 'presencial',
-    requisitos: [
-      'Más de 2 años de residencia en España',
-      'Sin antecedentes penales',
-      'Pasaporte vigente',
-    ],
-    proximaConvocatoria: 'Próximamente',
-    temario: [
-      {
-        nombre: 'Servicio en sala y barra',
-      },
-      {
-        nombre: 'Montaje y decoración de mesas',
-      },
-      {
-        nombre: 'Atención al cliente',
-      },
-      {
-        nombre: 'Protocolo y seguridad alimentaria',
-      },
-    ],
-    faq: [
-      {
-        pregunta: '¿Qué salidas profesionales tiene?',
-        respuesta: 'Podrás trabajar como camarero/a, ayudante de barra, auxiliar de sala en restaurantes, bares, hoteles y eventos.',
-      },
-      ...faqsFinanciacion,
-    ],
-    etiquetas: ['Arraigo Socioformativo'],
+    etiquetas: ['Arraigo Socioformativo', 'Formación profesional', 'Enfoque práctico'],
   },
 ];
