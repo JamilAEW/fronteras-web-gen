@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 import FaqAccordion from '@/components/FaqAccordion';
 import { CourseSchema, FAQSchema } from '@/components/StructuredData';
+import { getCourseImage } from '@/lib/course-media';
 
 const Curso = () => {
   const { slug } = useParams<{ slug: string }>();
