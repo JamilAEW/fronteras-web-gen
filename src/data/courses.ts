@@ -49,198 +49,81 @@ export const faqsFinanciacion: Faq[] = [
 export const courses: Curso[] = [
   // ========== VISADO / ESTANCIA ==========
   {
-    slug: 'curso-superior-universitario-marketing-digital',
-    titulo: 'Curso Superior Universitario en Marketing Digital',
-    categoria: 'visado-estancia',
-    resumen: 'Domina estrategias SEO/SEM, social media marketing, e-commerce y analítica web. Diseña y ejecuta campañas digitales efectivas con certificación universitaria.',
-    horas: 750,
-    modalidad: 'mixta',
-    requisitos: ['Pasaporte vigente', 'Conocimientos básicos de informática'],
-    proximaConvocatoria: 'Próximamente',
-    destacado: true,
-    temario: [
-      {
-        nombre: 'Fundamentos de Marketing Digital',
-        unidades: ['Introducción al marketing digital', 'Comportamiento del consumidor online', 'Plan de marketing digital'],
-      },
-      {
-        nombre: 'SEO y SEM',
-        unidades: ['Posicionamiento orgánico (SEO)', 'Google Ads y publicidad de pago', 'Analítica de búsquedas'],
-      },
-      {
-        nombre: 'Social Media Marketing',
-        unidades: ['Estrategias en redes sociales', 'Community management', 'Publicidad en Meta, LinkedIn, TikTok'],
-      },
-      {
-        nombre: 'Content Marketing y E-commerce',
-        unidades: ['Creación de contenido de valor', 'Email marketing', 'Estrategias de e-commerce y conversión'],
-      },
-      {
-        nombre: 'Analítica Web',
-        unidades: ['Google Analytics 4', 'Métricas y KPIs', 'Optimización de conversiones'],
-      },
-    ],
-    salidaProfesional: [
-      'Especialista en Marketing Digital',
-      'Community Manager',
-      'Analista de Marketing',
-      'Consultor SEO/SEM',
-      'Gestor de E-commerce',
-    ],
-    faq: [
-      {
-        pregunta: '¿Este curso sirve para Estancia y Visado por Estudios?',
-        respuesta: 'Sí, este curso es válido tanto para Estancia por Estudios como para Visado por Estudios (unificado), cumpliendo todos los requisitos legales.',
-      },
-      {
-        pregunta: '¿Qué modalidad tiene?',
-        respuesta: 'Es semipresencial (mixta), combinando clases online y sesiones presenciales.',
-      },
-      {
-        pregunta: '¿Qué formas de pago existen?',
-        respuesta: 'Ofrecemos pago flexible con cuotas sin intereses, adaptadas a tu situación.',
-      },
-      ...faqsFinanciacion,
-    ],
-    etiquetas: ['Visado / Estancia', 'Certificación Universitaria EUNEIZ'],
-  },
-  {
-    slug: 'curso-superior-universitario-hacking-etico-y-redes-ciberseguridad',
-    titulo: 'Curso Superior Universitario en Hacking Ético y Redes — Ciberseguridad',
-    categoria: 'visado-estancia',
-    resumen: 'Especialízate en pentesting, análisis de vulnerabilidades y seguridad en redes. Prepárate para la certificación PCCET de Palo Alto Networks.',
-    horas: 750,
-    modalidad: 'mixta',
-    requisitos: ['Pasaporte vigente', 'Conocimientos básicos de informática y redes'],
-    proximaConvocatoria: 'Próximamente',
-    destacado: true,
-    temario: [
-      {
-        nombre: 'Fundamentos de Ciberseguridad',
-        unidades: ['Conceptos básicos de seguridad', 'Tipos de amenazas y ataques', 'Marco normativo y legal'],
-      },
-      {
-        nombre: 'Hacking Ético y Pentesting',
-        unidades: ['Metodologías de pentesting', 'Herramientas de análisis de vulnerabilidades', 'Técnicas de explotación ética'],
-      },
-      {
-        nombre: 'Seguridad en Redes',
-        unidades: ['Arquitecturas de red seguras', 'Firewalls y sistemas de detección', 'VPNs y cifrado de datos'],
-      },
-      {
-        nombre: 'Auditoría y Análisis Forense',
-        unidades: ['Auditoría de sistemas', 'Análisis forense digital', 'Respuesta ante incidentes'],
-      },
-      {
-        nombre: 'Preparación PCCET',
-        unidades: ['Certificación Palo Alto Networks', 'Simulacros y ejercicios prácticos', 'Casos reales de ciberseguridad'],
-      },
-    ],
-    salidaProfesional: [
-      'Analista de Ciberseguridad',
-      'Pentester',
-      'Auditor de Seguridad',
-      'Consultor en Seguridad Informática',
-      'Especialista en SOC (Security Operations Center)',
-    ],
-    faq: [
-      {
-        pregunta: '¿Este curso sirve para Estancia y Visado por Estudios?',
-        respuesta: 'Sí, este curso es válido tanto para Estancia por Estudios como para Visado por Estudios (unificado).',
-      },
-      {
-        pregunta: '¿Qué modalidad tiene?',
-        respuesta: 'Es semipresencial (mixta), con clases online y prácticas presenciales.',
-      },
-      {
-        pregunta: '¿Incluye certificación PCCET?',
-        respuesta: 'El curso te prepara para obtener la certificación PCCET de Palo Alto Networks, reconocida internacionalmente en ciberseguridad.',
-      },
-      ...faqsFinanciacion,
-    ],
-    etiquetas: ['Visado / Estancia', 'Certificación Universitaria EUNEIZ', 'Preparación PCCET'],
-  },
-  {
-    slug: 'curso-superior-universitario-control-procesos-logisticos-empresa',
-    titulo: 'Curso Superior Universitario en Control en Procesos Logísticos para la Empresa',
-    categoria: 'visado-estancia',
-    resumen: 'Gestión de supply chain, control de inventarios, almacenes y transporte. Formación universitaria con enfoque práctico y herramientas digitales.',
-    horas: 750,
-    modalidad: 'mixta',
-    requisitos: ['Pasaporte vigente', 'Interés en logística y gestión empresarial'],
-    proximaConvocatoria: 'Próximamente',
-    destacado: true,
-    temario: [
-      {
-        nombre: 'Introducción a la Logística',
-        unidades: ['Conceptos de supply chain', 'Tipos de logística', 'Flujos de información y materiales'],
-      },
-      {
-        nombre: 'Gestión de Almacenes',
-        unidades: ['Diseño y organización de almacenes', 'Control de inventarios', 'Sistemas de almacenaje y picking'],
-      },
-      {
-        nombre: 'Transporte y Distribución',
-        unidades: ['Modos de transporte', 'Planificación de rutas', 'Optimización de la distribución'],
-      },
-      {
-        nombre: 'Control de Procesos',
-        unidades: ['KPIs logísticos', 'Gestión de la calidad', 'Mejora continua en logística'],
-      },
-      {
-        nombre: 'Herramientas Digitales',
-        unidades: ['Software de gestión logística (ERP, WMS)', 'Automatización y tecnología 4.0', 'Análisis de datos en logística'],
-      },
-    ],
-    salidaProfesional: [
-      'Responsable de Logística',
-      'Gestor de Almacén',
-      'Coordinador de Transporte',
-      'Analista de Supply Chain',
-      'Consultor Logístico',
-    ],
-    faq: [
-      {
-        pregunta: '¿Este curso sirve para Estancia y Visado por Estudios?',
-        respuesta: 'Sí, este curso es válido tanto para Estancia por Estudios como para Visado por Estudios (unificado).',
-      },
-      {
-        pregunta: '¿Qué modalidad tiene?',
-        respuesta: 'Es semipresencial (mixta), combinando sesiones online y presenciales.',
-      },
-      {
-        pregunta: '¿Qué salidas profesionales tiene?',
-        respuesta: 'Puedes trabajar en departamentos de logística, almacenes, empresas de transporte, consultoría y supply chain de cualquier sector.',
-      },
-      ...faqsFinanciacion,
-    ],
-    etiquetas: ['Visado / Estancia', 'Certificación Universitaria EUNEIZ'],
-  },
-  {
     slug: 'tecnicas-venta-online-y-marketing-digital',
     titulo: 'Técnicas de venta online y marketing digital',
     categoria: 'visado-estancia',
-    resumen: 'Estrategias de captación y conversión de clientes online. Domina email marketing, redes sociales y publicidad digital.',
+    resumen: 'Aprende captación, conversión y comunicación digital para vender online con criterio profesional y herramientas actuales.',
     horas: 300,
     modalidad: 'mixta',
     requisitos: ['Pasaporte vigente'],
     proximaConvocatoria: 'Próximamente',
+    destacado: true,
     temario: [
+      { nombre: 'Fundamentos del comercio electrónico' },
+      { nombre: 'Estrategias de captación de tráfico' },
+      { nombre: 'Técnicas de conversión y embudos de venta' },
+      { nombre: 'Email marketing y automatización' },
+      { nombre: 'Publicidad en redes sociales' },
+    ],
+    faq: [
       {
-        nombre: 'Fundamentos del comercio electrónico',
+        pregunta: '¿Este curso sirve para Estancia y Visado por Estudios?',
+        respuesta: 'Sí, este curso es válido tanto para Estancia por Estudios como para Visado por Estudios (unificado).',
       },
       {
-        nombre: 'Estrategias de captación de tráfico',
+        pregunta: '¿Qué modalidad tiene?',
+        respuesta: 'Es semipresencial (mixta).',
+      },
+      ...faqsFinanciacion,
+    ],
+    etiquetas: ['Visado / Estancia'],
+  },
+  {
+    slug: 'control-de-procesos-logisticos-en-la-empresa',
+    titulo: 'Control de procesos logísticos en la empresa',
+    categoria: 'visado-estancia',
+    resumen: 'Desarrolla competencias en almacén, inventario, distribución y coordinación operativa dentro del entorno logístico empresarial.',
+    horas: 300,
+    modalidad: 'mixta',
+    requisitos: ['Pasaporte vigente'],
+    proximaConvocatoria: 'Próximamente',
+    destacado: true,
+    temario: [
+      { nombre: 'Operativa logística y supply chain' },
+      { nombre: 'Gestión de almacenes e inventarios' },
+      { nombre: 'Planificación de transporte y distribución' },
+      { nombre: 'Control de procesos y calidad' },
+      { nombre: 'Herramientas digitales aplicadas a logística' },
+    ],
+    faq: [
+      {
+        pregunta: '¿Este curso sirve para Estancia y Visado por Estudios?',
+        respuesta: 'Sí, este curso es válido tanto para Estancia por Estudios como para Visado por Estudios (unificado).',
       },
       {
-        nombre: 'Técnicas de conversión y embudos de venta',
+        pregunta: '¿Qué modalidad tiene?',
+        respuesta: 'Es semipresencial (mixta).',
       },
-      {
-        nombre: 'Email marketing y automatización',
-      },
-      {
-        nombre: 'Publicidad en redes sociales',
-      },
+      ...faqsFinanciacion,
+    ],
+    etiquetas: ['Visado / Estancia'],
+  },
+  {
+    slug: 'auxiliar-de-cocina',
+    titulo: 'Auxiliar de Cocina',
+    categoria: 'visado-estancia',
+    resumen: 'Adquiere bases prácticas de preelaboración, apoyo en cocina, manipulación segura de alimentos y organización del puesto de trabajo.',
+    horas: 300,
+    modalidad: 'mixta',
+    requisitos: ['Pasaporte vigente'],
+    proximaConvocatoria: 'Próximamente',
+    destacado: true,
+    temario: [
+      { nombre: 'Preelaboración y conservación de alimentos' },
+      { nombre: 'Técnicas básicas de cocina' },
+      { nombre: 'Seguridad e higiene alimentaria' },
+      { nombre: 'Apoyo al servicio en cocina' },
+      { nombre: 'Organización del área de trabajo' },
     ],
     faq: [
       {
@@ -257,29 +140,107 @@ export const courses: Curso[] = [
   },
   {
     slug: 'atencion-sociosanitaria-instituciones-dependencia-discapacidad-visado',
-    titulo: 'Atención sociosanitaria en instituciones (dependencia y discapacidad)',
+    titulo: 'Atención sociosanitaria en instituciones a personas dependientes y con discapacidad',
     categoria: 'visado-estancia',
-    resumen: 'Cuidados básicos y soporte sociosanitario a personas dependientes. Aprende higiene, movilización y apoyo psicosocial.',
+    resumen: 'Fórmate en cuidados básicos, apoyo psicosocial, movilización y acompañamiento profesional en entornos institucionales.',
+    horas: 300,
+    modalidad: 'mixta',
+    requisitos: ['Pasaporte vigente'],
+    proximaConvocatoria: 'Próximamente',
+    destacado: true,
+    temario: [
+      { nombre: 'Introducción a la atención sociosanitaria' },
+      { nombre: 'Higiene y cuidados básicos' },
+      { nombre: 'Movilización y transferencias' },
+      { nombre: 'Apoyo psicosocial' },
+      { nombre: 'Primeros auxilios básicos' },
+    ],
+    faq: [
+      {
+        pregunta: '¿Este curso sirve para Estancia y Visado por Estudios?',
+        respuesta: 'Sí, este curso es válido tanto para Estancia por Estudios como para Visado por Estudios (unificado).',
+      },
+      {
+        pregunta: '¿Qué modalidad tiene?',
+        respuesta: 'Es semipresencial (mixta).',
+      },
+      ...faqsFinanciacion,
+    ],
+    etiquetas: ['Visado / Estancia'],
+  },
+  {
+    slug: 'montaje-y-mantenimiento-de-instalaciones-electricas-de-baja-tension',
+    titulo: 'Montaje y mantenimiento de instalaciones eléctricas de baja tensión',
+    categoria: 'visado-estancia',
+    resumen: 'Aprende montaje, revisión y mantenimiento básico de instalaciones eléctricas de baja tensión con enfoque práctico y seguro.',
     horas: 300,
     modalidad: 'mixta',
     requisitos: ['Pasaporte vigente'],
     proximaConvocatoria: 'Próximamente',
     temario: [
+      { nombre: 'Interpretación básica de instalaciones eléctricas' },
+      { nombre: 'Montaje de circuitos y mecanismos' },
+      { nombre: 'Mantenimiento preventivo y correctivo' },
+      { nombre: 'Medidas de seguridad eléctrica' },
+      { nombre: 'Herramientas y materiales de trabajo' },
+    ],
+    faq: [
       {
-        nombre: 'Introducción a la atención sociosanitaria',
+        pregunta: '¿Este curso sirve para Estancia y Visado por Estudios?',
+        respuesta: 'Sí, este curso es válido tanto para Estancia por Estudios como para Visado por Estudios (unificado).',
       },
       {
-        nombre: 'Higiene y cuidados básicos',
+        pregunta: '¿Qué modalidad tiene?',
+        respuesta: 'Es semipresencial (mixta).',
+      },
+      ...faqsFinanciacion,
+    ],
+    etiquetas: ['Visado / Estancia'],
+  },
+  {
+    slug: 'mantenimiento-y-soporte-de-sistemas-informaticos-y-redes',
+    titulo: 'Mantenimiento y soporte de sistemas informáticos y redes',
+    categoria: 'visado-estancia',
+    resumen: 'Desarrolla habilidades para instalar, mantener y dar soporte básico a equipos, sistemas operativos y redes informáticas.',
+    horas: 300,
+    modalidad: 'mixta',
+    requisitos: ['Pasaporte vigente', 'Conocimientos básicos de informática'],
+    proximaConvocatoria: 'Próximamente',
+    temario: [
+      { nombre: 'Equipos y sistemas operativos' },
+      { nombre: 'Mantenimiento preventivo y diagnóstico' },
+      { nombre: 'Redes locales y conectividad' },
+      { nombre: 'Soporte técnico a usuarios' },
+      { nombre: 'Seguridad básica en entornos informáticos' },
+    ],
+    faq: [
+      {
+        pregunta: '¿Este curso sirve para Estancia y Visado por Estudios?',
+        respuesta: 'Sí, este curso es válido tanto para Estancia por Estudios como para Visado por Estudios (unificado).',
       },
       {
-        nombre: 'Movilización y transferencias',
+        pregunta: '¿Qué modalidad tiene?',
+        respuesta: 'Es semipresencial (mixta).',
       },
-      {
-        nombre: 'Apoyo psicosocial',
-      },
-      {
-        nombre: 'Primeros auxilios básicos',
-      },
+      ...faqsFinanciacion,
+    ],
+    etiquetas: ['Visado / Estancia'],
+  },
+  {
+    slug: 'gestion-administrativa-y-organizativa-aplicada-al-sector-horeca',
+    titulo: 'Gestión administrativa y organizativa aplicada al sector HORECA',
+    categoria: 'visado-estancia',
+    resumen: 'Capacitación en organización operativa, documentación, atención y apoyo administrativo para negocios de hostelería y restauración.',
+    horas: 300,
+    modalidad: 'mixta',
+    requisitos: ['Pasaporte vigente'],
+    proximaConvocatoria: 'Próximamente',
+    temario: [
+      { nombre: 'Estructura del sector HORECA' },
+      { nombre: 'Gestión documental y administrativa' },
+      { nombre: 'Organización de recursos y turnos' },
+      { nombre: 'Atención al cliente y coordinación interna' },
+      { nombre: 'Control básico de aprovisionamiento y costes' },
     ],
     faq: [
       {
