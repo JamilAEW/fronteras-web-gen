@@ -32,7 +32,7 @@ export const OrganizationSchema = ({
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+34-658-40-39-06',
+      telephone: '+34-635-58-20-80',
       contactType: 'Admissions',
       email: 'info@educarsinfronteras.es',
     },

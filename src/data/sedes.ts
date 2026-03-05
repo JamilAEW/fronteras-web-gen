@@ -48,6 +48,6 @@ export const sedes: Sede[] = [
     ciudad: 'Madrid',
     metro: 'Nueva Numancia (L1)',
     telefono: '+34 657 111 506',
-    email: 'atcliente76@distritodeabogados.com',
+    email: 'info@educarsinfronteras.es',
   },
 ];

@@ -213,10 +213,10 @@ const Contacto = () => {
                       <div>
                         <p className="font-semibold mb-1">Teléfono</p>
                         <a
-                          href="tel:+34658403906"
+                          href="tel:+34635582080"
                           className="text-muted-foreground hover:text-primary transition-colors"
                         >
-                          +34 658 40 39 06
+                          +34 635 58 20 80
                         </a>
                       </div>
                     </div>
