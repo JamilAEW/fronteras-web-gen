@@ -27,7 +27,7 @@ export const sedes: Sede[] = [
     cp: '28026',
     ciudad: 'Madrid',
     metro: 'Usera (L6) salida Mirasierra',
-    telefono: '+34 658 40 39 06',
+    telefono: '+34 615 29 70 31',
     email: 'info@educarsinfronteras.es',
   },
   {
