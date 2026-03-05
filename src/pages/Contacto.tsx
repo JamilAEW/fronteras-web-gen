@@ -20,7 +20,7 @@ const Contacto = () => {
     telefono: '',
     curso: '',
     mensaje: '',
-    rgpd: false
+    rgpd: false,
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -37,7 +37,7 @@ const Contacto = () => {
       telefono: '',
       curso: '',
       mensaje: '',
-      rgpd: false
+      rgpd: false,
     });
   };
 
@@ -49,19 +49,19 @@ const Contacto = () => {
         <link rel="canonical" href="https://educarsinfronteras.es/contacto" />
         <meta name="keywords" content="contacto educar sin fronteras, sedes madrid, teléfono centro formación, dirección" />
       </Helmet>
-      {sedes.map((sede) =>
-      <LocalBusinessSchema
-        key={sede.nombre}
-        name={`Educar Sin Fronteras - ${sede.nombre}`}
-        address={{
-          streetAddress: sede.direccion,
-          addressLocality: sede.ciudad,
-          postalCode: sede.cp
-        }}
-        telephone={sede.telefono}
-        email={sede.email} />
-
-      )}
+      {sedes.map((sede) => (
+        <LocalBusinessSchema
+          key={sede.nombre}
+          name={`Educar Sin Fronteras - ${sede.nombre}`}
+          address={{
+            streetAddress: sede.direccion,
+            addressLocality: sede.ciudad,
+            postalCode: sede.cp,
+          }}
+          telephone={sede.telefono}
+          email={sede.email}
+        />
+      ))}
       <Navbar />
       <main>
         {/* Hero interno */}
@@ -75,12 +75,12 @@ const Contacto = () => {
         </section>
 
         {/* Formulario y datos de contacto */}
-        <section
+        <section 
           ref={ref as React.RefObject<HTMLElement>}
           className={`py-20 bg-background transition-all duration-1000 ${
-          isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'}`
-          }>
-          
+            isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
+          }`}
+        >
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Formulario */}
@@ -100,8 +100,8 @@ const Contacto = () => {
                         maxLength={100}
                         value={formData.nombre}
                         onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
-                        className="w-full px-4 py-2.5 border border-input rounded-lg focus:ring-2 focus:ring-accent/40 focus:border-transparent transition-all" />
-                      
+                        className="w-full px-4 py-2.5 border border-input rounded-lg focus:ring-2 focus:ring-accent/40 focus:border-transparent transition-all"
+                      />
                     </div>
 
                     <div>
@@ -115,8 +115,8 @@ const Contacto = () => {
                         maxLength={100}
                         value={formData.apellidos}
                         onChange={(e) => setFormData({ ...formData, apellidos: e.target.value })}
-                        className="w-full px-4 py-2.5 border border-input rounded-lg focus:ring-2 focus:ring-accent/40 focus:border-transparent transition-all" />
-                      
+                        className="w-full px-4 py-2.5 border border-input rounded-lg focus:ring-2 focus:ring-accent/40 focus:border-transparent transition-all"
+                      />
                     </div>
                   </div>
 
@@ -131,8 +131,8 @@ const Contacto = () => {
                       maxLength={255}
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-2.5 border border-input rounded-lg focus:ring-2 focus:ring-accent/40 focus:border-transparent transition-all" />
-                    
+                      className="w-full px-4 py-2.5 border border-input rounded-lg focus:ring-2 focus:ring-accent/40 focus:border-transparent transition-all"
+                    />
                   </div>
 
                   <div>
@@ -146,8 +146,8 @@ const Contacto = () => {
                       maxLength={20}
                       value={formData.telefono}
                       onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
-                      className="w-full px-4 py-2.5 border border-input rounded-lg focus:ring-2 focus:ring-accent/40 focus:border-transparent transition-all" />
-                    
+                      className="w-full px-4 py-2.5 border border-input rounded-lg focus:ring-2 focus:ring-accent/40 focus:border-transparent transition-all"
+                    />
                   </div>
 
                   <div>
@@ -156,8 +156,8 @@ const Contacto = () => {
                     </label>
                     <CoursesSelect
                       value={formData.curso}
-                      onChange={(value) => setFormData({ ...formData, curso: value })} />
-                    
+                      onChange={(value) => setFormData({ ...formData, curso: value })}
+                    />
                   </div>
 
                   <div>
@@ -172,8 +172,8 @@ const Contacto = () => {
                       value={formData.mensaje}
                       onChange={(e) => setFormData({ ...formData, mensaje: e.target.value })}
                       className="w-full px-4 py-2.5 border border-input rounded-lg focus:ring-2 focus:ring-accent/40 focus:border-transparent transition-all resize-none"
-                      placeholder="Cuéntanos cómo podemos ayudarte..." />
-                    
+                      placeholder="Cuéntanos cómo podemos ayudarte..."
+                    />
                   </div>
 
                   <div className="flex items-start gap-2">
@@ -183,8 +183,8 @@ const Contacto = () => {
                       required
                       checked={formData.rgpd}
                       onChange={(e) => setFormData({ ...formData, rgpd: e.target.checked })}
-                      className="mt-1" />
-                    
+                      className="mt-1"
+                    />
                     <label htmlFor="contacto-rgpd" className="text-xs text-muted-foreground">
                       Acepto la{' '}
                       <a href="/privacidad" className="text-primary hover:underline">
@@ -214,8 +214,8 @@ const Contacto = () => {
                         <p className="font-semibold mb-1">Teléfono</p>
                         <a
                           href="tel:+34635582080"
-                          className="text-muted-foreground hover:text-primary transition-colors">
-                          
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                        >
                           +34 635 58 20 80
                         </a>
                       </div>
@@ -229,8 +229,8 @@ const Contacto = () => {
                         <p className="font-semibold mb-1">Email</p>
                         <a
                           href="mailto:info@educarsinfronteras.es"
-                          className="text-muted-foreground hover:text-primary transition-colors">
-                          
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                        >
                           info@educarsinfronteras.es
                         </a>
                       </div>
@@ -240,7 +240,7 @@ const Contacto = () => {
 
                 <div className="bg-accent/10 rounded-2xl border border-accent/20 p-8">
                   <h3 className="text-xl font-display font-bold mb-3">Horario de atención</h3>
-                  <p className="text-muted-foreground mb-2">Lunes a Viernes: 10:00 - 14:00 y 16:00 - 20:00
+                  <p className="text-muted-foreground mb-2">
                     <strong>Lunes a Viernes:</strong> 9:00 - 18:00
                   </p>
                   <p className="text-muted-foreground">
@@ -256,8 +256,8 @@ const Contacto = () => {
         <Locations />
       </main>
       <Footer />
-    </div>);
-
+    </div>
+  );
 };
 
 export default Contacto;
