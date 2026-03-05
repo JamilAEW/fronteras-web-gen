@@ -12,12 +12,12 @@ export interface Sede {
 export const sedes: Sede[] = [
   {
     nombre: 'Centro de Formación y Oficina de Información',
-    direccion: 'Calle Doctor Esquerdo, 6',
+    direccion: 'Calle Dr. Esquerdo, 6',
     distrito: 'Salamanca',
     cp: '28028',
     ciudad: 'Madrid',
     metro: 'Manuel Becerra (L2 y L6)',
-    telefono: '+34 658 40 39 06',
+    telefono: '+34 635 58 20 80',
     email: 'info@educarsinfronteras.es',
   },
   {
