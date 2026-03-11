@@ -26,19 +26,4 @@ export const faqGeneral: Faq[] = [
     respuesta:
       'Las inscripciones están abiertas. Puedes consultar las próximas convocatorias de cada curso en sus fichas individuales o contactar con nuestro equipo de asesores para más información.',
   },
-  {
-    pregunta: '¿Dónde están ubicados?',
-    respuesta:
-      'Contamos con un centro de formación en la Calle Doctor Esquerdo, 6 (Salamanca) y dos oficinas de información en Usera y Carabanchel. Todas con fácil acceso en metro.',
-  },
-  {
-    pregunta: '¿Qué requisitos necesito para inscribirme?',
-    respuesta:
-      'Para cursos de arraigo: más de 2 años en España, sin antecedentes penales y pasaporte vigente. Para cursos de visado/estancia: pasaporte vigente y cumplir los requisitos específicos de cada formación.',
-  },
-  {
-    pregunta: '¿Los cursos incluyen prácticas?',
-    respuesta:
-      'Sí, los certificados de profesionalidad (arraigo) incluyen un módulo de prácticas profesionales no laborales de 80 horas en empresas del sector, lo que facilita tu inserción laboral.',
-  },
 ];
