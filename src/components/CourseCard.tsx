@@ -85,13 +85,6 @@ const CourseCard = ({ curso, isHomepage = false }: CourseCardProps) => {
           </div>
         )}
 
-        {/* Pricing */}
-        {curso.precio && (
-          <div className="mb-4">
-            <p className="text-lg font-bold text-foreground">{curso.precio.toLocaleString('es-ES')} €</p>
-            {curso.cuotas && <p className="text-xs text-muted-foreground">{curso.cuotas}</p>}
-          </div>
-        )}
 
         {/* Convocatoria */}
         {curso.proximaConvocatoria && (
