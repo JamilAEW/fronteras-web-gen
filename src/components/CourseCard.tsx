@@ -81,7 +81,7 @@ const CourseCard = ({ curso, isHomepage = false }: CourseCardProps) => {
         {curso.horas && (
           <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
             <BookOpenIcon className="h-4 w-4" />
-            <span>{curso.horas} horas{curso.horasPracticas ? ` + ${curso.horasPracticas}h prácticas` : ''}</span>
+            <span>{curso.horas} horas{curso.horasPracticas ? ` + ${curso.horasPracticas}h prácticas` : curso.horario?.toLowerCase().includes('taller') ? ' + Taller' : ''}</span>
           </div>
         )}
 

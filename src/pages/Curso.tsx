@@ -111,7 +111,7 @@ const Curso = () => {
               {curso.horas && (
                 <p className="mb-2">
                   <span className="font-semibold">Duración:</span> {curso.horas} horas
-                  {curso.horasPracticas ? ` + ${curso.horasPracticas}h prácticas` : ''}
+                  {curso.horasPracticas ? ` + ${curso.horasPracticas}h prácticas` : curso.horario?.toLowerCase().includes('taller') ? ' + Taller' : ''}
                 </p>
               )}
               {curso.duracionMeses && (
