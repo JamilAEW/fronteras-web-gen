@@ -594,14 +594,21 @@ export const courses: Curso[] = [
     titulo: 'Montaje y mantenimiento de instalaciones eléctricas de baja tensión',
     categoria: 'arraigo',
     resumen: 'Formación orientada al montaje, revisión y mantenimiento de instalaciones eléctricas de baja tensión con enfoque práctico en seguridad y ejecución.',
-    horas: 380,
+    horas: 750,
     modalidad: 'presencial',
+    duracionMeses: 8,
+    precio: 2850,
+    matricula: 300,
+    cuotas: 'Hasta 10 cuotas de 285€',
+    horario: 'Taller sábado',
     requisitos: [
       'Más de 2 años de residencia en España',
       'Sin antecedentes penales',
       'Pasaporte vigente',
     ],
-    proximaConvocatoria: 'Próximamente',
+    proximaConvocatoria: 'Noviembre 2026',
+    fechaInicio: '19/11/2026',
+    fechaFin: '30/07/2027',
     temario: [
       {
         nombre: 'Montaje de instalaciones eléctricas interiores',
