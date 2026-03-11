@@ -426,14 +426,20 @@ export const courses: Curso[] = [
     titulo: 'SSCM0108 — Limpieza de superficies y mobiliario en edificios y locales',
     categoria: 'arraigo',
     resumen: 'Formación oficial para limpieza profesional, mantenimiento básico de espacios y uso adecuado de útiles y maquinaria en edificios y locales.',
-    horas: 270,
+    horas: 150,
+    horasPracticas: 40,
     modalidad: 'presencial',
+    duracionMeses: 4,
+    precio: 1250,
+    matricula: 150,
+    cuotas: 'Hasta 6 cuotas de 208€',
+    horario: 'Viernes virtual',
     requisitos: [
       'Más de 2 años de residencia en España',
       'Sin antecedentes penales',
       'Pasaporte vigente',
     ],
-    proximaConvocatoria: 'Próximamente',
+    proximaConvocatoria: 'Mayo 2026',
     destacado: true,
     temario: [
       {
