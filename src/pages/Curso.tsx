@@ -104,14 +104,38 @@ const Curso = () => {
                 {curso.resumen}
               </p>
               {curso.modalidad && (
-                <p className="mb-6">
+                <p className="mb-2">
                   <span className="font-semibold">Modalidad:</span> {curso.modalidad === 'presencial' ? 'Presencial' : curso.modalidad === 'mixta' ? 'Semipresencial (Mixta)' : 'Online'}
                 </p>
               )}
               {curso.horas && (
-                <p className="mb-8">
+                <p className="mb-2">
                   <span className="font-semibold">Duración:</span> {curso.horas} horas
+                  {curso.horasPracticas ? ` + ${curso.horasPracticas}h prácticas` : ''}
                 </p>
+              )}
+              {curso.duracionMeses && (
+                <p className="mb-2">
+                  <span className="font-semibold">Duración total:</span> {curso.duracionMeses} meses{curso.horasPracticas ? ' + Prácticas' : ''}
+                </p>
+              )}
+              {curso.horario && (
+                <p className="mb-2">
+                  <span className="font-semibold">Horario:</span> {curso.horario}
+                </p>
+              )}
+              {curso.proximaConvocatoria && (
+                <p className="mb-2">
+                  <span className="font-semibold">Próxima convocatoria:</span> {curso.proximaConvocatoria}
+                  {curso.fechaInicio && ` — Inicio: ${curso.fechaInicio}`}
+                </p>
+              )}
+              {curso.precio && (
+                <div className="mb-6 mt-4 bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                  <p className="text-2xl font-bold">{curso.precio.toLocaleString('es-ES')} €</p>
+                  {curso.matricula && <p className="text-sm opacity-90">Matrícula: {curso.matricula} €</p>}
+                  {curso.cuotas && <p className="text-sm opacity-90">{curso.cuotas}</p>}
+                </div>
               )}
               <div className="flex flex-wrap gap-4">
                 <Button 
