@@ -483,14 +483,21 @@ export const courses: Curso[] = [
     titulo: 'SSCS0208 — Atención sociosanitaria a personas dependientes en instituciones sociales',
     categoria: 'arraigo',
     resumen: 'Certificado oficial para la atención integral de personas dependientes en instituciones, con formación en apoyo higiénico, alimentario y psicosocial.',
-    horas: 450,
+    horas: 370,
+    horasPracticas: 80,
     modalidad: 'presencial',
+    duracionMeses: 6,
+    precio: 2000,
+    matricula: 200,
+    cuotas: 'Hasta 8 cuotas',
+    horario: '1 día 18 a 21hrs — Sábado 9hrs a 13hrs y 15 a 18hrs',
     requisitos: [
       'Más de 2 años de residencia en España',
       'Sin antecedentes penales',
       'Pasaporte vigente',
     ],
-    proximaConvocatoria: 'Próximamente',
+    proximaConvocatoria: 'Mayo 2026',
+    fechaInicio: '18/05/2026',
     destacado: true,
     temario: [
       {
