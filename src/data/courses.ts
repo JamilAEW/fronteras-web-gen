@@ -23,9 +23,17 @@ export interface Curso {
   categoria: Categoria;
   resumen: string;
   horas?: number;
+  horasPracticas?: number;
   modalidad?: 'presencial' | 'mixta' | 'online';
+  duracionMeses?: number;
+  precio?: number;
+  matricula?: number;
+  cuotas?: string;
+  horario?: string;
   requisitos?: string[];
   proximaConvocatoria?: string;
+  fechaInicio?: string;
+  fechaFin?: string;
   temario?: Modulo[];
   salidaProfesional?: string[];
   docentes?: Docente[];
