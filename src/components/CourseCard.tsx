@@ -79,10 +79,25 @@ const CourseCard = ({ curso, isHomepage = false }: CourseCardProps) => {
 
         {/* Meta Info */}
         {curso.horas && (
-          <div className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
+          <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
             <BookOpenIcon className="h-4 w-4" />
-            <span>{curso.horas} horas de formación</span>
+            <span>{curso.horas} horas{curso.horasPracticas ? ` + ${curso.horasPracticas}h prácticas` : ''}</span>
           </div>
+        )}
+
+        {/* Pricing */}
+        {curso.precio && (
+          <div className="mb-4">
+            <p className="text-lg font-bold text-foreground">{curso.precio.toLocaleString('es-ES')} €</p>
+            {curso.cuotas && <p className="text-xs text-muted-foreground">{curso.cuotas}</p>}
+          </div>
+        )}
+
+        {/* Convocatoria */}
+        {curso.proximaConvocatoria && (
+          <p className="text-xs text-primary font-semibold mb-4">
+            📅 {curso.proximaConvocatoria}
+          </p>
         )}
 
         {/* Spacer to push button to bottom */}
