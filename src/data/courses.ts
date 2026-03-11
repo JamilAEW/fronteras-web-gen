@@ -372,14 +372,21 @@ export const courses: Curso[] = [
     titulo: 'COML0309 — Organización y gestión de almacenes',
     categoria: 'arraigo',
     resumen: 'Organiza y gestiona operaciones de almacenaje, stock, preparación de pedidos y flujos de mercancías con certificado oficial y prácticas.',
-    horas: 390,
+    horas: 310,
+    horasPracticas: 80,
     modalidad: 'presencial',
+    duracionMeses: 4,
+    precio: 2200,
+    matricula: 300,
+    cuotas: 'Hasta 10 cuotas de 220€',
+    horario: 'Lunes a Viernes — Semana alterna — 18:00 a 21:00h',
     requisitos: [
       'Más de 2 años de residencia en España',
       'Sin antecedentes penales',
       'Pasaporte vigente',
     ],
-    proximaConvocatoria: 'Próximamente',
+    proximaConvocatoria: 'Mayo 2026',
+    fechaInicio: '11/05/2026',
     destacado: true,
     temario: [
       {
