@@ -130,13 +130,6 @@ const Curso = () => {
                   {curso.fechaInicio && ` — Inicio: ${curso.fechaInicio}`}
                 </p>
               )}
-              {curso.precio && (
-                <div className="mb-6 mt-4 bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                  <p className="text-2xl font-bold">{curso.precio.toLocaleString('es-ES')} €</p>
-                  {curso.matricula && <p className="text-sm opacity-90">Matrícula: {curso.matricula} €</p>}
-                  {curso.cuotas && <p className="text-sm opacity-90">{curso.cuotas}</p>}
-                </div>
-              )}
               <div className="flex flex-wrap gap-4">
                 <Button 
                   variant="secondary" 
