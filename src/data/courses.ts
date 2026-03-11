@@ -132,7 +132,7 @@ export const courses: Curso[] = [
     horas: 750,
     modalidad: 'mixta',
     duracionMeses: 8,
-    horario: 'Lunes a Viernes de 6pm a 9pm — 3 días presencial y 2 días aula virtual',
+    horario: 'Taller',
     requisitos: ['Pasaporte vigente'],
     proximaConvocatoria: 'Octubre 2026',
     fechaInicio: '05/10/2026',
