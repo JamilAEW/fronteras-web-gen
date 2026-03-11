@@ -513,9 +513,6 @@ export const courses: Curso[] = [
     horasPracticas: 80,
     modalidad: 'presencial',
     duracionMeses: 4,
-    precio: 1500,
-    matricula: 200,
-    cuotas: 'Hasta 6 cuotas de 250€',
     horario: 'Lunes a Viernes de 15 a 18hrs — 4 horas a 18hrs — Sábado 9hrs a 13hrs',
     requisitos: [
       'Más de 2 años de residencia en España',
