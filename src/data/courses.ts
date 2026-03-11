@@ -319,14 +319,20 @@ export const courses: Curso[] = [
     titulo: 'ADGG0408 — Operaciones auxiliares de servicios administrativos y generales',
     categoria: 'arraigo',
     resumen: 'Certificado oficial orientado a tareas básicas de oficina, archivo, reproducción de documentación, atención y apoyo administrativo en empresas y entidades.',
-    horas: 430,
+    horas: 390,
+    horasPracticas: 80,
     modalidad: 'presencial',
+    duracionMeses: 4,
+    precio: 1800,
+    matricula: 300,
+    cuotas: 'Hasta 8 cuotas de 225€',
+    horario: 'Lunes a Viernes de 9:30 a 14:00h',
     requisitos: [
       'Más de 2 años de residencia en España',
       'Sin antecedentes penales',
       'Pasaporte vigente',
     ],
-    proximaConvocatoria: 'Próximamente',
+    proximaConvocatoria: 'Mayo 2026',
     destacado: true,
     temario: [
       {
