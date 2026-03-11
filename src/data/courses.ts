@@ -541,14 +541,21 @@ export const courses: Curso[] = [
     titulo: 'SSCG0111 — Gestión de llamadas de teleasistencia',
     categoria: 'arraigo',
     resumen: 'Formación oficial para atender, emitir y gestionar llamadas en servicios de teleasistencia, movilizando recursos de apoyo cuando sea necesario.',
-    horas: 330,
+    horas: 230,
+    horasPracticas: 80,
     modalidad: 'presencial',
+    duracionMeses: 4,
+    precio: 1500,
+    matricula: 200,
+    cuotas: 'Hasta 6 cuotas de 250€',
+    horario: 'Lunes a Viernes de 15 a 18hrs — 4 horas a 18hrs — Sábado 9hrs a 13hrs',
     requisitos: [
       'Más de 2 años de residencia en España',
       'Sin antecedentes penales',
       'Pasaporte vigente',
     ],
-    proximaConvocatoria: 'Próximamente',
+    proximaConvocatoria: 'Mayo 2026',
+    fechaInicio: '18/05/2026',
     temario: [
       {
         codigo: 'MF1423_2',
