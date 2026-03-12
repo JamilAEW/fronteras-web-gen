@@ -4,13 +4,13 @@
 // Muestra todas las entradas del blog en formato de tarjetas
 // Con filtros por categoría (todos, visado, arraigo, general)
 
-import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
-import { blogPosts, BlogPost } from '@/data/blog';
+import { blogPosts } from '@/data/blog';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
+import { BookOpenIcon, GlobeIcon, BriefcaseIcon, GraduationCapIcon, FileTextIcon, ShieldCheckIcon } from 'lucide-react';
 
 // ==========================================
 // COMPONENTE PRINCIPAL
