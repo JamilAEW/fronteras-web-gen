@@ -1,76 +1,38 @@
-// ==========================================
-// PÁGINA: Guía Gratuita (Blog)
-// ==========================================
-// Muestra todas las entradas del blog en formato de tarjetas
-// Con filtros por categoría (todos, visado, arraigo, general)
-
-import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
-import { blogPosts, BlogPost } from '@/data/blog';
+import { blogPosts } from '@/data/blog';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
+import { GlobeIcon, BriefcaseIcon, GraduationCapIcon, FileTextIcon, ShieldCheckIcon, HeartHandshakeIcon } from 'lucide-react';
 
-// ==========================================
-// COMPONENTE PRINCIPAL
-// ==========================================
+const topicCards = [
+  { icon: GlobeIcon, title: 'Visados y Estancia', description: 'Todo sobre cómo estudiar y residir legalmente en España.' },
+  { icon: GraduationCapIcon, title: 'Formación Oficial', description: 'Cursos certificados que abren puertas profesionales.' },
+  { icon: BriefcaseIcon, title: 'Empleo en España', description: 'Cómo acceder al mercado laboral con tu formación.' },
+  { icon: FileTextIcon, title: 'Trámites y Documentos', description: 'Guías prácticas para cada paso burocrático.' },
+  { icon: ShieldCheckIcon, title: 'Arraigo Socioformativo', description: 'La vía legal para regularizarte mediante formación.' },
+  { icon: HeartHandshakeIcon, title: 'Asesoramiento', description: 'Acompañamiento personalizado en todo tu proceso.' },
+];
+
 const GuiaGratuita = () => {
-  // ========================================
-  // ESTADO Y ANIMACIONES
-  // ========================================
-  const [selectedCategory, setSelectedCategory] = useState<'todos' | BlogPost['categoria']>('todos');
-  
-  // Refs para animaciones de scroll
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation();
-  const { ref: introRef, isVisible: introVisible } = useScrollAnimation();
-  const { ref: filterRef, isVisible: filterVisible } = useScrollAnimation();
   const { ref: postsRef, isVisible: postsVisible } = useScrollAnimation();
-
-  // ========================================
-  // FILTRADO DE POSTS
-  // ========================================
-  const filteredPosts = selectedCategory === 'todos' 
-    ? blogPosts 
-    : blogPosts.filter(post => post.categoria === selectedCategory);
-
-  // ========================================
-  // BOTONES DE FILTRO
-  // ========================================
-  const filterButtons = [
-    { id: 'todos' as const, label: 'Todos los artículos' },
-    { id: 'visado' as const, label: 'Visado / Estancia' },
-    { id: 'arraigo' as const, label: 'Arraigo Socioformativo' },
-    { id: 'general' as const, label: 'General' },
-  ];
+  const { ref: topicsRef, isVisible: topicsVisible } = useScrollAnimation();
 
   return (
     <div className="min-h-screen bg-background">
-      {/* ========================================
-          SEO - Meta tags
-          ======================================== */}
       <Helmet>
         <title>Guía Gratuita - Educar Sin Fronteras</title>
         <meta 
           name="description" 
           content="Guías y artículos gratuitos sobre visados, arraigo socioformativo, y formación en España. Información actualizada para tu proceso de regularización." 
         />
-        <meta name="keywords" content="guía gratuita, visado España, arraigo socioformativo, formación oficial, blog educación" />
       </Helmet>
 
-      {/* ========================================
-          NAVEGACIÓN
-          ======================================== */}
       <Navbar />
 
-      {/* ========================================
-          HERO - Encabezado principal
-          ========================================
-          MODIFICAR:
-          - Colores: bg-gradient-to-br from-[COLOR] to-[COLOR]
-          - Textos: Editar directamente las líneas
-          - Espaciado: py-20
-      */}
+      {/* Hero */}
       <section 
         ref={heroRef as React.RefObject<HTMLElement>}
         className={`bg-gradient-to-br from-primary to-brand-900 text-white py-20 transition-all duration-1000 ${
@@ -87,94 +49,52 @@ const GuiaGratuita = () => {
         </div>
       </section>
 
-      {/* ========================================
-          INTRODUCCIÓN
-          ========================================
-          MODIFICAR CONTENIDO:
-          - Editar directamente el texto en línea 103
-      */}
-      <section 
-        ref={introRef as React.RefObject<HTMLElement>}
-        className={`py-16 bg-background transition-all duration-1000 ${
-          introVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
-        }`}
-      >
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            En nuestra Guía Gratuita encontrarás toda la información que necesitas sobre visados, 
-            arraigo socioformativo, formación oficial y mucho más. Artículos actualizados y escritos 
-            por nuestro equipo de expertos para ayudarte en cada paso de tu proceso.
-          </p>
-        </div>
-      </section>
-
-      {/* ========================================
-          FILTROS DE CATEGORÍA
-          ========================================
-          MODIFICAR:
-          - Botones: Editar array filterButtons (línea 37)
-          - Colores activo: bg-primary text-primary-foreground
-          - Colores inactivo: bg-secondary text-secondary-foreground
-      */}
-      <section 
-        ref={filterRef as React.RefObject<HTMLElement>}
-        className={`py-12 bg-brand-50 transition-all duration-1000 ${
-          filterVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
-        }`}
-      >
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-4">
-            {filterButtons.map((button) => (
-              <button
-                key={button.id}
-                onClick={() => setSelectedCategory(button.id)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  selectedCategory === button.id
-                    ? 'bg-primary text-primary-foreground shadow-lg scale-105'
-                    : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
-                }`}
-              >
-                {button.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================
-          GRID DE ARTÍCULOS
-          ========================================
-          MODIFICAR:
-          - Columnas: md:grid-cols-2 lg:grid-cols-3
-          - Espaciado: gap-6
-          - Mensaje "no encontrado": línea 166
-      */}
+      {/* Artículo destacado */}
       <section 
         ref={postsRef as React.RefObject<HTMLElement>}
         className={`py-20 bg-background transition-all duration-1000 ${
           postsVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4">
-          {filteredPosts.length > 0 ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredPosts.map((post) => (
-                <BlogCard key={post.slug} post={post} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <p className="text-lg text-muted-foreground">
-                No se encontraron artículos en esta categoría.
-              </p>
-            </div>
-          )}
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-2xl font-display font-bold text-center mb-8 text-foreground">Artículo destacado</h2>
+          {blogPosts.map((post) => (
+            <BlogCard key={post.slug} post={post} />
+          ))}
         </div>
       </section>
 
-      {/* ========================================
-          PIE DE PÁGINA
-          ======================================== */}
+      {/* Topic Cards */}
+      <section 
+        ref={topicsRef as React.RefObject<HTMLElement>}
+        className={`py-20 bg-muted/30 transition-all duration-1000 ${
+          topicsVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-4 text-foreground">
+            Temas que cubrimos
+          </h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Próximamente más artículos sobre estos temas
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {topicCards.map((topic) => (
+              <div 
+                key={topic.title}
+                className="bg-card border border-border rounded-2xl p-8 text-center hover:shadow-lg hover:border-primary/30 transition-all duration-300"
+              >
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10 mb-5">
+                  <topic.icon className="h-7 w-7 text-primary" />
+                </div>
+                <h3 className="text-lg font-display font-bold text-foreground mb-2">{topic.title}</h3>
+                <p className="text-sm text-muted-foreground">{topic.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
