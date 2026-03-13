@@ -119,11 +119,6 @@ const Curso = () => {
                   <span className="font-semibold">Duración total:</span> {curso.duracionMeses} meses{curso.horasPracticas ? ' + Prácticas' : ''}
                 </p>
               )}
-              {curso.horario && (
-                <p className="mb-2">
-                  <span className="font-semibold">Horario:</span> {curso.horario}
-                </p>
-              )}
               {curso.proximaConvocatoria && (
                 <p className="mb-2">
                   <span className="font-semibold">Próxima convocatoria:</span> {curso.proximaConvocatoria}
